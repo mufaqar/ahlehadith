@@ -8,6 +8,7 @@ import Insta from '@/components/insta';
 import Main1 from '@/components/main/main1';
 import PostDesign from '@/components/post-design/post-design';
 import { PostMokeData } from '@/const/post';
+import Slider from "@/components/Slider/Slider";
 import React from 'react'
 
 const Home1 = () => {
@@ -18,6 +19,15 @@ const Home1 = () => {
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <section className="lg:w-[73%]">
+      <Slider data={PostMokeData.slice(0, 4)} />
+      <Layout>
+        <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
+          <section className="lg:w-[73%]">
+            <div className='my-5'>
+              <h2 className="text-2xl uppercase font-oswald">
+                جماعتی خبریں
+              </h2>
+            </div>
             <div className="grid gap-6 md:grid-cols-2">
               {PostMokeData.slice(0, 4).map((post, idx) => {
                 return <PostDesign post={post} idx={idx} key={idx} />;
