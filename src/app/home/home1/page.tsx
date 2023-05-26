@@ -19,7 +19,10 @@ const Home1 = () => {
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <section className="lg:w-[73%]">
-      <Slider data={PostMokeData.slice(0, 4)} />
+            <Slider data={PostMokeData.slice(0, 4)} />
+          </section>
+        </section>
+      </Layout>
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <section className="lg:w-[73%]">
