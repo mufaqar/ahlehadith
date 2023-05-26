@@ -1,4 +1,5 @@
-import { createContext, useEffect, useState } from "react";
+'use client';
+import { createContext, useEffect, useState } from 'react';
 
 export const SettingsContext = createContext();
 
@@ -26,9 +27,6 @@ export const SettingsProvider = ({ children }) => {
     }
   }, []);
 
-
-
-
   return (
     <SettingsContext.Provider
       value={{
@@ -43,11 +41,10 @@ export const SettingsProvider = ({ children }) => {
         setOpenSide,
         openSide,
         modalIsOpen,
-        setIsOpen
+        setIsOpen,
       }}
     >
       {children}
     </SettingsContext.Provider>
   );
 };
-
