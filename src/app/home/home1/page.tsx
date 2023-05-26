@@ -15,14 +15,7 @@ const Home1 = () => {
   return (
     <>
       <Header1 />
-      <Main1 />
-      <Layout>
-        <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
-          <section className="lg:w-[73%]">
-            <Slider data={PostMokeData.slice(0, 4)} />
-          </section>
-        </section>
-      </Layout>
+      <Slider data={PostMokeData.slice(0, 4)} />
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <section className="lg:w-[73%]">
