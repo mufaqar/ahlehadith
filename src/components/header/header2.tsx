@@ -37,6 +37,7 @@ const Header2 = () => {
 
   return (
     <>
+      Header 2
       <header className={`max-h-[64px] w-full md:mt-16 z-[100]`}>
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Socials />
@@ -67,11 +68,10 @@ const Header2 = () => {
         </div>
         <div className="bg-light-gray md:py-4 mt-10">
           <nav
-            className={` container px-4 md:px-10 mx-auto gap-10 flex justify-center items-center ${
-              isMobile
+            className={` container px-4 md:px-10 mx-auto gap-10 flex justify-center items-center ${isMobile
                 ? "absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
                 : "hidden md:flex"
-            }`}
+              }`}
           >
             {NavLinks.map((item: NavLinksType, idx: number) => {
               return (
@@ -94,9 +94,8 @@ const Header2 = () => {
         </div>
       )}
       <section
-        className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${
-          openSide ? "right-0" : "-right-[100%]"
-        }`}
+        className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${openSide ? "right-0" : "-right-[100%]"
+          }`}
       >
         <SideSection />
       </section>
