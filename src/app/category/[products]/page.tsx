@@ -80,11 +80,11 @@ const Blog = () => {
                       </Link>
                     </div>
                   </figure>
-                  <p className="mt-3 text-center font-poppins uppercase font-light text-gray-400">
+                  <p className="mt-3 text-center font-ahle uppercase font-light text-gray-400">
                     {item?.categories}
                   </p>
                   <Link href={item?.title}>
-                    <h2 className="text-center font-poppins text-lg">
+                    <h2 className="text-center font-ahle text-lg">
                       {item?.title}
                     </h2>
                   </Link>
@@ -109,7 +109,7 @@ const Blog = () => {
                       <h2 className="uppercase text-light-blue text-lg">
                         {post?.categories}
                       </h2>
-                      <h2 className="text-2xl font-poppins capitalize mt-6">
+                      <h2 className="text-2xl font-ahle capitalize mt-6">
                         {post?.title}
                       </h2>
                       <div className="text-white mb-20 flex gap-5 text-sm md:text-base justify-center item-center mt-5 pt-5 w-full border-t-[1px] border-white">

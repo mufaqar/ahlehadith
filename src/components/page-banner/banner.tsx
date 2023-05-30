@@ -29,10 +29,10 @@ const PageBanner = ({
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className={` absolute top-0 p-4 flex flex-col justify-center text-white items-center right-0 bottom-0 left-0 bg-black/30 ${rounded && 'container px-4 md:px-10 mx-auto rounded-[60px]'}`}>
-          <h1 className="text-xl md:text-6xl pt-10 text-yellow font-bold font-poppins capitalize">
+          <h1 className="text-xl md:text-6xl pt-10 text-yellow font-bold font-ahle capitalize">
             {title}
           </h1>
-          {subTitle && <p className="mt-3 text-lg font-poppins font-light max-w-[600px] text-center mb-5">{subTitle}</p>}
+          {subTitle && <p className="mt-3 text-lg font-ahle font-light max-w-[600px] text-center mb-5">{subTitle}</p>}
           
           {buttontext && (
             <Link href={buttonLink}>

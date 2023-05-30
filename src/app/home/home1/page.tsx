@@ -28,10 +28,10 @@ const Home1 = () => {
                 <h2 className="text-2xl uppercase font-ahle my-5">
                   خوش آمدید
                 </h2>
-                <p className='mt-2 font-poppins text-lg text-gray-600 dark:text-text'>
+                <p className='mt-2 font-ahle text-lg text-gray-600 dark:text-text'>
                   ہم آپ کو مرکزی جمعیت اہل حدیث پاکستان کی ویب سائٹ پر خوش آمدید کہتے ہیں.
                 </p>
-                <p className='mt-2 font-poppins text-lg text-gray-600 dark:text-text mb-5'>
+                <p className='mt-2 font-ahle text-lg text-gray-600 dark:text-text mb-5'>
                   مرکزی جمعیت اہل حدیث الحمدللہ دعوت و اصلاح ، تعلیم وتربیت ، علم وتحقیق، نشر و اشاعت ،تنظیم واحصائیات اور تعمیرات ورفاہ عامہ جیسے اہم محاذوں پر بھرپور جدوجہد کررہی ہے جس کے مبارک ثمرات ملکی سطح پر محسوس کیے جارہے ہیں اور خود موقر مجالس عاملہ وشوری مرکزی جمعیت اہل حدیث نے بھی اپنے حالیہ اجلاسوں میں جمعیت کی ہمہ جہت کارکردگی پراطمینان کااظہار فرمایاہے.
                 </p>
                 <Button variants="primary" size="medium">

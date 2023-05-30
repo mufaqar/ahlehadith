@@ -25,11 +25,11 @@ const PostDesign2 = () => {
             </figure>
             <div className="px-4">
               <div className="bg-white shadow-xl p-5 dark:bg-light-gray relative -mt-28 z-10 rounded-3xl overflow-hidden">
-              <p className="text-yellow rounded-3xl font-poppins uppercase font-light ">
+              <p className="text-yellow rounded-3xl font-ahle uppercase font-light ">
                 {item?.categories}
               </p>
               <Link href={item?.title}>
-                <h2 className="pb-4 group-hover:text-light-blue font-poppins text-lg">
+                <h2 className="pb-4 group-hover:text-light-blue font-ahle text-lg">
                   {item?.title}
                 </h2>
               </Link>

@@ -31,7 +31,7 @@ const SliderComponent = ({ data }: any) => {
               <div className="bg-black/30 absolute inset-0" />
               <div className="absolute max-w-[700px] p-4 w-full top-1/2 flex flex-col justify-center right-1/2 items-center transform -translate-y-1/2 translate-x-1/2">
                 <span className="bg-yellow text-black py-[2px] px-2 uppercase">{item?.categories}</span>
-                <h1 className="text-3xl mt-4 font-poppins leading-[40px] md:leading-[50px] lg:leading-[55px] md:text-4xl lg:text-[48px] capitalize text-center text-white">
+                <h1 className="text-3xl mt-4 font-ahle leading-[40px] md:leading-[50px] lg:leading-[55px] md:text-4xl lg:text-[48px] capitalize text-center text-white">
                   {item.title}
                 </h1>
                 <div className="uppercase text-xs text-center md:text-sm text-white items-center justify-center my-5 mb-8 font-light flex gap-4 md:gap-10">

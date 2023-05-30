@@ -139,7 +139,7 @@ const NewsLetterSection = () => {
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           handleChange={handleChange}
-          className="w-full p-3 bg-white text-center text-dark-gray  font-poppins font-normal"
+          className="w-full p-3 bg-white text-center text-dark-gray  font-ahle font-normal"
         />
         <button className="bg-dark-gray text-white mt-4 p-3 w-full">
           Subscribe

@@ -46,7 +46,7 @@ const Slug = () => {
                 height={100}
                 className="w-full mt-6"
               />
-              <p className="absolute bottom-0 right-0 left-0 bg-black/30 p-2 text-gray-300 font-poppins text-sm font-light">
+              <p className="absolute bottom-0 right-0 left-0 bg-black/30 p-2 text-gray-300 font-ahle text-sm font-light">
                 <strong className="text-yellow">Source:</strong> Lorem ipsum
                 dolor sit amet consectetur adipisicing elit.
               </p>
@@ -212,7 +212,7 @@ const CommentDesign = ({ reply }: any) => {
         <div className={`border-b-[1px] border-border pb-8`}>
           <div className="flex justify-between ">
             <div>
-              <h6 className="uppercase font-poppins">MARIE John </h6>
+              <h6 className="uppercase font-ahle">MARIE John </h6>
               <p className="text-gray-400 text-sm my-2">
                 January 21, 2016 01.54 am
               </p>

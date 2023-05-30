@@ -10,7 +10,7 @@ const NotFoundPage = () => {
       <p className=" bg-white dark:bg-dark-gray p-1 -mt-16 md:-mt-24 px-4 inline-block text-[28px]">
         404 - THE PAGE CAN'T BE FOUND
       </p>
-      <Link href="/" className="font-poppins text-white uppercase bg-light-blue hover:bg-black p-3 px-6  md:text-[18px] lg:text-[22px] sm:text-[1.3rem] mt-7 ">
+      <Link href="/" className="font-ahle text-white uppercase bg-light-blue hover:bg-black p-3 px-6  md:text-[18px] lg:text-[22px] sm:text-[1.3rem] mt-7 ">
         GO TO HOMEPAGE
       </Link>
     </div>

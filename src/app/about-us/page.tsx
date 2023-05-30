@@ -10,10 +10,10 @@ const Page = () => {
         <section className="grid grid-cols-1 md:grid-cols-2 my-24 gap-10">
           <div className="lg:mt-24">
             <span className="text-light-blue uppercase">Category</span>
-            <h2 className="text-3xl md:text-5xl md:leading-[60px] max-w-[500px] font-poppins font-light mt-5 capitalize">
+            <h2 className="text-3xl md:text-5xl md:leading-[60px] max-w-[500px] font-ahle font-light mt-5 capitalize">
               Optimize everything you want
             </h2>
-            <p className="mt-2 font-poppins text-lg text-gray-600 dark:text-text">
+            <p className="mt-2 font-ahle text-lg text-gray-600 dark:text-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
               autem. Quibusdam quas velit quaerat! Sed laborum accusamus maiores
               repudiandae, temporibus esse ex.
@@ -131,7 +131,7 @@ const Page = () => {
             className="w-full h-[300px] object-cover"
           />
           <div className="order-2 sm:order-none">
-            <h5 className="font-poppins text-xl text-text mt-4">
+            <h5 className="font-ahle text-xl text-text mt-4">
               Creative design
             </h5>
             <p className="text-text mt-3 font-light">
@@ -143,7 +143,7 @@ const Page = () => {
             <div className="pt-1 w-24 mt-6 bg-gray-200 dark:bg-light-gray" />
           </div>
           <div>
-            <h5 className="font-poppins text-xl text-text mt-4">
+            <h5 className="font-ahle text-xl text-text mt-4">
               Creative design
             </h5>
             <p className="text-text mt-3 font-light">
