@@ -14,12 +14,15 @@ import Button from '@/components/ui/button';
 import { AiOutlineClockCircle, AiOutlineEye, AiOutlinePlusCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import Image from 'next/image';
+import PostDesign2 from '@/components/post-design/post-design-2';
+import VideosGallery from '@/components/videos-gallery/videos';
+import Featured_News from '../../../components/featured-news/news';
 
 const Home1 = () => {
   return (
     <>
       <Header1 />
-      <Slider data={PostMokeData.slice(0, 4)} />
+      <Slider />
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <div className="">
@@ -94,11 +97,7 @@ const Home1 = () => {
                   جماعتی خبریں
                 </h2>
               </div>
-              <div className="flex gap-6 flex-col">
-                {PostMokeData.slice(0, 2).map((post, idx) => {
-                  return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
-                })}
-              </div>
+              <Featured_News />
             </div>
             <div className="pt-[1px] bg-border my-16" />
             <div>
@@ -107,11 +106,7 @@ const Home1 = () => {
                   تازہ ترین وڈیوز
                 </h2>
               </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {PostMokeData.slice(0, 4).map((post, idx) => {
-                  return <PostDesign post={post} idx={idx} key={idx} />;
-                })}
-              </div>
+              <VideosGallery />
             </div>
             <div className="pt-[1px] bg-border my-16" />
             <div>
@@ -120,10 +115,8 @@ const Home1 = () => {
                   کتب لائبریری
                 </h2>
               </div>
-              <div className="grid gap-6 md:grid-cols-3">
-                {PostMokeData.slice(0, 3).map((post, idx) => {
-                  return <PostDesign post={post} idx={idx} home={true} layout={3} key={idx} />;
-                })}
+              <div className="">
+              <PostDesign2 />
               </div>
             </div>
           </div>
