@@ -20,14 +20,14 @@ const Main1 = () => {
     <>
       <main className="h-[580px] md:grid grid-cols-2 -mt-[60px]">
         <div className="">
-          <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl  font-oswald" />
+          <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl  font-ahle" />
         </div>
         <div>
           <div className="grid grid-cols-2 _grid h-full">
             {
               post.map((item: any, idx: number) => {
                 return (
-                  <MainPost post={item} className="text-sm md:text-lg font-oswald" key={idx} />
+                  <MainPost post={item} className="text-sm md:text-lg font-ahle" key={idx} />
                 )
               })
             }

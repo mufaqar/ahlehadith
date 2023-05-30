@@ -20,7 +20,7 @@ const Home2 = () => {
       <div className="my-16">
         <Layout>
           <PostDesign2 />
-          <h2 className="text-3xl mt-20 uppercase text-center font-oswald">
+          <h2 className="text-3xl mt-20 uppercase text-center font-ahle">
             Top trending Categories
           </h2>
           <section className="mt-16 flex justify-center flex-wrap gap-8">
@@ -47,21 +47,21 @@ const Home2 = () => {
               );
             })}
           </section>
-          <h2 className="text-3xl mt-20 uppercase text-center font-oswald">
+          <h2 className="text-3xl mt-20 uppercase text-center font-ahle">
             Latest Articles 🎈
           </h2>
           <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-20">
             {PostMokeData.slice(0, 6).map((post, idx) => {
-              return <PostDesign post={post} idx={idx} key={idx} rounded={true}/>;
+              return <PostDesign post={post} idx={idx} key={idx} rounded={true} />;
             })}
           </section>
-          <h2 className="text-3xl mt-20 uppercase text-center font-oswald">
-          🎬 The Videos
+          <h2 className="text-3xl mt-20 uppercase text-center font-ahle">
+            🎬 The Videos
           </h2>
           <section className="mt-20 p-4 md:p-10 bg-light-gray rounded-[40px]">
-            <VideosGallery/>
+            <VideosGallery />
           </section>
-          
+
         </Layout>
       </div>
     </>

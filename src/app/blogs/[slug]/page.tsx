@@ -37,7 +37,7 @@ const Slug = () => {
                 Technology
               </h2>
             </div>
-            <h2 className="text-xl md:text-2xl capitalize mt-2 font-oswald font-bold">{`Lorem ipsum dolor sit amet consectetur`}</h2>
+            <h2 className="text-xl md:text-2xl capitalize mt-2 font-ahle font-bold">{`Lorem ipsum dolor sit amet consectetur`}</h2>
             <figure className="relative">
               <Image
                 src="/assets/images/Cars.jpg"

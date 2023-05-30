@@ -203,7 +203,7 @@ const LatestCategories = ({ posts }: any) => {
                     {p}
                   </h2>
                 </div>
-                <div className="text-sm group-hover:text-light-blue font-oswald">({item.length})</div>
+                <div className="text-sm group-hover:text-light-blue font-ahle">({item.length})</div>
               </div>
             );
           })}
@@ -225,7 +225,7 @@ const Advertisement = () => {
           Best Selling Blog & Magazine
           Wp Theme Of This Year
         </h2>
-        <button className="uppercase bg-yellow font-oswald font-normal text-black  w-full hover:bg-black hover:text-yellow p-3">
+        <button className="uppercase bg-yellow font-ahle font-normal text-black  w-full hover:bg-black hover:text-yellow p-3">
           Purchase Now
         </button>
       </div>

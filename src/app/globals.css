@@ -10,7 +10,21 @@
 }
 
 body,
-body p {
+body p,
+html {
+  font-family: 'nafeesweb';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'nafeesweb';
+}
+
+.font-ahle {
   font-family: 'nafeesweb';
 }
 
