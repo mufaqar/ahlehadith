@@ -26,11 +26,12 @@ const Blog = () => {
     setPData(res)
   }
 
+  
 
   return (
     <>
       <Header1 />
-      <Slider data={PostMokeData.slice(0, 4)} />
+      <Slider data={PostMokeData.slice(0, 4)}/>
       <Layout>
         <section className="my-24">
           <SideBarHeading className="max-w-[18rem] mx-auto mb-12">
