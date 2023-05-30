@@ -23,19 +23,6 @@ const Home1 = () => {
       <Layout>
         <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
           <div className="">
-            <div>
-              <div className='my-5'>
-                <h2 className="text-2xl uppercase font-oswald">
-                  جماعتی خبریں
-                </h2>
-              </div>
-              <div className="flex gap-6 flex-col">
-                {PostMokeData.slice(0, 2).map((post, idx) => {
-                  return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
-                })}
-              </div>
-            </div>
-            <div className="pt-[1px] bg-border my-16" />
             <div className='flex md:flex-row flex-col gap-6'>
               <div className='md:w-3/5 w-full'>
                 <h2 className="text-2xl uppercase font-oswald my-5">
@@ -98,6 +85,19 @@ const Home1 = () => {
                     );
                   })}
                 </div>
+              </div>
+            </div>
+            <div className="pt-[1px] bg-border my-16" />
+            <div>
+              <div className='my-5'>
+                <h2 className="text-2xl uppercase font-oswald">
+                  جماعتی خبریں
+                </h2>
+              </div>
+              <div className="flex gap-6 flex-col">
+                {PostMokeData.slice(0, 2).map((post, idx) => {
+                  return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
+                })}
               </div>
             </div>
             <div className="pt-[1px] bg-border my-16" />
