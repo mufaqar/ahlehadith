@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Button from "../ui/button";
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
-import {CgArrowLongRight} from 'react-icons/cg'
+import {CgArrowLongLeft} from 'react-icons/cg'
 
 const SliderComponent = ({ data }: any) => {
   const settings = {
@@ -39,7 +39,7 @@ const SliderComponent = ({ data }: any) => {
                   <span>ELLIOT ALDERSON</span>
                   <span>5 Comments</span>
                 </div>
-                <Button variants="secondary" size="medium">View More <CgArrowLongRight size={28}/></Button>
+                <Button variants="secondary" size="medium"><CgArrowLongLeft size={28}/> View More</Button>
               </div>
 
             </div>

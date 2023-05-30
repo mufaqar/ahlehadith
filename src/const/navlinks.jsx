@@ -1,22 +1,34 @@
 export const NavLinks = [
      {
-          name: 'Home',
+          name: 'تعارف',
           link: '/'
      },
      {
-          name: 'categories',
+          name: 'ذیلی تنظیمات',
           link: '/categories'
      },
      {
-          name: 'Blogs',
+          name: 'جماعتی خبریں',
           link: '/blogs'
      },
      {
-          name: 'About us',
+          name: 'وڈیوز',
           link: '/about-us'
      },
      {
-          name: 'contact us',
+          name: 'تصاویر',
+          link: '/contact-us'
+     },
+     {
+          name: 'اسلامک گرافکس',
+          link: '/contact-us'
+     },
+     {
+          name: 'کتب لائبریری',
+          link: '/contact-us'
+     },
+     {
+          name: 'ہفت روزہ اہلحدیث',
           link: '/contact-us'
      },
 ]
