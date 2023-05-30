@@ -38,13 +38,13 @@ const Header1 = () => {
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Logo />
           <div className="flex text-white">
-            <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
+            <nav className={`gap-7 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
               {NavLinks.map((item: NavLinksType, idx: number) => {
                 return <Link href={item.link} className="uppercase text-white" key={idx}>{item.name}</Link>;
               })}
             </nav>
             <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={() => setSearchOpen(true)} />
-            <HiOutlineMenu size={24} className="mr-5 mt-1 cursor-pointer" onClick={() => setOpenSide(!openSide)} />
+            <HiOutlineMenu size={24} className="me-5 mt-1 cursor-pointer" onClick={() => setOpenSide(!openSide)} />
             <ThemeSwitch />
             <div className="ml-3 md:hidden" onClick={() => setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32} /> : <RxCross1 size={32} />}</div>
           </div>
@@ -53,7 +53,7 @@ const Header1 = () => {
       {
         searchOpen && <div className="fixed top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox /></div>
       }
-      <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${openSide ? 'right-0' : '-right-[100%]'}`}><SideSection /></section>
+      <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${openSide ? 'left-0' : '-left-[100%]'}`}><SideSection /></section>
 
     </>
   );
@@ -71,18 +71,18 @@ const SearchBox = () => {
   return (
     <section className="flex justify-center items-center mt-28">
       <div className="flex items-center md:w-[600px] relative bg-dark-gray rounded-full overflow-hidden" >
+        <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
+          <RxCross2 size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" onClick={() => setSearchOpen(false)} />
+        </button>
+        <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
+          <BiSearch size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" />
+        </button>
         <Input
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           handleChange={handleChange}
-          className="md:w-[600px] p-5 bg-transparent text-pure"
+          className="md:w-[600px] p-5 bg-transparent text-end text-pure"
         />
-        <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
-          <BiSearch size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" />
-        </button>
-        <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
-          <RxCross2 size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" onClick={() => setSearchOpen(false)} />
-        </button>
       </div>
     </section>
   )
