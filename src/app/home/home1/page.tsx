@@ -36,8 +36,8 @@ const Home1 = () => {
               </div>
             </div>
             <div className="pt-[1px] bg-border my-16" />
-            <div className='flex gap-6 md:grid-cols-2'>
-              <div className='md:w-3/5'>
+            <div className='flex md:flex-row flex-col gap-6'>
+              <div className='md:w-3/5 w-full'>
                 <h2 className="text-2xl uppercase font-oswald my-5">
                   خوش آمدید
                 </h2>
@@ -51,7 +51,7 @@ const Home1 = () => {
                   مزید جانئیے
                 </Button>
               </div>
-              <div className='md:w-2/5'>
+              <div className='md:w-2/5 w-full'>
                 <h2 className="text-2xl uppercase font-oswald my-5">
                   ہفت روزہ اہلحدیث
                 </h2>
