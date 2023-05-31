@@ -4,6 +4,7 @@ import Layout from "@/components/Layout/Layout";
 import Pagination from "@/components/Pagination/pagination";
 import Slider from "@/components/Slider/Slider";
 import { SideBarHeading } from "@/components/aside";
+import Featured_News from "@/components/featured-news/news";
 import Footer1 from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PostDesign from "@/components/post-design/post-design";
@@ -29,7 +30,7 @@ const Blog = () => {
   return (
     <>
       <Header1 />
-      <Slider data={PostMokeData.slice(0, 4)}/>
+      <Featured_News />
       <Layout>
         <section className="my-24">
           <SideBarHeading className="max-w-[18rem] mx-auto mb-12">
