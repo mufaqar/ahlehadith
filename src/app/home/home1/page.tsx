@@ -17,6 +17,7 @@ import Image from 'next/image';
 import PostDesign2 from '@/components/post-design/post-design-2';
 import VideosGallery from '@/components/videos-gallery/videos';
 import Featured_News from '../../../components/featured-news/news';
+import Gallery_images from '@/components/image-gallery';
 
 const Home1 = () => {
   return (
@@ -112,7 +113,9 @@ const Home1 = () => {
           </div>
         </section>
       </Layout>
-      <Insta />
+      <Layout>
+        <Gallery_images />
+      </Layout>
       <Footer1 />
     </>
   )
