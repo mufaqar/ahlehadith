@@ -26,18 +26,6 @@ const Blog = () => {
     setPData(res)
   }
 
- 
-interface PostMokeData {
-  id: number;
-  title: string;
-  categories: string;
-  img: string;
-  body: string;
-}
-
-
-  
-
   return (
     <>
       <Header1 />

@@ -4,7 +4,7 @@ import Button from "../ui/button";
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { CgArrowLongLeft } from 'react-icons/cg'
 
-const SliderComponent = () => {
+const SliderComponent = (_data: any) => {
   const settings = {
     dots: true,
     infinite: true,
