@@ -24,8 +24,20 @@ const Home1 = () => {
       <Header1 />
       <Slider />
       <Layout>
-        <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
+        <section className="lg:flex gap-10 my-10 md:my-16 md:mt-16">
           <div className="">
+
+            <div>
+              <div className='my-5'>
+                <h2 className="text-2xl uppercase font-ahle">
+                  جماعتی خبریں
+                </h2>
+              </div>
+              <Featured_News />
+            </div>
+
+            <div className="pt-[1px] bg-border my-16" />
+
             <div className='flex md:flex-row flex-col gap-6'>
               <div className='md:w-3/5 w-full'>
                 <h2 className="text-2xl uppercase font-ahle my-5">
@@ -46,60 +58,35 @@ const Home1 = () => {
                   ہفت روزہ اہلحدیث
                 </h2>
                 <div className="">
-                  {PostMokeData.slice(1, 2).map((item, idx) => {
-                    return (
-                      <div key={idx}>
-                        <figure className="relative group overflow-hidden">
-                          <Image
-                            src={item?.img}
-                            alt="image"
-                            width={400}
-                            height={400}
-                            className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
-                          />
-                          <div className="absolute inset-0 bg-black/40 hidden group-hover:block">
-                            <div className="flex flex-col justify-center items-center h-full text-yellow">
-                              <AiOutlinePlusCircle
-                                size={30}
-                                className="group-hover:scale-110 transition-all duration ease-in-out"
-                              />
-                              <span className="text-sm md:text-base">View More</span>
-                            </div>
-                            <Link
-                              href={item?.title}
-                              className="text-white flex gap-5 text-sm md:text-base justify-center item-center absolute bottom-2 pt-2 md:bottom-4 w-full border-t-[1px] border-gray-300 md:pt-4"
-                            >
-                              <span className="flex items-center gap-1">
-                                <i>
-                                  <AiOutlineClockCircle />
-                                </i>{" "}
-                                2 .
-                              </span>
-                              <span className="flex items-center gap-1">
-                                <i>
-                                  <AiOutlineEye className="text-lg" />
-                                </i>{" "}
-                                1.3k
-                              </span>
-                            </Link>
+                  <div>
+                    <figure className="relative group overflow-hidden">
+                      <Image
+                        src="/assets/images/abdullah.jpeg"
+                        alt="image"
+                        width={400}
+                        height={400}
+                        className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-contain transition-all duration-200 ease-in-out"
+                      />
+                      <div className="absolute inset-0 bg-black/40 hidden group-hover:block">
+                        <Link href="#">
+                          <div className="flex flex-col justify-center items-center h-full text-yellow">
+                            <AiOutlinePlusCircle
+                              size={30}
+                              className="group-hover:scale-110 transition-all duration ease-in-out"
+                            />
+
+                            <span className="text-sm md:text-base">View More</span>
                           </div>
-                        </figure>
+                        </Link>
                       </div>
-                    );
-                  })}
+                    </figure>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div className="pt-[1px] bg-border my-16" />
-            <div>
-              <div className='my-5'>
-                <h2 className="text-2xl uppercase font-ahle">
-                  جماعتی خبریں
-                </h2>
-              </div>
-              <Featured_News />
-            </div>
-            <div className="pt-[1px] bg-border my-16" />
+
             <div>
               <div className='my-5'>
                 <h2 className="text-2xl uppercase font-ahle">
@@ -108,7 +95,9 @@ const Home1 = () => {
               </div>
               <VideosGallery />
             </div>
+
             <div className="pt-[1px] bg-border my-16" />
+
             <div>
               <div className='my-5'>
                 <h2 className="text-2xl uppercase font-ahle">
@@ -116,11 +105,11 @@ const Home1 = () => {
                 </h2>
               </div>
               <div className="">
-              <PostDesign2 />
+                <PostDesign2 />
               </div>
             </div>
-          </div>
 
+          </div>
         </section>
       </Layout>
       <Insta />

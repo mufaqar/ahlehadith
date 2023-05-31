@@ -11,26 +11,28 @@ import {
 const PostDesign2 = () => {
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-      {PostMokeData.slice(1, 5).map((item, idx) => {
+      {BooksData.map((item, idx) => {
         return (
           <div key={idx} className="group">
-            <figure className="relative overflow-hidden rounded-3xl ">
-              <Image
-                src={item?.img}
-                alt="image"
-                width={400}
-                height={400}
-                className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
-              />
-            </figure>
-            <div className="px-4">
+            <Link href="#">
+              <figure className="relative overflow-hidden rounded-3xl ">
+                <Image
+                  src={item?.img}
+                  alt="image"
+                  width={400}
+                  height={400}
+                  className="h-40 sm:h-60 group-hover:scale-110 xl:h-96 w-full object-cover object-bottom transition-all duration-200 ease-in-out"
+                />
+              </figure>
+            </Link>
+            {/* <div className="px-4">
               <div className="bg-white shadow-xl p-5 dark:bg-light-gray relative -mt-28 z-10 rounded-3xl overflow-hidden">
               <p className="text-yellow rounded-3xl font-ahle uppercase font-light ">
-                {item?.categories}
+                books
               </p>
-              <Link href={item?.title}>
+              <Link href="#">
                 <h2 className="pb-4 group-hover:text-light-blue font-ahle text-lg">
-                  {item?.title}
+                کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام
                 </h2>
               </Link>
               <div
@@ -50,7 +52,7 @@ const PostDesign2 = () => {
                 </span>
               </div>
               </div>
-            </div>
+            </div> */}
           </div>
         );
       })}
@@ -59,3 +61,18 @@ const PostDesign2 = () => {
 };
 
 export default PostDesign2;
+
+export const BooksData = [
+  {
+    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+  },
+  {
+    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+  },
+  {
+    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+  },
+  {
+    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+  },
+];
