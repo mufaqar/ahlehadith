@@ -64,15 +64,15 @@ export default PostDesign2;
 
 export const BooksData = [
   {
-    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+    img: "/assets/images/book1.jpg",
   },
   {
-    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+    img: "/assets/images/book2.jpg",
   },
   {
-    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+    img: "/assets/images/book3.jpg",
   },
   {
-    img: "/assets/images/کتاب-و-سنت-کی-روشنی-میں-حیا-کا-مقام.jpg",
+    img: "/assets/images/book4.jpg",
   },
 ];
