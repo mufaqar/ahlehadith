@@ -5,7 +5,7 @@ import { IoLogoInstagram } from 'react-icons/io';
 const Gallery_images = () => {
     return (
         <div className="my-10">
-            <h2 className="text-2xl uppercase font-ahle">
+            <h2 className="text-3xl uppercase font-ahle ahle-heading">
                 اسلامک گرافکس
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-1 mt-10">
