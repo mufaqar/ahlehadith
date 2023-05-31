@@ -21,7 +21,7 @@ const PostDesign2 = () => {
                   alt="image"
                   width={400}
                   height={400}
-                  className="h-40 sm:h-60 group-hover:scale-110 xl:h-96 w-full object-cover object-bottom transition-all duration-200 ease-in-out"
+                  className="h-60 group-hover:scale-110 xl:h-96 w-full object-cover object-bottom transition-all duration-200 ease-in-out"
                 />
               </figure>
             </Link>
