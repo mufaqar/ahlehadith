@@ -114,7 +114,14 @@ const Home1 = () => {
         </section>
       </Layout>
       <Layout>
-        <Gallery_images />
+        <div>
+          <div className='my-5'>
+            <h2 className="text-2xl uppercase font-ahle">
+              اسلامک گرافکس
+            </h2>
+          </div>
+          <Gallery_images />
+        </div>
       </Layout>
       <Footer1 />
     </>
