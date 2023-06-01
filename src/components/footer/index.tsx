@@ -13,7 +13,7 @@ const Footer2 = () => {
           <div className="py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white">
+                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
                   ہمارے بارے میں
                 </h2>
                 <p className="text-gray-300 dark:text-gray-200">
@@ -21,7 +21,7 @@ const Footer2 = () => {
                 </p>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white">
+                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
                   تازہ ترین خبریں
                 </h2>
                 <div className="grid gap-5">
@@ -52,7 +52,7 @@ const Footer2 = () => {
                 </div>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white">
+                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
                   کوئک لنکس / فوری رسائی
                 </h2>
                 <ul className="">
@@ -84,25 +84,25 @@ const Footer2 = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white">
+                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading" >
                   فالو کریں
                 </h2>
                 <ul className=" grid gap-3">
-                <li>
-                  <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
-                    <FaFacebookF size={26} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
-                    <FaTwitter size={26} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
-                    <FaYoutube size={26} />
-                  </Link>
-                </li>
+                  <li>
+                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                      <FaFacebookF size={26} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                      <FaTwitter size={26} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                      <FaYoutube size={26} />
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

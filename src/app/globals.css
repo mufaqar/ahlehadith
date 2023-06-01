@@ -28,6 +28,21 @@ h6 {
   font-family: 'nafeesweb';
 }
 
+.ahle-heading {
+  position: relative;
+  margin-bottom: 2.4rem;
+}
+
+.ahle-heading:after {
+  position: absolute;
+  content: '';
+  bottom: -12px;
+  right: 0;
+  padding: 2px;
+  background-color: #fff054;
+  width: 60px;
+}
+
 @layer base {
   :root {
     --dark-gray: #181818;

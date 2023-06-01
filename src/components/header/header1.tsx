@@ -34,13 +34,13 @@ const Header1 = () => {
 
   return (
     <>
-      <header className={`right-0 left-0 top-0 shadow-md max-h-[64px] fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/40'}`}>
+      <header className={`right-0 left-0 top-0 shadow-md  fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/70'}`}>
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Logo />
           <div className="flex text-white">
             <nav className={` gap-7 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
               {NavLinks.map((item: NavLinksType, idx: number) => {
-                return <Link href={item.link} className="uppercase font-ahle text-white" key={idx}>{item.name}</Link>;
+                return <Link href={item.link} className="uppercase font-ahle text-[21px] text-white hover:text-yellow hover:underline" key={idx}>{item.name}</Link>;
               })}
             </nav>
             <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={() => setSearchOpen(true)} />

@@ -24,7 +24,7 @@ const Home1 = () => {
 
             <div>
               <div className='my-5'>
-                <h2 className="text-2xl uppercase font-ahle">
+                <h2 className="text-3xl uppercase font-ahle ahle-heading">
                   جماعتی خبریں
                 </h2>
               </div>
@@ -35,7 +35,7 @@ const Home1 = () => {
 
             <div className='flex md:flex-row flex-col gap-6'>
               <div className='md:w-3/5 w-full'>
-                <h2 className="text-2xl uppercase font-ahle my-5">
+                <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   خوش آمدید
                 </h2>
                 <p className='mt-2 font-ahle text-lg text-gray-600 dark:text-text'>
@@ -49,7 +49,7 @@ const Home1 = () => {
                 </Button>
               </div>
               <div className='md:w-2/5 w-full'>
-                <h2 className="text-2xl uppercase font-ahle my-5">
+                <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   ہفت روزہ اہلحدیث
                 </h2>
                 <div className="">
@@ -84,7 +84,7 @@ const Home1 = () => {
 
             <div>
               <div className='my-5'>
-                <h2 className="text-2xl uppercase font-ahle">
+                <h2 className="text-3xl uppercase font-ahle ahle-heading">
                   تازہ ترین وڈیوز
                 </h2>
               </div>
@@ -95,7 +95,7 @@ const Home1 = () => {
 
             <div>
               <div className='my-5'>
-                <h2 className="text-2xl uppercase font-ahle">
+                <h2 className="text-3xl uppercase font-ahle ahle-heading">
                   کتب لائبریری
                 </h2>
               </div>
