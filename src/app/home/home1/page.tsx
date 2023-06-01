@@ -32,8 +32,8 @@ const Home1 = () => {
 
             <div className="pt-[1px] bg-border my-16" />
 
-            <div className="flex md:flex-row flex-col gap-6">
-              <div className="md:w-3/5 w-full">
+            <div className="flex md:flex-row flex-col">
+              <div className="md:w-3/4 w-full border border-yellow px-5">
                 <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   خوش آمدید
                 </h2>
@@ -53,7 +53,7 @@ const Home1 = () => {
                   مزید جانئیے
                 </Button>
               </div>
-              <div className="md:w-2/5 w-full">
+              <div className="md:w-1/4 w-full bg-yellow">
                 <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   ہفت روزہ اہلحدیث
                 </h2>
@@ -67,7 +67,7 @@ const Home1 = () => {
                         height={400}
                         className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-contain transition-all duration-200 ease-in-out"
                       />
-                      <div className="absolute inset-0 bg-black/40 hidden group-hover:block">
+                      <div className="absolute inset-0">
                         <Link href="#">
                           <div className="flex flex-col justify-center items-center h-full text-yellow">
                             <AiOutlinePlusCircle
