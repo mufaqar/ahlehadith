@@ -9,7 +9,15 @@ const ContactUs = () => {
   return (
     <>
       <Layout>
-        <form className="mt-12">
+        <form className="my-12">
+          <div className='my-8'>
+            <h2 className="text-3xl uppercase font-ahle ahle-heading">
+              میسج کے ذریعے فوری رابطہ
+            </h2>
+            <p className='mt-5 font-ahle text-lg text-gray-600 dark:text-text'>
+              درج ذیل فارم کو پر کریں. ہمارا نمائندہ بہت جلد آپ سے رابطہ کرے گا
+            </p>
+          </div>
           <div className="mt-2 mb-5 md:flex gap-4">
             <input
               type="text"
@@ -44,7 +52,7 @@ const ContactUs = () => {
             </Button>
           </div>
         </form>
-        <section className="grid md:grid-cols-3 my-32">
+        <section className="grid md:grid-cols-3 my-24">
           <div className="flex flex-col text-gray-500 gap-1 items-center">
             <FaPhoneSquareAlt size={80} className="text-yellow" />
             <h4 className="text-xl mt-6 text-dark-gray font-ahle">فون نمبر</h4>

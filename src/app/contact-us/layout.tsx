@@ -16,7 +16,7 @@ export default function ConatctLayout({
         <Header1 />
         <PageBanner
           title="رابطہ کریں"
-          subTitle="درج ذیل فارم کو پر کریں. ہمارا نمائندہ بہت جلد آپ سے رابطہ کرے گا"
+          subTitle=""
           image="/assets/images/contat.jpg"
           buttontext=""
           buttonLink=""
