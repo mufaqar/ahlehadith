@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 import Layout from '../Layout/Layout';
-import PostDesign from '@/components/post-design/post-design';
 import { PostMokeData } from '@/const/post';
 import Image from 'next/image';
 
