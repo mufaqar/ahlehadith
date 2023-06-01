@@ -1,23 +1,17 @@
 "use client"
-
 import Layout from '@/components/Layout/Layout';
-import Aside from '@/components/aside';
-import Footer1 from '@/components/footer';
 import Header1 from '@/components/header/header1';
-import Insta from '@/components/insta';
-import Main1 from '@/components/main/main1';
-import PostDesign from '@/components/post-design/post-design';
-import { PostMokeData } from '@/const/post';
 import Slider from "@/components/Slider/Slider";
 import React from 'react'
 import Button from '@/components/ui/button';
-import { AiOutlineClockCircle, AiOutlineEye, AiOutlinePlusCircle } from 'react-icons/ai';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import Image from 'next/image';
 import PostDesign2 from '@/components/post-design/post-design-2';
 import VideosGallery from '@/components/videos-gallery/videos';
 import Featured_News from '../../../components/featured-news/news';
 import Gallery_images from '@/components/image-gallery';
+import Footer2 from '@/components/footer';
 
 const Home1 = () => {
   return (
@@ -116,14 +110,18 @@ const Home1 = () => {
       <Layout>
         <div>
           <div className='my-5'>
+<<<<<<< HEAD
             <h2 className="text-3xl uppercase font-ahle ahle-heading">
+=======
+            <h2 className="text-2xl uppercase font-ahle ahle-heading">
+>>>>>>> 93dd256c6a0bcbffea0938e54d5287c86e940707
               اسلامک گرافکس
             </h2>
           </div>
           <Gallery_images />
         </div>
       </Layout>
-      <Footer1 />
+      <Footer2 />
     </>
   )
 }

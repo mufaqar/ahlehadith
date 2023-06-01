@@ -11,15 +11,15 @@ export default function ConatctLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl">
       <body>
         <Header1 />
         <PageBanner
-          title="Contact Us"
-          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          title="رابطہ کریں"
+          subTitle=""
           image="/assets/images/contat.jpg"
-          buttontext="By this time"
-          buttonLink="#"
+          buttontext=""
+          buttonLink=""
         />
         {children}
         <Footer1/>

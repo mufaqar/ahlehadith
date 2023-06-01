@@ -12,7 +12,7 @@ export default function ConatctLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl">
       <body>
         <Header1 />
         <PageBanner
