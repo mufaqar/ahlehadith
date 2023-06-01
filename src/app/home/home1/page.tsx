@@ -50,7 +50,7 @@ const Home1 = () => {
                   کی ہمہ جہت کارکردگی پراطمینان کااظہار فرمایاہے.
                 </p>
                 <Button variants="primary" size="medium">
-                  مزید جانئیے
+                  <Link href='/introduction'>مزید جانئیے</Link>
                 </Button>
               </div>
               <div className="md:w-1/4 w-full dark:bg-black px-5">
@@ -74,7 +74,6 @@ const Home1 = () => {
                               size={30}
                               className="group-hover:scale-110 transition-all duration ease-in-out"
                             />
-
                             <span className="text-sm md:text-base">
                               View More
                             </span>
