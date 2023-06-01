@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 import Layout from '../Layout/Layout';
 import { PostMokeData } from '@/const/post';
 import Image from 'next/image';
+import { GetWordStr } from '@/utils';
 
 const Footer2 = () => {
   return (
@@ -13,15 +14,15 @@ const Footer2 = () => {
           <div className="py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
+                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
                   ہمارے بارے میں
                 </h2>
-                <p className="text-gray-300 dark:text-gray-200">
+                <p className="text-white">
                   منہج سلف پر قرآن وحدیث کی تبلیغ واشاعت کی علمبردار - مرکزی جمعیت اہل حدیث پاکستان
                 </p>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
+                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
                   تازہ ترین خبریں
                 </h2>
                 <div className="grid gap-5">
@@ -39,11 +40,11 @@ const Footer2 = () => {
                           />
                         </figure>
                         <div className='w-2/3'>
-                          <Link href={`/blogs/${item.title}`} className='text-xs text-start text-gray-300 hover:text-white dark:text-gray-200'>
-                            {item.title}
+                          <Link href={`/blogs/${item.title}`} className='text-base text-start text-white hover:text-gray-300'>
+                            {GetWordStr(item?.title, 7)}
                           </Link>
-                          <p className='text-xs text-start text-gray-300 dark:text-gray-200 mt-2'>
-                            22 December
+                          <p className='text-sm text-start text-gray-300 dark:text-gray-200 mt-2'>
+                            22 فروری
                           </p>
                         </div>
                       </div>
@@ -52,54 +53,54 @@ const Footer2 = () => {
                 </div>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading">
+                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
                   کوئک لنکس / فوری رسائی
                 </h2>
                 <ul className="">
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">
                       جماعتی خبریں
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">وڈیوز</Link>
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">وڈیوز</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">تصاویر</Link>
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">تصاویر</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">اسلامک گرافکس</Link>
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">اسلامک گرافکس</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">کتب لائبریری</Link>
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">کتب لائبریری</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">رابطہ کریں</Link>
+                    <Link href="#" className="text-white hover:text-gray-300 text-base">رابطہ کریں</Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-xl font-semibold text-white uppercase dark:text-white ahle-heading" >
+                <h2 className="mb-6 text-xl text-white uppercase ahle-heading" >
                   فالو کریں
                 </h2>
                 <ul className=" grid gap-3">
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                    <Link href="#" className="text-white hover:text-gray-300">
                       <FaFacebookF size={26} />
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                    <Link href="#" className="text-white hover:text-gray-300">
                       <FaTwitter size={26} />
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-white dark:text-gray-200">
+                    <Link href="#" className="text-white hover:text-gray-300">
                       <FaYoutube size={26} />
                     </Link>
                   </li>
