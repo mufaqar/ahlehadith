@@ -1,23 +1,25 @@
-import Image from "next/image";
-import React, { useContext, useState } from "react";
-import ReactPlayer from "react-player";
-import { BsPlayCircle } from "react-icons/bs";
-import ModelBox from "../ModelBox/ModelBox";
+import Image from 'next/image';
+import React, { useContext, useState } from 'react';
+import ReactPlayer from 'react-player';
+import { BsPlayCircle } from 'react-icons/bs';
+import ModelBox from '../ModelBox/ModelBox';
 
 const VideosGallery = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [URL, setURL] = useState("");
+  const [URL, setURL] = useState('');
   const OpenModelBox = (video) => {
     setURL(video);
     setIsOpen(true);
   };
 
-  console.log(URL.replace('https://www.youtube.com/watch?v=', 'https://i.ytimg.com/vi/'))
+  console.log(
+    URL.replace('https://www.youtube.com/watch?v=', 'https://i.ytimg.com/vi/')
+  );
 
   return (
     <>
       <section className="md:flex gap-6 max-h-[600px]">
-        <div className="rounded-3xl relative md:w-[77%] overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
+        <div className="rounded-xl relative md:w-[77%] overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
           <Image
             src={`https://i.ytimg.com/vi/QfOGNxFvgtY/hqdefault.jpg`}
             alt="thumbnil"
@@ -37,17 +39,20 @@ const VideosGallery = () => {
             return (
               <div
                 key={idx}
-                className="rounded-2xl relative md:rounded-3xl h-[33%] border-[6px] border-white dark:border-transparent shadow-xl overflow-hidden inline-block"
+                className="rounded-xl relative md:rounded-xl h-[33%] border-[6px] border-white dark:border-transparent shadow-xl overflow-hidden inline-block"
               >
                 <Image
-                  src={`${item?.url?.replace('https://www.youtube.com/watch?v=', 'https://i.ytimg.com/vi/')}/hqdefault.jpg`}
+                  src={`${item?.url?.replace(
+                    'https://www.youtube.com/watch?v=',
+                    'https://i.ytimg.com/vi/'
+                  )}/hqdefault.jpg`}
                   alt="thumbnil"
                   width={900}
                   height={900}
                   className="w-full h-full object-cover"
                 />
                 <BsPlayCircle
-                  onClick={()=>OpenModelBox(item?.url)}
+                  onClick={() => OpenModelBox(item?.url)}
                   className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-yellow active:scale-105 animate-pulse text-5xl"
                 />
               </div>
@@ -71,12 +76,12 @@ export default VideosGallery;
 
 export const Video_Data = [
   {
-    url: "https://www.youtube.com/watch?v=DASJPMM-LSs",
+    url: 'https://www.youtube.com/watch?v=DASJPMM-LSs',
   },
   {
-    url: "https://www.youtube.com/watch?v=vzElLps3GQI",
+    url: 'https://www.youtube.com/watch?v=vzElLps3GQI',
   },
   {
-    url: "https://www.youtube.com/watch?v=QfOGNxFvgtY",
+    url: 'https://www.youtube.com/watch?v=QfOGNxFvgtY',
   },
 ];

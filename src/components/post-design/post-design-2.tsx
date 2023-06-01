@@ -15,7 +15,7 @@ const PostDesign2 = () => {
         return (
           <div key={idx} className="group">
             <Link href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank">
-              <figure className="relative overflow-hidden rounded-3xl ">
+              <figure className="relative overflow-hidden rounded-xl ">
                 <Image
                   src={item?.img}
                   alt="image"
