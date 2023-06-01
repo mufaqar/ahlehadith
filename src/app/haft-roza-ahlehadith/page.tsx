@@ -12,7 +12,7 @@ const Haft_Roza_Ahlehadith = () => {
         <>
             <Header1 />
             <PageBanner
-                title="کتب لائبریری"
+                title="ہفت روزہ اہلحدیث"
                 subTitle=""
                 image="/assets/images/contat.jpg"
                 buttontext=""
