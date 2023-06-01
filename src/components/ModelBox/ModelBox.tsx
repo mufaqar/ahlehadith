@@ -3,7 +3,6 @@ import React from "react";
 import Modal from "react-modal";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import ReactPlayer from "react-player";
 
 const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
   function closeModal() {
@@ -21,6 +20,12 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
       border: "none",
     },
   };
+
+
+
+
+
+  
 
   return (
     <>
@@ -43,7 +48,7 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
               <div className="video-container px-40">
                 <iframe
                   className="responsive-iframe"
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                  src={URL.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/')}
                   allowFullScreen
                 />
               </div>

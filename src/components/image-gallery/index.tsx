@@ -10,13 +10,14 @@ const Gallery_images = () => {
     setURL(image)
     setIsOpen(true); 
   }
+  
   return (
    <>
     <div className="my-10">
       <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
-        <Masonry columnsCount={3} gutter="6px">
+        <Masonry columnsCount={3} gutter="20px">
           {Gallery.map((image) => (
-            <img src={image.img} className="w-full" onClick={()=>OpenModelBox(image)}/>
+            <figure className="border-border border p-2 shadow-md hover:shadow-lg cursor-pointer"><img src={image.img} className="w-full" onClick={()=>OpenModelBox(image)}/></figure>
           ))}
         </Masonry>
       </ResponsiveMasonry>
