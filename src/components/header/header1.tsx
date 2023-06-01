@@ -38,7 +38,7 @@ const Header1 = () => {
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Logo />
           <div className="flex text-white">
-            <nav className={` gap-7 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
+            <nav className={` gap-5 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
               {NavLinks.map((item: NavLinksType, idx: number) => {
                 return <Link href={item.link} className="uppercase font-ahle text-[21px] text-white hover:text-yellow hover:underline" key={idx}>{item.name}</Link>;
               })}
@@ -53,7 +53,7 @@ const Header1 = () => {
       {
         searchOpen && <div className="fixed top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox /></div>
       }
-      <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${openSide ? 'left-0' : '-left-[100%]'}`}><SideSection /></section>
+      <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out overflow-y-auto no-scrollbar ${openSide ? 'left-0' : '-left-[100%]'}`}><SideSection /></section>
 
     </>
   );
