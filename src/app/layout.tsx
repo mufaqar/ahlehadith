@@ -21,7 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="rtl">
-
       <body className={`dark:bg-dark-gray ${inter.className}`} >
         <SettingsProvider>
           <ThemeProvider enableSystem={false} attribute="class">{children}</ThemeProvider>
