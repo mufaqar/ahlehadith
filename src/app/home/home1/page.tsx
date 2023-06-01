@@ -33,7 +33,7 @@ const Home1 = () => {
             <div className="pt-[1px] bg-border my-16" />
 
             <div className="flex md:flex-row flex-col">
-              <div className="md:w-3/4 w-full border border-yellow px-5">
+              <div className="md:w-3/4 w-full  px-5 bg-light-gray">
                 <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   خوش آمدید
                 </h2>
@@ -53,7 +53,7 @@ const Home1 = () => {
                   مزید جانئیے
                 </Button>
               </div>
-              <div className="md:w-1/4 w-full bg-yellow">
+              <div className="md:w-1/4 w-full dark:bg-black px-5">
                 <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading">
                   ہفت روزہ اہلحدیث
                 </h2>
