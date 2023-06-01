@@ -10,18 +10,18 @@ import {
 
 const PostDesign2 = () => {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 ">
       {BooksData.map((item, idx) => {
         return (
           <div key={idx} className="group">
-            <Link href="#">
+            <Link href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank">
               <figure className="relative overflow-hidden rounded-3xl ">
                 <Image
                   src={item?.img}
                   alt="image"
                   width={400}
                   height={400}
-                  className="h-60 group-hover:scale-110 xl:h-96 w-full object-cover object-bottom transition-all duration-200 ease-in-out"
+                  className="group-hover:scale-105 h-96 w-full object-fill object-bottom transition-all duration-200 ease-in-out"
                 />
               </figure>
             </Link>
@@ -74,5 +74,8 @@ export const BooksData = [
   },
   {
     img: "/assets/images/book4.jpg",
+  },
+  {
+    img: "/assets/images/book2.jpg",
   },
 ];
