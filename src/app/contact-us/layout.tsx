@@ -15,11 +15,11 @@ export default function ConatctLayout({
       <body>
         <Header1 />
         <PageBanner
-          title="Contact Us"
-          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          title="رابطہ کریں"
+          subTitle="درج ذیل فارم کو پر کریں. ہمارا نمائندہ بہت جلد آپ سے رابطہ کرے گا"
           image="/assets/images/contat.jpg"
-          buttontext="By this time"
-          buttonLink="#"
+          buttontext=""
+          buttonLink=""
         />
         {children}
         <Footer1/>

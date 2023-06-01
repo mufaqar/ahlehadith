@@ -63,24 +63,24 @@ const Footer2 = () => {
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">
+                    <Link href="/blogs" className="text-white hover:text-gray-300 text-base">
                       جماعتی خبریں
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">وڈیوز</Link>
+                    <Link href="/videos" className="text-white hover:text-gray-300 text-base">وڈیوز</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">تصاویر</Link>
+                    <Link href="/pictures" className="text-white hover:text-gray-300 text-base">تصاویر</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">اسلامک گرافکس</Link>
+                    <Link href="islamic-graphics" className="text-white hover:text-gray-300 text-base">اسلامک گرافکس</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">کتب لائبریری</Link>
+                    <Link href="/books-library" className="text-white hover:text-gray-300 text-base">کتب لائبریری</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">رابطہ کریں</Link>
+                    <Link href="/contact-us" className="text-white hover:text-gray-300 text-base">رابطہ کریں</Link>
                   </li>
                 </ul>
               </div>
