@@ -14,7 +14,7 @@ const SideSection = () => {
       <div className='h-full w-full grid gap-10 items-center py-10'>
         <Logo />
         <div>
-          <h2 className="mb-6 text-2xl font-ahle text-white uppercase dark:text-white">
+          <h2 className="mb-7 text-2xl font-ahle ahle-heading text-white">
             ہمارے بارے میں
           </h2>
           <p className="text-white text-xl font-ahle">
@@ -22,7 +22,7 @@ const SideSection = () => {
           </p>
         </div>
         <div>
-          <h2 className="mb-6 text-2xl font-ahle text-white uppercase dark:text-white">
+          <h2 className="mb-7 text-2xl font-ahle ahle-heading text-white">
             فالو کریں
           </h2>
           <ul className="flex gap-3">

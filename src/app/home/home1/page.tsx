@@ -110,7 +110,7 @@ const Home1 = () => {
       <Layout>
         <div>
           <div className='my-5'>
-            <h2 className="text-2xl uppercase font-ahle">
+            <h2 className="text-2xl uppercase font-ahle ahle-heading">
               اسلامک گرافکس
             </h2>
           </div>
