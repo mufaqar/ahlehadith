@@ -30,7 +30,9 @@ const Blog = () => {
   return (
     <>
       <Header1 />
-      <Featured_News />
+      <section className="md:mt-20 sm:mt-14 mt-10 pt-3">
+        <Featured_News />
+      </section>
       <Layout>
         <section className="my-24">
           <SideBarHeading className="max-w-[18rem] mx-auto mb-12">
