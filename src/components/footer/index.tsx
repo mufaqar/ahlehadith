@@ -14,15 +14,15 @@ const Footer2 = () => {
           <div className="py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
               <div>
-                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                   ہمارے بارے میں
                 </h2>
-                <p className="text-white">
+                <p className="text-white font-ahle text-lg">
                   منہج سلف پر قرآن وحدیث کی تبلیغ واشاعت کی علمبردار - مرکزی جمعیت اہل حدیث پاکستان
                 </p>
               </div>
               <div>
-                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                   تازہ ترین خبریں
                 </h2>
                 <div className="grid gap-5">
@@ -40,10 +40,10 @@ const Footer2 = () => {
                           />
                         </figure>
                         <div className='w-2/3'>
-                          <Link href={`/blogs/${item.title}`} className='text-base text-start text-white hover:text-gray-300'>
-                            {GetWordStr(item?.title, 7)}
+                          <Link href={`/blogs/${item.title}`} className='text-lg text-start text-white hover:text-gray-300 font-ahle'>
+                            {GetWordStr(item?.title, 8)}
                           </Link>
-                          <p className='text-sm text-start text-gray-300 dark:text-gray-200 mt-2'>
+                          <p className='text-base text-start text-gray-300 dark:text-gray-200 mt-2'>
                             22 فروری
                           </p>
                         </div>
@@ -53,39 +53,39 @@ const Footer2 = () => {
                 </div>
               </div>
               <div>
-                <h2 className="mb-6 text-xl text-white uppercase ahle-heading">
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                   کوئک لنکس / فوری رسائی
                 </h2>
                 <ul className="">
                   <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 text-base">
+                    <Link href="#" className="text-white hover:text-gray-300 font-ahle text-lg">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/blogs" className="text-white hover:text-gray-300 text-base">
+                    <Link href="/blogs" className="text-white hover:text-gray-300 font-ahle text-lg">
                       جماعتی خبریں
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/videos" className="text-white hover:text-gray-300 text-base">وڈیوز</Link>
+                    <Link href="/videos" className="text-white hover:text-gray-300 font-ahle text-lg">وڈیوز</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/pictures" className="text-white hover:text-gray-300 text-base">تصاویر</Link>
+                    <Link href="/pictures" className="text-white hover:text-gray-300 font-ahle text-lg">تصاویر</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="islamic-graphics" className="text-white hover:text-gray-300 text-base">اسلامک گرافکس</Link>
+                    <Link href="islamic-graphics" className="text-white hover:text-gray-300 font-ahle text-lg">اسلامک گرافکس</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/books-library" className="text-white hover:text-gray-300 text-base">کتب لائبریری</Link>
+                    <Link href="/books-library" className="text-white hover:text-gray-300 font-ahle text-lg">کتب لائبریری</Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/contact-us" className="text-white hover:text-gray-300 text-base">رابطہ کریں</Link>
+                    <Link href="/contact-us" className="text-white hover:text-gray-300 font-ahle text-lg">رابطہ کریں</Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-xl text-white uppercase ahle-heading" >
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading" >
                   فالو کریں
                 </h2>
                 <ul className=" grid gap-3">
@@ -113,7 +113,7 @@ const Footer2 = () => {
         <div className='bg-[#090909]'>
           <Layout>
             <div className="py-6">
-              <span className="block text-sm text-center text-gray-300 dark:text-gray-200">
+              <span className="block text-base text-center text-gray-300 dark:text-gray-200 font-ahle">
                 2023© مرکزی جمعیت اہل حدیث پاکستان
               </span>
             </div>
