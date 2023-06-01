@@ -91,9 +91,21 @@ const Home1 = () => {
 
             <div>
               <div className="my-5">
-                <h2 className="text-3xl uppercase font-ahle ahle-heading">
-                  تازہ ترین وڈیوز
-                </h2>
+
+              </div>
+
+              <div className="my-5">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-3xl uppercase font-ahle ahle-heading">
+                    تازہ ترین وڈیوز
+                  </h2>
+                  <Link
+                    href="#"
+                    className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
+                  >
+                    وڈیو وزٹ  کریں
+                  </Link>
+                </div>
               </div>
               <VideosGallery />
             </div>
@@ -123,14 +135,19 @@ const Home1 = () => {
       </Layout>
       <Layout>
         <div>
-          <div className='my-5'>
-<<<<<<< HEAD
-            <h2 className="text-3xl uppercase font-ahle ahle-heading">
-=======
-            <h2 className="text-2xl uppercase font-ahle ahle-heading">
->>>>>>> 93dd256c6a0bcbffea0938e54d5287c86e940707
-              اسلامک گرافکس
-            </h2>
+
+          <div className="my-5">
+            <div className="flex justify-between items-center">
+              <h2 className="text-3xl uppercase font-ahle ahle-heading">
+                اسلامک گرافکس
+              </h2>
+              <Link
+                href="#"
+                className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
+              >
+                اسلامک گرافکس وزٹ کریں
+              </Link>
+            </div>
           </div>
           <Gallery_images />
         </div>
