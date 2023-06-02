@@ -45,7 +45,7 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
             </button>
 
             {video ? (
-              <div className="video-container px-40">
+              <div className="video-container px-40 z-[99999] relative">
                 <iframe
                   className="responsive-iframe"
                   src={URL.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/')}
