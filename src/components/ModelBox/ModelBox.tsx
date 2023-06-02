@@ -45,7 +45,7 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
             </button>
 
             {video ? (
-              <div className="video-container px-40 z-[99999] relative">
+              <div className="video-container px-40 z-[5] relative">
                 <iframe
                   className="responsive-iframe"
                   src={URL.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/')}
@@ -58,7 +58,7 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
                 alt="image"
                 width={800}
                 height={600}
-                className="shadow-lg mx-auto w-full"
+                className="shadow-lg mx-auto w-full z-[5] relative"
               />
             )}
             {/* <button className="absolute top-1/2 left-8 transform -translate-y-1/2 bg-dark-gray rounded-full  active:scale-105 text-yellow  p-2 text-3xl " ><IoIosArrowBack /></button> */}
