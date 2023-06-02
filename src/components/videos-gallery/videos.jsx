@@ -29,7 +29,7 @@ const VideosGallery = () => {
           />
           <BsPlayCircle
             onClick={() =>
-              OpenModelBox(`https://www.youtube.com/watch?v=DASJPMM-LSs`)
+              OpenModelBox(`https://www.youtube.com/watch?v=QfOGNxFvgtY`)
             }
             className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-yellow active:scale-105 animate-pulse text-7xl"
           />
