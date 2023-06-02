@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
-import ModelBox from './ModelBox/ModelBox';
+import ModelBox from '../ModelBox/ModelBox';
 
 const ImagesSection = () => {
     const settings = {
