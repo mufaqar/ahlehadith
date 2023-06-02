@@ -19,7 +19,7 @@ const VideosGallery = () => {
   return (
     <>
       <section className="md:flex gap-6 max-h-[600px]">
-        <div className="rounded-xl relative md:w-[77%] overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
+        <div className="rounded-xl relative md:w-[77%] w-full overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
           <Image
             src={`https://i.ytimg.com/vi/QfOGNxFvgtY/hqdefault.jpg`}
             alt="thumbnil"
@@ -34,7 +34,7 @@ const VideosGallery = () => {
             className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-yellow active:scale-105 animate-pulse text-7xl"
           />
         </div>
-        <div className="flex md:flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[23%]">
+        <div className="flex md:flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[23%] w-full">
           {Video_Data.slice(0, 3).map((item, idx) => {
             return (
               <div
