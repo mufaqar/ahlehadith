@@ -23,7 +23,7 @@ const Home1 = () => {
       <Main1 />
       {/* <Slider /> */}
       <Layout>
-        <section className="my-10 md:my-16 md:mt-16">
+        <section className="my-10 md:my-20 md:mt-20">
           <div className="">
             <div>
               <div className="my-5">
