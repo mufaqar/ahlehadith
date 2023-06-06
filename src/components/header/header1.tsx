@@ -18,6 +18,7 @@ const Header1 = () => {
 
   const [scrollTop, setScrollTop] = useState<any>(0);
   const [headerClr, setHeaderClr] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   useEffect(() => {
     function onScroll() {
@@ -30,18 +31,30 @@ const Header1 = () => {
 
   }, [scrollTop]);
 
-
-
   return (
     <>
       <header className={`right-0 left-0 top-0 shadow-md  fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/70'}`}>
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Logo />
           <div className="flex text-white">
-            <nav className={` gap-5 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
-              {NavLinks.map((item: NavLinksType, idx: number) => {
-                return <Link href={item.link} className="uppercase font-ahle text-[20px] text-white hover:text-yellow hover:underline" key={idx}>{item.name}</Link>;
-              })}
+            <nav>
+              <ul className={` gap-5 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
+                {NavLinks.map((item: NavLinksType, idx: number) => {
+                  return <li key={idx}
+                    onClick={() => { setDropdown(!dropdown) }}>
+                    <Link href={item.link} className="uppercase font-ahle text-[20px] text-white hover:text-yellow hover:underline" >
+                      {item.name}
+                    </Link>
+                  </li>
+                })}
+              </ul>
+              <ul className={`absolute bg-white px-5 py-10 ${dropdown ? 'block' : 'hidden'}`}>
+                <li>
+                  <Link href="#" className="uppercase font-ahle text-[20px] text-black hover:text-yellow hover:underline" >
+                    sub menu
+                  </Link>
+                </li>
+              </ul>
             </nav>
             <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={() => setSearchOpen(true)} />
             <HiOutlineMenu size={24} className="me-5 mt-1 cursor-pointer" onClick={() => setOpenSide(!openSide)} />

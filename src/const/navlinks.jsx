@@ -1,38 +1,62 @@
 export const NavLinks = [
      {
+          id: 1,
           name: 'سرورق',
-          link: '/'
+          link: '/',
+          sub_menu: [
+               {
+                    name: 'قیادت',
+                    link: '#',
+               },
+               {
+                    name: 'کابینہ',
+                    link: '#',
+               },
+          ]
      },
      {
-          name: 'تعارف',
-          link: '/introduction'
+          id: 2,
+          name: 'تنظیم',
+          link: '/introduction',
      },
      {
-          name: 'ذیلی تنظیمات',
-          link: '/categories'
+          id: 3,
+          name: 'تاریخ و تعارف',
+          link: '/categories',
      },
      {
-          name: 'جماعتی خبریں',
-          link: '/blogs'
+          id: 4,
+          name: 'میڈیا',
+          link: '/blogs',
      },
      {
-          name: 'وڈیوز',
+          id: 5,
+          name: 'دعوت و تبلیغ',
           link: '/videos'
      },
      {
-          name: 'تصاویر',
+          id: 6,
+          name: ' اہلِ حدیث میگزین',
           link: '/pictures'
      },
      {
-          name: 'اسلامک گرافکس',
+          id: 7,
+          name: 'رفاہِ عامہ سرگرمیاں',
           link: '/islamic-graphics'
      },
      {
-          name: 'کتب لائبریری',
+          id: 8,
+          name: 'فتاویٰ جات',
           link: '/books-library'
      },
      {
-          name: 'ہفت روزہ اہلحدیث',
+          id: 9,
+          name: 'جوائن کریں',
           link: '/haft-roza-ahlehadith'
+     },
+     {
+          id: 10,
+          name: 'برائے رابطہ',
+          link: '/contact'
      },
 ]
