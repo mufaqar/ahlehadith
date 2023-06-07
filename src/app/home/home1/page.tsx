@@ -38,7 +38,7 @@ const Home1 = () => {
       </Layout>
 
       <section className="flex justify-center my-20 py-16 bg-[url('/assets/images/slid4.jpeg')] bg-center bg-no-repeat bg-cover bg-[#fff054] bg-blend-multiply relative before:content-[' '] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white/50 before:border group">
-        <div className="w-1/2 w-full. text-center px-5 bg-white dark:bg-light-gray z-[2]">
+        <div className="md:w-2/4 w-3/4 text-center px-5 bg-white dark:bg-light-gray z-[2]">
           <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading after:md:right-[45%] after:right-[40%]">
             خوش آمدید
           </h2>
