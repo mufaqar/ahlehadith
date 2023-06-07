@@ -11,7 +11,7 @@ export const NavLinks = [
           sub_menu: [
                {
                     name: 'قیادت',
-                    link: '#',
+                    link: '/introduction',
                },
                {
                     name: 'کابینہ',

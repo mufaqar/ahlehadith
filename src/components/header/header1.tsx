@@ -70,7 +70,7 @@ const Header1 = () => {
 
                     <ul className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 md:top-[70px] gap-4 md:bg-white ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
-                        return <Mega_menu sub_item={sub_item} key={_idx} />
+                        return <Mega_menu sub_item={sub_item} key={_idx} click={ () => setDropdown(null)} />
                         // <li key={_idx}>
                         //   <Link href={sub_item.link} className="uppercase font-ahle text-[20px] text-black hover:text-yellow hover:underline" >
                         //     {sub_item.name}
