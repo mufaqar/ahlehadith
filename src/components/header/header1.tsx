@@ -60,7 +60,7 @@ const Header1 = () => {
                       </Link>
                       {
                         item.sub_menu ? (
-                          <span>
+                          <span className="cursor-pointer">
                             <BiChevronDown onClick={() => handleMenu(item.id)} />
                           </span>
                         ) :
