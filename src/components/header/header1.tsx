@@ -3,7 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
-import { BiMenuAltRight, BiSearch } from "react-icons/bi";
+import { BiChevronDown, BiMenuAltRight, BiSearch } from "react-icons/bi";
 import { RxCross1, RxCross2 } from "react-icons/rx";
 import { NavLinks } from "../../const/navlinks";
 import { NavLinksType } from "@/utils/types";
@@ -12,12 +12,23 @@ import { SettingsContext } from "@/context/setting-context";
 import Input from "../controlls/input";
 import { HiOutlineMenu } from 'react-icons/hi'
 import SideSection from "../side-section/side-section";
+import Mega_menu from "../mega-menu/mega";
 
 const Header1 = () => {
   const { searchOpen, setSearchOpen, isMobile, setIsMobile, setOpenSide, openSide } = useContext(SettingsContext)
 
   const [scrollTop, setScrollTop] = useState<any>(0);
   const [headerClr, setHeaderClr] = useState(false);
+  const [dropdown, setDropdown] = useState(null);
+  const [handleSubmenu, setHandleSubmenu] = useState(null)
+  const handleMenu = (id: any) => {
+    if (dropdown === id) {
+      return setDropdown(null)
+    }
+    setDropdown(id)
+    //setDropdown(!dropdown)
+
+  }
 
   useEffect(() => {
     function onScroll() {
@@ -30,20 +41,49 @@ const Header1 = () => {
 
   }, [scrollTop]);
 
-
-
   return (
     <>
       <header className={`right-0 left-0 top-0 shadow-md  fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/70'}`}>
-        <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
-          <Logo />
-          <div className="flex text-white">
-            <nav className={` gap-5 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
-              {NavLinks.map((item: NavLinksType, idx: number) => {
-                return <Link href={item.link} className="uppercase font-ahle text-[20px] text-white hover:text-yellow hover:underline" key={idx}>{item.name}</Link>;
-              })}
+        <div className="container mx-auto flex py-2 justify-between items-center px-4">
+          <div className="md:w-[13%] bg-white rounded-lg ">
+            <Logo />
+          </div>
+          <div className="flex text-white md:w-[87%] justify-end">
+            <nav>
+              <ul className={`w-full gap-4 me-4 items-center justify-end ${isMobile ? 'absolute top-16 flex flex-col gap-6 p-10 left-0 right-0 bg-dark-gray w-full' : 'hidden md:flex'}`}>
+                {NavLinks.map((item: NavLinksType, idx: number) => {
+                  return <li key={idx} className="md:w-auto w-full"
+                  >
+                    <span className="flex items-center justify-between">
+                      <Link href={item.link} className="uppercase font-ahle text-[20px] text-white hover:text-yellow hover:underline" >
+                        {item.name}
+                      </Link>
+                      {
+                        item.sub_menu ? (
+                          <span className="cursor-pointer">
+                            <BiChevronDown onClick={() => handleMenu(item.id)} />
+                          </span>
+                        ) :
+                          ''
+                      }
+                    </span>
+
+                    <ul className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 md:top-[70px] gap-4 md:bg-white ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                      {item.sub_menu?.map((sub_item: any, _idx: any) => {
+                        return <Mega_menu sub_item={sub_item} key={_idx} click={ () => setDropdown(null)} />
+                        // <li key={_idx}>
+                        //   <Link href={sub_item.link} className="uppercase font-ahle text-[20px] text-black hover:text-yellow hover:underline" >
+                        //     {sub_item.name}
+                        //   </Link>
+                        // </li>
+                      })}
+                    </ul>
+                  </li>
+                })}
+              </ul>
+
             </nav>
-            <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={() => setSearchOpen(true)} />
+            <BiSearch size={24} className="me-5 ms-2 mt-1 cursor-pointer" onClick={() => setSearchOpen(true)} />
             <HiOutlineMenu size={24} className="me-5 mt-1 cursor-pointer" onClick={() => setOpenSide(!openSide)} />
             <ThemeSwitch />
             <div className="ml-3 md:hidden" onClick={() => setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32} /> : <RxCross1 size={32} />}</div>
