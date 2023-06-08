@@ -5,6 +5,9 @@ import Layout from '../Layout/Layout';
 import { PostMokeData } from '@/const/post';
 import Image from 'next/image';
 import { GetWordStr } from '@/utils';
+import { BsEnvelopeAtFill, BsPhone, BsPinMapFill } from 'react-icons/bs';
+import { NavLinks } from '@/const/navlinks';
+import { NavLinksType } from '@/utils/types';
 
 const Footer2 = () => {
   return (
@@ -20,55 +23,48 @@ const Footer2 = () => {
                 <p className="text-white font-ahle text-lg">
                   منہج سلف پر قرآن وحدیث کی تبلیغ واشاعت کی علمبردار - مرکزی جمعیت اہل حدیث پاکستان
                 </p>
-              </div>
-              <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
-                  ہمارا نیٹ ورک
-                </h2>
-                <p className="text-white font-ahle text-lg">
-                  وجود
-
-                  فورم
-
-                  بلاگ
-                </p>
-              </div>
-              <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
-                  تازہ ترین خبریں
-                </h2>
-                <div className="grid gap-5">
-                  {PostMokeData.slice(0, 3).map((item, idx) => {
-                    return (
-                      <div key={idx}
-                        className='flex gap-3'>
-                        <figure className="relative w-1/3 overflow-hidden">
-                          <Image
-                            src={item?.img}
-                            alt="image"
-                            width={400}
-                            height={400}
-                            className="w-full object-cover"
-                          />
-                        </figure>
-                        <div className='w-2/3'>
-                          <Link href={`/blogs/${item.title}`} className='text-lg text-start text-white hover:text-gray-300 font-ahle'>
-                            {GetWordStr(item?.title, 8)}
-                          </Link>
-                          <p className='text-base text-start text-gray-300 dark:text-gray-200 mt-2'>
-                            22 فروری
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
+                <div>
+                  <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle mt-5">
+                    ہمارا نیٹ ورک
+                  </h2>
+                  <ul >
+                    <li className="text-white font-ahle text-lg">
+                      وجود
+                    </li>
+                    <li className="text-white font-ahle text-lg">
+                      فورم
+                    </li>
+                    <li className="text-white font-ahle text-lg">
+                      بلاگ
+                    </li>
+                  </ul>
                 </div>
+              </div>
+              <div>
+                {NavLinks.slice(4, 5).map((item: NavLinksType, idx: number) => {
+                  return (
+                    <><h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                      {item.name}
+                    </h2>
+                      <ul className="">
+                        {item.sub_menu?.map((sub_item: any, _idx: any) => {
+                          return <li key={_idx} className="mb-4">
+                            <Link href={sub_item.link} className="text-white hover:text-gray-300 font-ahle text-lg">
+                              {sub_item.name}
+                            </Link>
+                          </li>
+                        })}
+                      </ul>
+                    </>
+                  );
+                })}
+
               </div>
               <div>
                 <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                   کوئک لنکس / فوری رسائی
                 </h2>
-                <ul className="">
+                <ul className="list-inside list-square marker:text-white">
                   <li className="mb-4">
                     <Link href="#" className="text-white hover:text-gray-300 font-ahle text-lg">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
@@ -101,14 +97,21 @@ const Footer2 = () => {
                   رابطہ کریں
                 </h2>
 
-                <p><a href='#'>ایڈریس: مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
-                </a></p>
-
-
-                <p>فون نمبر:  03208453475 – 04237729933</p>
-                <p>ای میل ایڈریس: mjah106@gmail.com</p>
-                <ul className=" grid gap-3">
-                  <li>
+                <p className='text-white font-ahle text-lg flex gap-2'>
+                  <BsPinMapFill size={20} />
+                  ایڈریس: مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
+                </p>
+                <p className='text-white font-ahle text-lg flex gap-2'>
+                  <BsPhone size={20} />
+                  فون نمبر:  03208453475 –
+                  04237729933
+                </p>
+                <p className='text-white font-ahle text-lg flex gap-2'>
+                  <BsEnvelopeAtFill size={20} />
+                  ای میل ایڈریس: mjah106@gmail.com
+                </p>
+                <ul className="flex gap-3 mt-5">
+                  <li className="text-white font-ahle text-lg">
                     <Link href="#" className="text-white hover:text-gray-300">
                       <FaFacebookF size={26} />
                     </Link>

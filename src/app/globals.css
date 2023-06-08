@@ -25,6 +25,9 @@
   font-style: normal;
 }
 
+body{
+  position: relative;
+}
 body,
 body p,
 html,

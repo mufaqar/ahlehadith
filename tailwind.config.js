@@ -30,6 +30,10 @@ module.exports = {
         'poppins': ['poppins'],
         'lato': ['lato'],
       },
+      listStyleType: {
+        square: 'square',
+        roman: 'upper-roman',
+      }
     },
   },
   plugins: [],
