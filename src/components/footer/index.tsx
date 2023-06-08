@@ -23,6 +23,18 @@ const Footer2 = () => {
               </div>
               <div>
                 <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                  ہمارا نیٹ ورک
+                </h2>
+                <p className="text-white font-ahle text-lg">
+                  وجود
+
+                  فورم
+
+                  بلاگ
+                </p>
+              </div>
+              <div>
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                   تازہ ترین خبریں
                 </h2>
                 <div className="grid gap-5">
@@ -86,8 +98,15 @@ const Footer2 = () => {
               </div>
               <div>
                 <h2 className="mb-6 text-2xl text-white uppercase ahle-heading" >
-                  فالو کریں
+                  رابطہ کریں
                 </h2>
+
+                <p><a href='#'>ایڈریس: مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
+                </a></p>
+
+
+                <p>فون نمبر:  03208453475 – 04237729933</p>
+                <p>ای میل ایڈریس: mjah106@gmail.com</p>
                 <ul className=" grid gap-3">
                   <li>
                     <Link href="#" className="text-white hover:text-gray-300">
@@ -109,7 +128,7 @@ const Footer2 = () => {
             </div>
 
           </div>
-        </Layout>
+        </Layout >
         <div className='bg-[#090909]'>
           <Layout>
             <div className="py-6">
@@ -119,7 +138,7 @@ const Footer2 = () => {
             </div>
           </Layout>
         </div>
-      </footer>
+      </footer >
     </>
   )
 }
