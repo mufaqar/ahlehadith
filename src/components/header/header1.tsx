@@ -94,7 +94,7 @@ const Header1 = () => {
         searchOpen && <div className="fixed top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 " onClick={() => setSearchOpen(false)} ><SearchBox /></div>
       }
       <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out overflow-y-auto no-scrollbar ${openSide ? 'left-0' : '-left-[100%]'}`}><SideSection /></section>
-      <div onClick={() => { setDropdown(null), setSearchOpen(false), setOpenSide(false)  }} className={`${openSide || dropdown || searchOpen ? 'block z-[1]' : 'block -z-30'} bg-red-900 opacity-0  absolute top-0 bottom-0 left-0 right-0 `}></div>
+      <div onClick={() => { setDropdown(null), setSearchOpen(false), setOpenSide(false)  }} className={`${openSide || dropdown || searchOpen ? 'block z-[1]' : 'block -z-30'} bg-red-800 opacity-0  absolute top-0 bottom-0 left-0 right-0 `}></div>
     </>
   );
 };
