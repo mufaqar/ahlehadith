@@ -74,7 +74,7 @@ const Home1 = () => {
                     تازہ ترین وڈیوز
                   </h2>
                   <Link
-                    href="#"
+                    href="/videos"
                     className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
                   >
                     وڈیو وزٹ  کریں
@@ -91,7 +91,7 @@ const Home1 = () => {
                     کتب لائبریری
                   </h2>
                   <Link
-                    href="#"
+                    href="/books-library"
                     className=" p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
                   >
                     لائبریری وزٹ کریں
@@ -115,7 +115,7 @@ const Home1 = () => {
                 اسلامک گرافکس
               </h2>
               <Link
-                href="#"
+                href="/islamic-graphics"
                 className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
               >
                 اسلامک گرافکس وزٹ کریں
