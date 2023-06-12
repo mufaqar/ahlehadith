@@ -24,7 +24,7 @@ const Footer = () => {
                   <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle mt-5">
                     ہمارا نیٹ ورک
                   </h2>
-                  <ul >
+                  <ul className='list-inside list-square marker:text-white'>
                     <li className="text-white font-ahle text-lg">
                       وجود
                     </li>
@@ -43,7 +43,7 @@ const Footer = () => {
                     <><h2 key={idx} className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                       {item.name}
                     </h2>
-                      <ul className="">
+                      <ul className="list-inside list-square marker:text-white">
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
                           return <li key={_idx} className="mb-4">
                             <Link href={sub_item.link} className="text-white hover:text-gray-300 font-ahle text-lg">

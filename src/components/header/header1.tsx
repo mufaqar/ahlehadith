@@ -50,17 +50,17 @@ const Header1 = () => {
           </div>
           <div className="flex text-white md:w-[87%] justify-end">
             <nav>
-              <ul className={`w-full gap-4 me-4 items-center justify-end ${isMobile ? 'absolute top-16 flex flex-col gap-6 p-10 left-0 right-0 bg-dark-gray w-full' : 'hidden md:flex'}`}>
+              <ul className={`w-full gap-4 me-4 items-center justify-end ${isMobile ? 'absolute top-16 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
                 {NavLinks.map((item: NavLinksType, idx: number) => {
                   return <li key={idx} className="md:w-auto w-full"
                   >
                     <span className="flex items-center justify-between">
-                      <Link href={item.link} className="uppercase font-ahle text-[20px] text-white hover:text-yellow hover:underline" >
+                      <Link href={item.link} className="uppercase font-ahle text-[20px] md:text-white text-pure hover:text-yellow hover:underline" >
                         {item.name}
                       </Link>
                       {
                         item.sub_menu ? (
-                          <span className="cursor-pointer">
+                          <span className="cursor-pointer md:text-white text-pure">
                             <BiChevronDown onMouseEnter={() => handleMenu(item.id)} />
                           </span>
                         ) :
@@ -68,7 +68,7 @@ const Header1 = () => {
                       }
                     </span>
 
-                    <ul className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 md:top-[70px] gap-4 md:bg-white ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                    <ul className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 md:top-[71px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
                         return <Mega_menu sub_item={sub_item} key={_idx} click={ () => setDropdown(null)} />
                         // <li key={_idx}>
