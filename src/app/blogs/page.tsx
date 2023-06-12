@@ -2,7 +2,6 @@
 
 import Layout from "@/components/Layout/Layout";
 import Pagination from "@/components/Pagination/pagination";
-import Slider from "@/components/Slider/Slider";
 import { SideBarHeading } from "@/components/aside";
 import Featured_News from "@/components/featured-news/news";
 import Footer from "@/components/footer";
@@ -10,11 +9,9 @@ import Header1 from "@/components/header/header1";
 import PostDesign from "@/components/post-design/post-design";
 import Button from "@/components/ui/button";
 import { PostMokeData } from "@/const/post";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import {
-  AiOutlinePlusCircle,
   AiOutlineClockCircle,
   AiOutlineEye,
 } from "react-icons/ai";
@@ -41,51 +38,6 @@ const Blog = () => {
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
             {PostMokeData.map((post, idx) => {
               return (
-                // <div key={idx}>
-                //   <figure className="relative group overflow-hidden">
-                //     <Image
-                //       src={item?.img}
-                //       alt="image"
-                //       width={400}
-                //       height={400}
-                //       className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
-                //     />
-                //     <div className="absolute inset-0 bg-black/40 hidden group-hover:block">
-                //       <div className="flex flex-col justify-center items-center h-full text-yellow">
-                //         <AiOutlinePlusCircle
-                //           size={30}
-                //           className="group-hover:scale-110 transition-all duration ease-in-out"
-                //         />
-                //         <span className="text-sm md:text-base">View More</span>
-                //       </div>
-                //       <Link
-                //         href={item?.title}
-                //         className="text-white flex gap-5 text-sm md:text-base justify-center item-center absolute bottom-2 pt-2 md:bottom-4 w-full border-t-[1px] border-gray-300 md:pt-4"
-                //       >
-                //         <span className="flex items-center gap-1">
-                //           <i>
-                //             <AiOutlineClockCircle />
-                //           </i>{" "}
-                //           2 .
-                //         </span>
-                //         <span className="flex items-center gap-1">
-                //           <i>
-                //             <AiOutlineEye className="text-lg" />
-                //           </i>{" "}
-                //           1.3k
-                //         </span>
-                //       </Link>
-                //     </div>
-                //   </figure>
-                //   <p className="mt-3 text-center font-ahle uppercase font-light text-gray-400">
-                //     {item?.categories}
-                //   </p>
-                //   <Link href={item?.title}>
-                //     <h2 className="text-center font-ahle text-lg">
-                //       {item?.title}
-                //     </h2>
-                //   </Link>
-                // </div>
                 <PostDesign post={post} idx={idx} layout={2} key={idx} />
               );
             })}

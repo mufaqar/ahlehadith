@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Button from "../ui/button";
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
-import { CgArrowLongLeft } from 'react-icons/cg'
 
 const SliderComponent = (_data: any) => {
   const settings = {

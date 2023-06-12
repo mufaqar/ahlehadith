@@ -1,6 +1,5 @@
 "use client";
 
-import Layout from "@/components/Layout/Layout";
 import Footer from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";

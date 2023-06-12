@@ -43,7 +43,7 @@ const Main1 = () => {
 export default Main1;
 
 const MainPost = ({ className, post }: any) => {
-  console.log("🚀 ~ file: main1.tsx:43 ~ MainPost ~ post:", post)
+  //console.log("🚀 ~ file: main1.tsx:43 ~ MainPost ~ post:", post)
   return (
     <div
       className="relative h-[300px] md:h-full group bg-cover bg-no-repeat bg-center md:mt-[56px]"
