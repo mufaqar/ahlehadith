@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout/Layout';
-import Footer2 from '@/components/footer';
+import Footer from '@/components/footer';
 import Header1 from '@/components/header/header1';
 import Gallery_images from '@/components/image-gallery';
 import PageBanner from '@/components/page-banner/banner';
@@ -23,7 +23,7 @@ const Islamic_Graphics = () => {
                     </div>
                 </section>
             </Layout>
-            <Footer2 />
+            <Footer />
         </>
     )
 }

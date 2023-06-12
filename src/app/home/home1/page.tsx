@@ -11,7 +11,7 @@ import PostDesign2 from "@/components/post-design/post-design-2";
 import VideosGallery from "@/components/videos-gallery/videos";
 import Featured_News from "../../../components/featured-news/news";
 import Gallery_images from "@/components/image-gallery";
-import Footer2 from "@/components/footer";
+import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import ImagesSection from "@/components/images-section/imagesect";
@@ -125,7 +125,7 @@ const Home1 = () => {
           <ImagesSection />
         </div>
       </Layout>
-      <Footer2 />
+      <Footer />
     </>
   );
 };

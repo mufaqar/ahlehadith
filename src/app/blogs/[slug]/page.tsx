@@ -2,7 +2,7 @@
 
 import Layout from "@/components/Layout/Layout";
 import Aside, { SideBarHeading } from "@/components/aside";
-import Footer1 from "@/components/footer";
+import Footer from "@/components/footer";
 import Insta from "@/components/insta";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
@@ -189,7 +189,7 @@ const Slug = () => {
         </section>
       </Layout>
       <Insta />
-      <Footer1 />
+      <Footer />
     </>
   );
 };

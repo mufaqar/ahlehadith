@@ -1,7 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout/Layout";
-import Footer1 from "@/components/footer";
+import Footer from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
 import React from "react";
@@ -20,7 +20,7 @@ export default function ConatctLayout({
           image="/assets/images/contat.jpg"
         />
         <Layout>{children}</Layout>
-        <Footer1/>
+        <Footer/>
       </body>
     </html>
   );

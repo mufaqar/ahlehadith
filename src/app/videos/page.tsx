@@ -1,6 +1,6 @@
 "use client"
 import Layout from '@/components/Layout/Layout'
-import Footer2 from '@/components/footer'
+import Footer from '@/components/footer'
 import Header1 from '@/components/header/header1'
 import PageBanner from '@/components/page-banner/banner'
 import VideosGallery from '@/components/videos-gallery/videos'
@@ -39,7 +39,7 @@ const Videos = () => {
                     </div>
                 </section>
             </Layout>
-            <Footer2 />
+            <Footer />
         </>
     )
 }

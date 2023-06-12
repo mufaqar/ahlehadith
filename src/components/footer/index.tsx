@@ -9,7 +9,7 @@ import { BsEnvelopeAtFill, BsPhone, BsPinMapFill } from 'react-icons/bs';
 import { NavLinks } from '@/const/navlinks';
 import { NavLinksType } from '@/utils/types';
 
-const Footer2 = () => {
+const Footer = () => {
   return (
     <>
       <footer className="bg-[#212121]">
@@ -43,7 +43,7 @@ const Footer2 = () => {
               <div>
                 {NavLinks.slice(4, 5).map((item: NavLinksType, idx: number) => {
                   return (
-                    <><h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                    <><h2 key={idx} className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                       {item.name}
                     </h2>
                       <ul className="">
@@ -146,4 +146,4 @@ const Footer2 = () => {
   )
 }
 
-export default Footer2
+export default Footer

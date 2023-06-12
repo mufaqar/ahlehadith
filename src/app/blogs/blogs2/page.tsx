@@ -4,7 +4,7 @@ import Layout from "@/components/Layout/Layout";
 import Pagination from "@/components/Pagination/pagination";
 import Slider from "@/components/Slider/Slider";
 import { SideBarHeading } from "@/components/aside";
-import Footer1 from "@/components/footer";
+import Footer from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
@@ -144,7 +144,7 @@ const Blog = () => {
           <Pagination data={PostMokeData.slice(5)} PaginatedData={PaginatedData} />
         </section>
       </Layout>
-      <Footer1 />
+      <Footer />
     </>
   );
 };
