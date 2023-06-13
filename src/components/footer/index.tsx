@@ -101,18 +101,18 @@ const Footer = () => {
                   رابطہ کریں
                 </h2>
 
-                <p className='text-pure font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2 mb-3'>
                   <BsPinMapFill size={20} />
-                  ایڈریس: مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
+                  مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
                 </p>
-                <p className='text-pure font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2 mb-3'>
                   <BsPhone size={20} />
-                  فون نمبر:  03208453475 –
+                  03208453475 –
                   04237729933
                 </p>
-                <p className='text-pure font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2 mb-3'>
                   <BsEnvelopeAtFill size={20} />
-                  ای میل ایڈریس: mjah106@gmail.com
+                  mjah106@gmail.com
                 </p>
                 <ul className="flex gap-3 mt-5">
                   <li className='p-2 rounded-full border border-yellow hover:border-pure text-yellow hover:text-pure'>
