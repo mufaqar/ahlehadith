@@ -65,6 +65,16 @@ h6 {
   width: 60px;
 }
 
+.footer-heading:before {
+  position: absolute;
+  content: '';
+  bottom: -14px;
+  right: -13px;
+  height: 8px;
+  background-color: #249bca;
+  width: 8px;
+}
+
 @layer base {
   :root {
     --dark-gray: #181818;
