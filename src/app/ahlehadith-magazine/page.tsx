@@ -6,12 +6,12 @@ import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import Gallery_images from '@/components/image-gallery';
 
-const Pictures = () => {
+const Ahlehadith_Magazine = () => {
   return (
     <>
       <Header1 />
       <PageBanner
-        title="تصاویر"
+        title="اہلِ حدیث میگزین"
         subTitle=""
         image="/assets/images/contat.jpg"
         buttontext=""
@@ -27,4 +27,4 @@ const Pictures = () => {
   )
 }
 
-export default Pictures
+export default Ahlehadith_Magazine

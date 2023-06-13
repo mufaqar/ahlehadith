@@ -73,7 +73,7 @@ export const NavLinks = [
           sub_menu: [
                {
                     name: 'تصاویر',
-                    link: '#',
+                    link: '/pictures',
                },
                {
                     name: 'ویڈیو',
@@ -115,7 +115,7 @@ export const NavLinks = [
      {
           id: 6,
           name: ' اہلِ حدیث میگزین',
-          link: '/pictures',
+          link: '/ahlehadith-magazine',
           sub_menu: [
                {
                     name: 'درس قرآن و حدیث',
