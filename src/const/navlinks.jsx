@@ -7,7 +7,7 @@ export const NavLinks = [
      {
           id: 2,
           name: 'تنظیم',
-          link: '/introduction',
+          link: '/categories',
           sub_menu: [
                {
                     name: 'قیادت',
@@ -42,7 +42,7 @@ export const NavLinks = [
      {
           id: 3,
           name: 'تاریخ و تعارف',
-          link: '/categories',
+          link: '/introduction',
           sub_menu: [
                {
                     name: 'منشور',
@@ -149,7 +149,7 @@ export const NavLinks = [
      {
           id: 10,
           name: 'برائے رابطہ',
-          link: '/contact',
+          link: '/contact-us',
           sub_menu: [
                {
                     name: 'ایڈریس',
