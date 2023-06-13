@@ -40,7 +40,8 @@ const Footer = () => {
               <div>
                 {NavLinks.slice(4, 5).map((item: NavLinksType, idx: number) => {
                   return (
-                    <><h2 key={idx} className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                    <div key={idx}>
+                    <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
                       {item.name}
                     </h2>
                       <ul className="list-inside list-square marker:text-white">
@@ -52,7 +53,7 @@ const Footer = () => {
                           </li>
                         })}
                       </ul>
-                    </>
+                    </div>
                   );
                 })}
 
