@@ -55,7 +55,7 @@ const Header1 = () => {
                   return <li key={idx} className="md:w-auto w-full"
                   >
                     <span className="flex items-center justify-between">
-                      <Link href={item.link} className="uppercase font-ahle text-[20px] md:text-white text-pure hover:text-yellow hover:underline" >
+                      <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[20px] md:text-white text-pure hover:text-yellow hover:underline" >
                         {item.name}
                       </Link>
                       {
@@ -68,9 +68,9 @@ const Header1 = () => {
                       }
                     </span>
 
-                    <ul className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[71px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                    <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[71px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
-                        return <Mega_menu sub_item={sub_item} key={_idx} click={ () => setDropdown(null)} />
+                        return <Mega_menu sub_item={sub_item} key={_idx} click={ () => { setDropdown(null), setIsMobile(false) }} />
                         // <li key={_idx}>
                         //   <Link href={sub_item.link} className="uppercase font-ahle text-[20px] text-black hover:text-yellow hover:underline" >
                         //     {sub_item.name}
@@ -94,7 +94,7 @@ const Header1 = () => {
         searchOpen && <div className="fixed top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 " onClick={() => setSearchOpen(false)} ><SearchBox /></div>
       }
       <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out overflow-y-auto no-scrollbar ${openSide ? 'left-0' : '-left-[100%]'}`}><SideSection /></section>
-      <div onClick={() => { setDropdown(null), setSearchOpen(false), setOpenSide(false)  }} className={`${openSide || dropdown || searchOpen ? 'block z-[1]' : 'block -z-30'} bg-red-800 opacity-0  absolute top-0 bottom-0 left-0 right-0 `}></div>
+      
     </>
   );
 };
