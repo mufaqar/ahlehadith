@@ -52,7 +52,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           </h2>
         </div>
         {layout !== 3 && (
-          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body, 16)}</p>
+          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body)}</p>
         )}
       </div>
     </div>
