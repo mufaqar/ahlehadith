@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="ur" dir="rtl">
       <body className={`dark:bg-dark-gray ${inter.className}`} >
         <SettingsProvider>
           <ThemeProvider enableSystem={false} attribute="class">{children}</ThemeProvider>

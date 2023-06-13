@@ -11,7 +11,7 @@ export default function ConatctLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="ur" dir="rtl">
       <body>
         <Header1 />
         <PageBanner
