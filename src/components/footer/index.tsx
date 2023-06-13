@@ -9,30 +9,36 @@ import { NavLinksType } from '@/utils/types';
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#212121]">
+      <footer className="bg-light-gray">
         <Layout>
           <div className="py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
               <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle">
                   ہمارے بارے میں
                 </h2>
-                <p className="text-white font-ahle text-lg">
+                <p className="text-pure font-ahle text-lg">
                   منہج سلف پر قرآن وحدیث کی تبلیغ واشاعت کی علمبردار - مرکزی جمعیت اہل حدیث پاکستان
                 </p>
                 <div>
-                  <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle mt-5">
+                  <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle mt-5">
                     ہمارا نیٹ ورک
                   </h2>
-                  <ul className='list-inside list-square marker:text-white'>
-                    <li className="text-white font-ahle text-lg">
-                      وجود
+                  <ul className='list-inside list-square marker:text-pure'>
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                        وجود
+                      </Link>
                     </li>
-                    <li className="text-white font-ahle text-lg">
-                      فورم
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                        فورم
+                      </Link>
                     </li>
-                    <li className="text-white font-ahle text-lg">
-                      بلاگ
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                        بلاگ
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -41,13 +47,13 @@ const Footer = () => {
                 {NavLinks.slice(4, 5).map((item: NavLinksType, idx: number) => {
                   return (
                     <div key={idx}>
-                    <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
-                      {item.name}
-                    </h2>
-                      <ul className="list-inside list-square marker:text-white">
+                      <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle">
+                        {item.name}
+                      </h2>
+                      <ul className="list-inside list-square marker:text-pure">
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
-                          return <li key={_idx} className="mb-4">
-                            <Link href={sub_item.link} className="text-white hover:text-gray-300 font-ahle text-lg">
+                          return <li key={_idx} className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                            <Link href={sub_item.link} className="text-pure hover:opacity-80 font-ahle text-lg">
                               {sub_item.name}
                             </Link>
                           </li>
@@ -59,69 +65,69 @@ const Footer = () => {
 
               </div>
               <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle">
+                <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle">
                   کوئک لنکس / فوری رسائی
                 </h2>
-                <ul className="list-inside list-square marker:text-white">
-                  <li className="mb-4">
-                    <Link href="#" className="text-white hover:text-gray-300 font-ahle text-lg">
+                <ul className="list-inside list-square marker:text-pure">
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
                     </Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="/blogs" className="text-white hover:text-gray-300 font-ahle text-lg">
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="/blogs" className="text-pure hover:opacity-80 font-ahle text-lg">
                       جماعتی خبریں
                     </Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="/videos" className="text-white hover:text-gray-300 font-ahle text-lg">وڈیوز</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="/videos" className="text-pure hover:opacity-80 font-ahle text-lg">وڈیوز</Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="/pictures" className="text-white hover:text-gray-300 font-ahle text-lg">تصاویر</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="/pictures" className="text-pure hover:opacity-80 font-ahle text-lg">تصاویر</Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="islamic-graphics" className="text-white hover:text-gray-300 font-ahle text-lg">اسلامک گرافکس</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="islamic-graphics" className="text-pure hover:opacity-80 font-ahle text-lg">اسلامک گرافکس</Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="/books-library" className="text-white hover:text-gray-300 font-ahle text-lg">کتب لائبریری</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="/books-library" className="text-pure hover:opacity-80 font-ahle text-lg">کتب لائبریری</Link>
                   </li>
-                  <li className="mb-4">
-                    <Link href="/contact-us" className="text-white hover:text-gray-300 font-ahle text-lg">رابطہ کریں</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
+                    <Link href="/contact-us" className="text-pure hover:opacity-80 font-ahle text-lg">رابطہ کریں</Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading" >
+                <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading" >
                   رابطہ کریں
                 </h2>
 
-                <p className='text-white font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2'>
                   <BsPinMapFill size={20} />
                   ایڈریس: مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
                 </p>
-                <p className='text-white font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2'>
                   <BsPhone size={20} />
                   فون نمبر:  03208453475 –
                   04237729933
                 </p>
-                <p className='text-white font-ahle text-lg flex gap-2'>
+                <p className='text-pure font-ahle text-lg flex gap-2'>
                   <BsEnvelopeAtFill size={20} />
                   ای میل ایڈریس: mjah106@gmail.com
                 </p>
                 <ul className="flex gap-3 mt-5">
-                  <li className="text-white font-ahle text-lg">
-                    <Link href="#" className="text-white hover:text-gray-300">
-                      <FaFacebookF size={26} />
+                  <li className='p-2 rounded-full border border-yellow hover:border-pure text-yellow hover:text-pure'>
+                    <Link href="#" className="">
+                      <FaFacebookF size={24} />
                     </Link>
                   </li>
-                  <li>
-                    <Link href="#" className="text-white hover:text-gray-300">
-                      <FaTwitter size={26} />
+                  <li className='p-2 rounded-full border border-yellow hover:border-pure text-yellow hover:text-pure'>
+                    <Link href="#" className="">
+                      <FaTwitter size={24} />
                     </Link>
                   </li>
-                  <li>
-                    <Link href="#" className="text-white hover:text-gray-300">
-                      <FaYoutube size={26} />
+                  <li className='p-2 rounded-full border border-yellow hover:border-pure text-yellow hover:text-pure'>
+                    <Link href="#" className="">
+                      <FaYoutube size={24} />
                     </Link>
                   </li>
                 </ul>
@@ -130,10 +136,10 @@ const Footer = () => {
 
           </div>
         </Layout >
-        <div className='bg-[#090909]'>
+        <div className='bg-dark-gray'>
           <Layout>
             <div className="py-6">
-              <span className="block text-base text-center text-gray-300 dark:text-gray-200 font-ahle">
+              <span className="block text-base text-center text-white/60 font-ahle">
                 2023© مرکزی جمعیت اہل حدیث پاکستان
               </span>
             </div>
