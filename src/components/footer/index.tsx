@@ -24,19 +24,19 @@ const Footer = () => {
                   <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle mt-5">
                     ہمارا نیٹ ورک
                   </h2>
-                  <ul className='list-inside list-square marker:text-pure'>
-                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
-                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                  <ul className='list-inside list-square marker:text-yellow'>
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[11px] before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                         وجود
                       </Link>
                     </li>
-                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
-                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[11px] before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                         فورم
                       </Link>
                     </li>
-                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-2.5 before:right-1">
-                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                    <li className="text-pure font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[11px] before:right-1">
+                      <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                         بلاگ
                       </Link>
                     </li>
@@ -50,10 +50,10 @@ const Footer = () => {
                       <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle">
                         {item.name}
                       </h2>
-                      <ul className="list-inside list-square marker:text-pure">
+                      <ul className="list-inside list-square marker:text-yellow">
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
-                          return <li key={_idx} className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                            <Link href={sub_item.link} className="text-pure hover:opacity-80 font-ahle text-lg">
+                          return <li key={_idx} className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                            <Link href={sub_item.link} className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                               {sub_item.name}
                             </Link>
                           </li>
@@ -68,31 +68,31 @@ const Footer = () => {
                 <h2 className="mb-6 text-2xl text-pure uppercase ahle-heading font-ahle">
                   کوئک لنکس / فوری رسائی
                 </h2>
-                <ul className="list-inside list-square marker:text-pure">
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg">
+                <ul className="list-inside list-square marker:text-yellow">
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="#" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
                     </Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="/blogs" className="text-pure hover:opacity-80 font-ahle text-lg">
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="/blogs" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">
                       جماعتی خبریں
                     </Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="/videos" className="text-pure hover:opacity-80 font-ahle text-lg">وڈیوز</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="/videos" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">وڈیوز</Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="/pictures" className="text-pure hover:opacity-80 font-ahle text-lg">تصاویر</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="/pictures" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">تصاویر</Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="islamic-graphics" className="text-pure hover:opacity-80 font-ahle text-lg">اسلامک گرافکس</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="islamic-graphics" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">اسلامک گرافکس</Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="/books-library" className="text-pure hover:opacity-80 font-ahle text-lg">کتب لائبریری</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="/books-library" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">کتب لائبریری</Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[2px] before:w-3 before:bg-pure before:absolute before:top-3 before:right-1">
-                    <Link href="/contact-us" className="text-pure hover:opacity-80 font-ahle text-lg">رابطہ کریں</Link>
+                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-green-400 before:absolute before:top-[13px] before:right-1">
+                    <Link href="/contact-us" className="text-pure hover:opacity-80 font-ahle text-lg ms-1">رابطہ کریں</Link>
                   </li>
                 </ul>
               </div>
