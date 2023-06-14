@@ -11,15 +11,7 @@ export const metadata = {
 const Introduction = () => {
   return (
     <>
-      <Header1 />
-      <PageBanner
-        title="تعارف"
-        subTitle=""
-        image="/assets/images/contat.jpg"
-        buttontext=""
-        buttonLink=""
-      />
-      <Footer />
+      Introduction
     </>
   );
 };

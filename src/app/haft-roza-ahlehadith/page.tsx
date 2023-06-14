@@ -7,23 +7,12 @@ import Link from 'next/link';
 import React from 'react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
-export const metadata = {
-    title: 'Haft Roza Ahlehadith',
-    description: '',
-  };
-  
+
 
 const Haft_Roza_Ahlehadith = () => {
     return (
         <>
-            <Header1 />
-            <PageBanner
-                title="ہفت روزہ اہلحدیث"
-                subTitle=""
-                image="/assets/images/contat.jpg"
-                buttontext=""
-                buttonLink=""
-            />
+            
             <Layout>
                 <section className="my-10 md:my-16 md:mt-16 grid md:grid-cols-2 grid-cols-1">
                     <div>
@@ -75,7 +64,7 @@ const Haft_Roza_Ahlehadith = () => {
                     </div>
                 </section>
             </Layout>
-            <Footer />
+
         </>
     )
 }

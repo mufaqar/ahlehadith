@@ -5,28 +5,17 @@ import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import Gallery_images from '@/components/image-gallery';
 
-export const metadata = {
-  title: 'Ahlehadith Magazine',
-  description: '',
-};
+
 
 const Ahlehadith_Magazine = () => {
   return (
     <>
-      <Header1 />
-      <PageBanner
-        title="اہلِ حدیث میگزین"
-        subTitle=""
-        image="/assets/images/contat.jpg"
-        buttontext=""
-        buttonLink=""
-      />
+
       <Layout>
         <section className="my-20">
         <Gallery_images />
         </section>
       </Layout>
-      <Footer />
     </>
   )
 }
