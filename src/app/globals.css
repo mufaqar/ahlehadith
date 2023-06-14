@@ -59,19 +59,19 @@ h6 {
   position: absolute;
   content: '';
   bottom: -12px;
-  right: 0;
+  right: 13px;
   padding: 2px;
   background-color: #fff054;
   width: 60px;
 }
 
-.footer-heading:before {
+.ahle-heading:before {
   position: absolute;
   content: '';
   bottom: -14px;
-  right: -13px;
+  right: 0;
   height: 8px;
-  background-color: #249bca;
+  background-color: #397524;
   width: 8px;
 }
 
