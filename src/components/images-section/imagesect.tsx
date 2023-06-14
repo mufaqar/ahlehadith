@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';

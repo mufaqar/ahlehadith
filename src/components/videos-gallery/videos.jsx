@@ -1,3 +1,6 @@
+"use client";
+
+
 import Image from 'next/image';
 import React, { useContext, useState } from 'react';
 import ReactPlayer from 'react-player';

@@ -1,10 +1,14 @@
-"use client"
 import Footer from '@/components/footer';
 import Header1 from '@/components/header/header1';
 import PageBanner from '@/components/page-banner/banner';
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import Gallery_images from '@/components/image-gallery';
+
+export const metadata = {
+  title: 'Ahlehadith Magazine',
+  description: '',
+};
 
 const Ahlehadith_Magazine = () => {
   return (

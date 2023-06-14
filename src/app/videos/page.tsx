@@ -1,4 +1,3 @@
-"use client"
 import Layout from '@/components/Layout/Layout'
 import Footer from '@/components/footer'
 import Header1 from '@/components/header/header1'
@@ -6,17 +5,17 @@ import PageBanner from '@/components/page-banner/banner'
 import VideosGallery from '@/components/videos-gallery/videos'
 import React from 'react'
 
+
+export const metadata = {
+    title: "Videos",
+    description: "",
+  };
+  
+
 const Videos = () => {
     return (
         <>
-            <Header1 />
-            <PageBanner
-                title="وڈیوز"
-                subTitle=""
-                image="/assets/images/contat.jpg"
-                buttontext=""
-                buttonLink=""
-            />
+
             <Layout>
                 <section className="my-10 md:my-16 md:mt-16">
                     <div>
@@ -39,7 +38,7 @@ const Videos = () => {
                     </div>
                 </section>
             </Layout>
-            <Footer />
+         
         </>
     )
 }

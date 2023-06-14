@@ -1,11 +1,14 @@
+
 import Footer from "@/components/footer";
 import Header1 from "@/components/header/header1";
-import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 
+export const metadata = {
+     title: 'Blogs',
+     description: '',
+   };
 
-
-export default function ContactLayout({
+export default function BlogLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -14,13 +17,6 @@ export default function ContactLayout({
     <html lang="ur" dir="rtl">
       <body>
         <Header1 />
-        <PageBanner
-          title="رابطہ کریں"
-          subTitle=""
-          image="/assets/images/contat.jpg"
-          buttontext=""
-          buttonLink=""
-        />
         {children}
         <Footer/>
       </body>

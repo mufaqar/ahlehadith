@@ -5,6 +5,12 @@ import Gallery_images from '@/components/image-gallery';
 import PageBanner from '@/components/page-banner/banner';
 import React from 'react';
 
+export const metadata = {
+    title: "Islamic Graphics",
+    description: "",
+  };
+  
+
 const Islamic_Graphics = () => {
     return (
         <>

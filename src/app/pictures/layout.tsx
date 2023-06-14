@@ -1,16 +1,14 @@
-
 import Footer from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 
 export const metadata = {
-  title: 'About Us',
-  description: '',
+  title: "Picture",
+  description: "",
 };
 
-
-export default function ConatctLayout({
+export default function PictureLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -20,14 +18,14 @@ export default function ConatctLayout({
       <body>
         <Header1 />
         <PageBanner
-          title="About Us"
-          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          title="تصاویر"
+          subTitle=""
           image="/assets/images/contat.jpg"
-          buttontext="By this time"
-          buttonLink="#"
+          buttontext=""
+          buttonLink=""
         />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

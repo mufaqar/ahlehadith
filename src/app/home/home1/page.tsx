@@ -1,4 +1,4 @@
-"use client";
+
 import Layout from "@/components/Layout/Layout";
 import Header1 from "@/components/header/header1";
 import Slider from "@/components/Slider/Slider";
@@ -15,6 +15,9 @@ import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import ImagesSection from "@/components/images-section/imagesect";
+
+
+
 
 const Home1 = () => {
   return (

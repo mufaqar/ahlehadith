@@ -26,7 +26,6 @@ const Blog = () => {
 
   return (
     <>
-      <Header1 />
       <section className="md:mt-20 sm:mt-14 mt-10 pt-3">
         <Featured_News />
       </section>
@@ -92,7 +91,6 @@ const Blog = () => {
           <Pagination data={PostMokeData.slice(5)} PaginatedData={PaginatedData} />
         </section>
       </Layout>
-      <Footer />
     </>
   );
 };

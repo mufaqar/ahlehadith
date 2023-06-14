@@ -5,6 +5,11 @@ import PageBanner from '@/components/page-banner/banner';
 import PostDesign2 from '@/components/post-design/post-design-2';
 import React from 'react';
 
+export const metadata = {
+    title: 'Book Library',
+    description: '',
+  };
+
 const Books_Library = () => {
     return (
         <>

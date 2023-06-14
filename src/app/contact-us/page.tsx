@@ -5,6 +5,11 @@ import Link from "next/link";
 import React from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhoneSquareAlt } from "react-icons/fa";
 
+export const metadata = {
+  title: 'Contact Us',
+  description: '',
+};
+
 const ContactUs = () => {
   return (
     <>
