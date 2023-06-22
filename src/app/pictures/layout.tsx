@@ -14,8 +14,7 @@ export default function PictureLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         <PageBanner
           title="تصاویر"
@@ -26,7 +25,6 @@ export default function PictureLayout({
         />
         {children}
         <Footer />
-      </body>
-    </html>
+      </>
   );
 }

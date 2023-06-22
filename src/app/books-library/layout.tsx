@@ -14,8 +14,7 @@ export default function BookLibraryLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         <PageBanner
           title="کتب لائبریری"
@@ -26,7 +25,6 @@ export default function BookLibraryLayout({
         />
         {children}
         <Footer />
-      </body>
-    </html>
+      </>
   );
 }

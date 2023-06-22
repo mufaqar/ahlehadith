@@ -14,8 +14,7 @@ export default function VideosLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         <PageBanner
           title="وڈیوز"
@@ -26,7 +25,6 @@ export default function VideosLayout({
         />
         {children}
         <Footer />
-      </body>
-    </html>
+      </>
   );
 }

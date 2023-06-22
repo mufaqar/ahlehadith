@@ -11,8 +11,7 @@ export default function ContactLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         <PageBanner
           title="رابطہ کریں"
@@ -23,7 +22,6 @@ export default function ContactLayout({
         />
         {children}
         <Footer/>
-      </body>
-    </html>
+      </>
   );
 }

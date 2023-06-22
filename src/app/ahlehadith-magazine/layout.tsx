@@ -14,8 +14,7 @@ export default function AhlehadithMagazineLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         <PageBanner
         title="اہلِ حدیث میگزین"
@@ -26,7 +25,6 @@ export default function AhlehadithMagazineLayout({
       />
         {children}
         <Footer />
-      </body>
-    </html>
+      </>
   );
 }

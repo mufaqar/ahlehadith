@@ -16,13 +16,11 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ur" dir="rtl">
-      <body>
+    <>
         <Header1 />
         
         {children}
         <Footer/>
-      </body>
-    </html>
+      </>
   );
 }
