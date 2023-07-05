@@ -1,22 +1,14 @@
 
 import Layout from "@/components/Layout/Layout";
 import Header1 from "@/components/header/header1";
-import Slider from "@/components/Slider/Slider";
 import React from "react";
-import Button from "@/components/ui/button";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import Link from "next/link";
-import Image from "next/image";
-import PostDesign2 from "@/components/post-design/post-design-2";
 import VideosGallery from "@/components/videos-gallery/videos";
 import Featured_News from "../../../components/featured-news/news";
-import Gallery_images from "@/components/image-gallery";
 import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import ImagesSection from "@/components/images-section/imagesect";
-
-
 
 
 const Home1 = () => {
@@ -24,7 +16,7 @@ const Home1 = () => {
     <>
       <Header1 />
       <Main1 />
-      {/* <Slider /> */}
+      
       <Layout>
         <section className="my-10 md:my-20 md:mt-20">
           <div className="">
@@ -134,3 +126,5 @@ const Home1 = () => {
 };
 
 export default Home1;
+
+

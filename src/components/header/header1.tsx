@@ -43,7 +43,7 @@ const Header1 = () => {
 
   return (
     <>
-      <header className={`right-0 left-0 top-0 shadow-md  fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/70'}`}>
+      <header className={`right-0 left-0 top-0 shadow-md  fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/90'}`}>
         <div className="container mx-auto flex py-2 justify-between items-center px-4">
           <div className="md:w-[13%] bg-white rounded-lg ">
             <Logo />
