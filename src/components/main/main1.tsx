@@ -30,7 +30,7 @@ const Main1 = () => {
 
   return (
     <>
-      <main className="h-[580px] md:grid grid-cols-2 gap-2 mt-[79px]">
+      <main className="h-[580px] md:grid grid-cols-1 gap-2 mt-[79px]">
         <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
@@ -47,7 +47,7 @@ const Main1 = () => {
 
           {/* <MainPost post={Slide_BG[0]} className="text-xl md:text-3xl  font-ahle" /> */}
         </div>
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <div className="grid grid-cols-2 gap-2 _grid h-full">
             {
               post.map((item: any, idx: number) => {
@@ -57,7 +57,7 @@ const Main1 = () => {
               })
             }
           </div>
-        </div>
+        </div> */}
       </main>
 
     </>
