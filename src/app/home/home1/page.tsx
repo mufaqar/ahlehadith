@@ -13,12 +13,13 @@ import { PostMokeData } from "@/const/post";
 import { GetWordStr } from "@/utils";
 import Image from "next/image";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import Header3 from "@/components/header/header3";
 
 
 const Home1 = () => {
   return (
     <>
-      <Header1 />
+      <Header3 />
       <Main1 />
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
