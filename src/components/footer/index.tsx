@@ -37,14 +37,14 @@ const Footer = () => {
                 </p>
               </div>
               <form className="w-full">
-                <div className="mt-2 md:flex gap-4">
+                <div className="md:flex gap-4">
                   <input
                     type="text"
                     className="p-4 bg-gray-100 dark:bg-light-gray w-full text-gray-500 mt-4 md:mt-0 focus:outline-yellow border-none text-sm"
                     placeholder="سبسکرائبرکانام"
                   />
                 </div>
-                <div className="mt-2 md:flex gap-4">
+                <div className="mt-3 flex gap-3">
                   <input
                     type="text"
                     className="p-4 bg-gray-100 dark:bg-light-gray w-full text-gray-500 focus:outline-yellow border-none text-sm"
@@ -52,7 +52,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="bg-[#ffee00] uppercase text-black w-fit ml-0 md:mt-0 mt-4 p-4 hover:bg-light-blue cursor-pointer">
+                    className="bg-[#ffee00] uppercase text-white w-fit ml-0 p-4 hover:bg-light-blue cursor-pointer">
                     <TbLocationFilled size={18} />
                   </button>
                 </div>
