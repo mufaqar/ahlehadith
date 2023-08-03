@@ -24,19 +24,19 @@ const Main1 = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
   };
   const slider = React.useRef<Slider>(null);
 
   return (
     <>
       <main className="h-[580px] md:grid grid-cols-2 gap-2 mt-[79px]">
-        <div className="relative">
+        <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
               post.map((item: any, idx: number) => {
                 return (
-                  <img src={item.img} alt="img" key={idx} className="h-[580px] object-cover"/>
+                  <img src={item.img} alt="img" key={idx} className="h-[580px] w-full object-cover"/>
                 )
               })
             }
