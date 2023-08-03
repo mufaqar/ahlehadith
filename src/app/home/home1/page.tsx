@@ -8,28 +8,180 @@ import Featured_News from "../../../components/featured-news/news";
 import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
-import ImagesSection from "@/components/images-section/imagesect";
+import Team from "@/components/team/team";
+import { PostMokeData } from "@/const/post";
+import { GetWordStr } from "@/utils";
+import Image from "next/image";
+import { AiOutlineShareAlt } from "react-icons/ai";
+import Header3 from "@/components/header/header3";
 
 
 const Home1 = () => {
   return (
     <>
-      <Header1 />
+      <Header3 />
       <Main1 />
-      
       <Layout>
-        <section className="my-10 md:my-20 md:mt-20">
-          <div className="">
-            <div>
-              <div className="my-5">
-                <h2 className="text-3xl uppercase font-ahle ahle-heading">
-                  جماعتی خبریں
-                </h2>
-              </div>
-              <Featured_News />
+        <div className="my-10 md:my-20 md:mt-20">
+          <div className="my-5">
+            <h2 className="text-3xl uppercase font-ahle ahle-heading">
+              جماعتی خبریں
+            </h2>
+          </div>
+          <div className="md:flex gap-6">
+            <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
+              {PostMokeData.slice(0, 1).map((item, idx) => {
+                return (
+                  <div key={idx} className="relative h-[540px] w-full bg-black">
+                    <Image
+                      src={item.img}
+                      alt="thumbnil"
+                      width={900}
+                      height={50}
+                      className="w-full h-full object-cover opacity-60"
+                    />
+                    <span className="bg-yellow text-black py-1 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
+                      {item?.categories}
+                    </span>
+                    <span className="bg-black text-yellow py-1 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
+                      22 فروری
+                    </span>
+                    <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
+                      <Link href="#" className="text-2xl font-ahle text-black">
+                        {item.title}
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
+              {PostMokeData.slice(0, 3).map((item, idx) => {
+                return (
+                  <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
+                  >
+                    <Link href={`/blogs/${item.title}`} className={`md:w-1/3`}>
+                      <figure
+                        className={`overflow-hidden relative md:w-full`}
+                      >
+                        <Image
+                          src={item?.img}
+                          alt=""
+                          width={200}
+                          height={160}
+                          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
+                        />
+                        <div className={`absolute top-8 right-0 bg-yellow p-1.5 cursor-pointer px-4 text-sm uppercase text-dark-gray flex items-center `}>
+                          Share <AiOutlineShareAlt size={22} />
+                        </div>
+                      </figure>
+                    </Link>
+                    <div
+                      className={`bg-light-gray md:w-2/3 p-6 `}
+                    >
+                      <div className={``}>
+                        <p className="capitalize text-light-blue text-sm">
+                          By Danial Alam - <span className="uppercase">22 December</span>
+                        </p>
+                        <h2
+                          className={`text-[18px] font-medium font-ahle `}
+                        >
+                          {item.title}
+                        </h2>
+                      </div>
+                      <p className="mt-3 text-text font-normal">{GetWordStr(item?.body)}</p>
+
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </section>
+        </div>
+      </Layout>
+
+      <Layout>
+        <div className="my-10 md:my-20 md:mt-20">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 ">
+            <div className=" border border-light-gray">
+              <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
+                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <h2 className="text-3xl uppercase font-ahle text-white">
+                  روزانہ قرآن
+                </h2>
+              </div>
+              <div className="p-5">
+                <p className="font-ahle text-lg text-gray-600 dark:text-text">
+                  ترجمہ :  ہاں، اللہ اس سے ہرگز نہیں شرماتا کہ مچھر یا اس سے بھی حقیر تر کسی چیز کی تمثیلیں دے جو لوگ حق بات کو قبول کرنے والے ہیں، وہ انہی تمثیلوں کو دیکھ کر جان لیتے ہیں کہ یہ حق ہے جو ان کے رب ہی کی طرف سے آیا ہے، اور جو ماننے والے نہیں ہیں، وہ انہیں سن کر کہنے لگتے ہیں کہ ایسی تمثیلوں سے اللہ کو کیا سروکار؟ اس طرح اللہ ایک ہی بات سے بہتوں کو گمراہی میں مبتلا کر دیتا ہے اور بہتوں کو راہ راست دکھا دیتا ہے اور گمراہی میں وہ انہی کو مبتلا کرتا ہے، جو فاسق ہیں ﴿۲۶﴾
+                </p>
+                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
+                  سُوۡرَةُ البَقَرَة : 26
+                </p>
+              </div>
+            </div>
+            <div className=" border border-light-gray">
+              <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
+                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <h2 className="text-3xl uppercase font-ahle text-white">
+                  روزانہ کی حدیث
+                </h2>
+              </div>
+              <div className="p-5">
+                <p className="font-ahle text-lg text-gray-600 dark:text-text">
+                  ترجمہ :  رسول اللہ ﷺ نے فرمایا جب اللہ تعالیٰ کسی بندے کی موت کے لیے کسی زمین کا فیصلہ کر دیتا ہے تو وہاں اس کی کوئی حاجت پیدا کر دیتا ہے۔
+                </p>
+                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
+                  (جامع ترمذی ،۲۱۴۷)
+                </p>
+              </div>
+            </div>
+            <div className=" border border-light-gray">
+              <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
+                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <h2 className="text-3xl uppercase font-ahle text-white">
+                  اقتباس
+                </h2>
+              </div>
+              <div className="px-5">
+                <ul className="divide-y divide-border ">
+                  <li className="py-3">
+                    <p className="font-ahle text-lg text-pure">
+                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
+                    </p>
+                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
+                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
+                    </p>
+                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
+                      مزید پڑھیں
+                    </Link>
+                  </li>
+                  <li className="py-3">
+                    <p className="font-ahle text-lg text-pure">
+                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
+                    </p>
+                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
+                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
+                    </p>
+                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
+                      مزید پڑھیں
+                    </Link>
+                  </li>
+                  <li className="py-3">
+                    <p className="font-ahle text-lg text-pure">
+                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
+                    </p>
+                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
+                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
+                    </p>
+                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
+                      مزید پڑھیں
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </Layout>
 
       <section className="flex justify-center my-20 py-16 bg-[url('/assets/images/slid4.jpeg')] bg-center bg-no-repeat bg-cover bg-[#fff054] bg-blend-multiply relative before:content-[' '] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white/50 before:border group">
@@ -101,23 +253,21 @@ const Home1 = () => {
         </section >
       </Layout >
       <Layout>
-
         <div className="my-20">
-
           <div className="my-14">
             <div className="flex justify-between items-center">
               <h2 className="text-3xl uppercase font-ahle ahle-heading">
-                اسلامک گرافکس
+                مشہور شخصیات
               </h2>
               <Link
                 href="/islamic-graphics"
                 className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
               >
-                اسلامک گرافکس وزٹ کریں
+                مشہور شخصیات
               </Link>
             </div>
           </div>
-          <ImagesSection />
+          <Team />
         </div>
       </Layout>
       <Footer />

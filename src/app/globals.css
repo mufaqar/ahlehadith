@@ -61,7 +61,7 @@ h6 {
   bottom: -12px;
   right: 13px;
   padding: 2px;
-  background-color: #fff054;
+  background-color: #ffee00;
   width: 60px;
 }
 
@@ -79,7 +79,7 @@ h6 {
   :root {
     --dark-gray: #181818;
     --light-gray: #f3f4f6;
-    --yellow: #fff054;
+    --yellow: #ffee00;
     --pure: #393939;
     --light-blue: #05adaf;
     --text: #979797;
@@ -89,7 +89,7 @@ h6 {
   :root[class='dark'] {
     --dark-gray: #181818;
     --light-gray: #262626;
-    --yellow: #fff054;
+    --yellow: #ffee00;
     --pure: #fff;
     --light-blue: #05adaf;
     --text: #b8b8b8;
