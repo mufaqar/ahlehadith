@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
@@ -7,10 +6,8 @@ import { BiChevronDown, BiMenuAltRight, BiSearch } from "react-icons/bi";
 import { RxCross1, RxCross2 } from "react-icons/rx";
 import { NavLinks } from "../../const/navlinks";
 import { NavLinksType } from "@/utils/types";
-import ThemeSwitch from "../ThemeSwitch";
 import { SettingsContext } from "@/context/setting-context";
 import Input from "../controlls/input";
-import { HiOutlineMenu } from 'react-icons/hi'
 import SideSection from "../side-section/side-section";
 import Mega_menu from "../mega-menu/mega";
 import { BsEnvelopeAtFill } from "react-icons/bs";
@@ -44,7 +41,7 @@ const Header3 = () => {
 
   return (
     <>
-      <header className={`right-0 left-0 top-0 shadow-md fixed w-full z-50 ${headerClr ? 'bg-white' : 'bg-white/90'}`}>
+      <header className={`right-0 left-0 top-0 shadow-md fixed w-full z-50 ${headerClr ? 'bg-white' : 'bg-white'}`}>
         <div className="flex items-center gap-7">
           <div className="md:w-1/4 bg-white rounded-lg ps-4">
             <Logo />
@@ -92,7 +89,7 @@ const Header3 = () => {
                             ''
                         }
                       </span>
-                      <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[71px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                      <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[91px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
                           return <Mega_menu sub_item={sub_item} key={_idx} click={() => { setDropdown(null), setIsMobile(false) }} />
                         })}
@@ -108,14 +105,11 @@ const Header3 = () => {
                     عطیات
                   </Link>
                   <Link href="#" className="uppercase inline-block font-ahle text-[20px] md:text-white text-pure bg-[#012f1e] px-10 py-4" >
-                    عطیات
+                    رضاکار بنیں
                   </Link>
                 </div>
                 <div className="ml-3 md:hidden text-pure" onClick={() => setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32} /> : <RxCross1 size={32} />}</div>
               </div>
-
-
-
             </div>
           </div>
         </div>
