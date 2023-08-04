@@ -7,7 +7,7 @@ import Layout from "@/components/Layout/Layout";
 
 
 function Tabs() {
-  const defaultSelectedName = Data[4].Name; // Get the name of the first item as default selectedName
+  const defaultSelectedName = Data[0].Name; // Get the name of the first item as default selectedName
   const [selectedName, setSelectedName] = useState<string>(defaultSelectedName);
   const handleItemClick = (itemName: string) => {
     setSelectedName(itemName);
