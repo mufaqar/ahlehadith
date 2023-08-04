@@ -13,7 +13,7 @@ function Tabs() {
     setSelectedName(itemName);
   };
   return (
-    <section className='bg-[#f8f8f8] py-10 md:py-20'>
+    <section className='bg-light-gray py-10 md:py-20'>
       <Layout>
         <div className='flex md:flex-row flex-col justify-between gap-8 items-center'>
           <div className="md:w-1/3 w-full">
