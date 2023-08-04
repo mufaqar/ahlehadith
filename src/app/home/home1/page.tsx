@@ -11,7 +11,7 @@ import { GetWordStr } from "@/utils";
 import Image from "next/image";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import Header3 from "@/components/header/header3";
-import Tabs from "@/components/tabs/tabs";
+//import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
 
 
@@ -21,7 +21,7 @@ const Home1 = () => {
       <Header3 />
       <Main1 />
       <Sub_Nav />
-      <Tabs />
+      {/* <Tabs /> */}
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <Image src="/assets/images/achievements.jpg" alt="img" width={1920} height={250} />
