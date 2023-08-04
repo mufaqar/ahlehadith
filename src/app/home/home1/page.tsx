@@ -21,9 +21,7 @@ const Home1 = () => {
     <>
       <Header3 />
       <Main1 />
-
       <Layout>
-
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
             <h2 className="text-3xl uppercase font-ahle ahle-heading">
