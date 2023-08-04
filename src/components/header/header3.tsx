@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
@@ -7,10 +6,8 @@ import { BiChevronDown, BiMenuAltRight, BiSearch } from "react-icons/bi";
 import { RxCross1, RxCross2 } from "react-icons/rx";
 import { NavLinks } from "../../const/navlinks";
 import { NavLinksType } from "@/utils/types";
-import ThemeSwitch from "../ThemeSwitch";
 import { SettingsContext } from "@/context/setting-context";
 import Input from "../controlls/input";
-import { HiOutlineMenu } from 'react-icons/hi'
 import SideSection from "../side-section/side-section";
 import Mega_menu from "../mega-menu/mega";
 import { BsEnvelopeAtFill } from "react-icons/bs";

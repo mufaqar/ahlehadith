@@ -1,11 +1,6 @@
 "use client"
-
-import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
-import Link from "next/link";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import { SettingsContext } from "@/context/setting-context";
-import { PostMokeData } from '../../const/post'
 import Slider from "react-slick";
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 

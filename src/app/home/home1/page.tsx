@@ -1,10 +1,7 @@
-
 import Layout from "@/components/Layout/Layout";
-import Header1 from "@/components/header/header1";
 import React from "react";
 import Link from "next/link";
 import VideosGallery from "@/components/videos-gallery/videos";
-import Featured_News from "../../../components/featured-news/news";
 import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";

@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import Data from '../../const/jammattest';
-import Link from 'next/link';
 import Nazryat from './Nazryat';
 import Layout from "@/components/Layout/Layout";
 
