@@ -44,7 +44,7 @@ const Home1 = () => {
       <section className="py-12 bg-[url('/assets/images/bg-jui.jpg')] bg-center bg-cover">
         <Layout>
           <div className="flex md:flex-row flex-col gap-5">
-            <div className="md:w-2/3 w-full flex gap-5 items-center">
+            <div className="md:w-2/3 w-full flex md:flex-row flex-col gap-5 items-center">
               <div>
                 <h2 className="text-2xl uppercase text-white font-ahle mb-3">
                   خوشحال پاکستان کے لیے
@@ -61,7 +61,7 @@ const Home1 = () => {
               </div>
             </div>
             <div className="md:w-1/3 w-full">
-              <Image src='/assets/images/sajid-mir.jpg' alt="sajid-mir" width={300} height={300} className="rounded-full h-60 w-60 object-cover" />
+              <Image src='/assets/images/sajid-mir.jpg' alt="sajid-mir" width={300} height={300} className="rounded-full h-60 w-60 object-cover mx-auto" />
             </div>
           </div>
         </Layout>
@@ -235,7 +235,7 @@ const Home1 = () => {
 
             <div className="md:w-1/3 w-full">
             </div>
-            <div className="md:w-2/3 w-full flex gap-5 items-center justify-end">
+            <div className="md:w-2/3 w-full flex md:flex-row flex-col gap-5 items-center justify-end">
               <div>
                 <h2 className="text-2xl uppercase text-white font-ahle mb-3">
                   اس ملک میں حقیقی تبدیلی کے لئیے

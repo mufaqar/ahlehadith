@@ -25,12 +25,13 @@ const Main1 = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
+    arrows: false,
   };
   const slider = React.useRef<Slider>(null);
 
   return (
     <>
-      <main className="h-[580px] md:grid grid-cols-1 gap-2 mt-[79px]">
+      <main className="h-[580px] md:grid grid-cols-1 gap-2 md:mt-[90px] mt-[50px]">
         <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
