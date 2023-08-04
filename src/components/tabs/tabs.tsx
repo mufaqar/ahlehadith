@@ -16,7 +16,7 @@ function Tabs() {
       <Layout>
         <div className='flex md:flex-row flex-col justify-between gap-8 items-center'>
           <div className="md:w-1/3 w-full">
-            <h2 className='text-4xl font-[JameelNoori]'>جماعت اسلامی</h2>
+            <h2 className='text-4xl font-[JameelNoori]'>مرکزی جمعیت اہل حدیث</h2>
             <h3 className='text-3xl text-[#012f1e] font-[JameelNoori] mb-7'>سب سے منفرد کیوں ہے ؟</h3>
           </div>
           <div className="md:w-2/3 w-full">
