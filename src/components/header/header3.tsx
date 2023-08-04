@@ -41,7 +41,7 @@ const Header3 = () => {
 
   return (
     <>
-      <header className={`right-0 left-0 top-0 shadow-md fixed w-full z-50 ${headerClr ? 'bg-white' : 'bg-white/90'}`}>
+      <header className={`right-0 left-0 top-0 shadow-md fixed w-full z-50 ${headerClr ? 'bg-white' : 'bg-white'}`}>
         <div className="flex items-center gap-7">
           <div className="md:w-1/4 bg-white rounded-lg ps-4">
             <Logo />
