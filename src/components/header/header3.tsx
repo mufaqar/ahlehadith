@@ -89,7 +89,7 @@ const Header3 = () => {
                             ''
                         }
                       </span>
-                      <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[71px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                      <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[91px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
                           return <Mega_menu sub_item={sub_item} key={_idx} click={() => { setDropdown(null), setIsMobile(false) }} />
                         })}
