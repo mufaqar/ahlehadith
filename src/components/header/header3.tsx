@@ -108,14 +108,11 @@ const Header3 = () => {
                     عطیات
                   </Link>
                   <Link href="#" className="uppercase inline-block font-ahle text-[20px] md:text-white text-pure bg-[#012f1e] px-10 py-4" >
-                    عطیات
+                    رضاکار بنیں
                   </Link>
                 </div>
                 <div className="ml-3 md:hidden text-pure" onClick={() => setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32} /> : <RxCross1 size={32} />}</div>
               </div>
-
-
-
             </div>
           </div>
         </div>

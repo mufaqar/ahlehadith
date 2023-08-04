@@ -14,6 +14,8 @@ import { GetWordStr } from "@/utils";
 import Image from "next/image";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import Header3 from "@/components/header/header3";
+import Tabs from "@/components/tabs/tabs";
+import Sub_Nav from "@/components/header/sub-nav";
 
 
 const Home1 = () => {
@@ -21,6 +23,49 @@ const Home1 = () => {
     <>
       <Header3 />
       <Main1 />
+      <Sub_Nav />
+      <Tabs />
+      <Layout>
+        <div className="my-10 md:my-20 md:mt-20">
+          <Image src="/assets/images/achievements.jpg" alt="img" width={1920} height={250} />
+          <div className="flex justify-center gap-5 mt-10">
+            <Link href="#"
+              className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
+              مزید جانیں
+            </Link>
+            <Link href="#"
+              className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
+              منشور ڈاؤن لوڈ کریں
+            </Link>
+          </div>
+        </div>
+      </Layout>
+
+      <section className="py-12 bg-[url('/assets/images/bg-jui.jpg')] bg-center bg-cover">
+        <Layout>
+          <div className="flex md:flex-row flex-col gap-5">
+            <div className="md:w-2/3 w-full flex gap-5 items-center">
+              <div>
+                <h2 className="text-2xl uppercase text-white font-ahle mb-3">
+                  خوشحال پاکستان کے لیے
+                </h2>
+                <h3 className="text-5xl uppercase text-white font-ahle">
+                  مرکزی جمعیت اہل حدیث کےممبربنیں
+                </h3>
+              </div>
+              <div>
+                <Link href="#"
+                  className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-xl px-8 py-2.5 uppercase">
+                  ممبر بنیں
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-1/3 w-full">
+              <Image src='/assets/images/sajid-mir.jpg' alt="sajid-mir" width={300} height={300} className="rounded-full h-60 w-60 object-cover" />
+            </div>
+          </div>
+        </Layout>
+      </section>
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
@@ -184,7 +229,33 @@ const Home1 = () => {
         </div>
       </Layout>
 
-      <section className="flex justify-center my-20 py-16 bg-[url('/assets/images/slid4.jpeg')] bg-center bg-no-repeat bg-cover bg-[#fff054] bg-blend-multiply relative before:content-[' '] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white/50 before:border group">
+      <section className="py-16 bg-[url('/assets/images/tabdeeli.jpg')] bg-center bg-cover">
+        <Layout>
+          <div className="flex md:flex-row flex-col gap-5">
+
+            <div className="md:w-1/3 w-full">
+            </div>
+            <div className="md:w-2/3 w-full flex gap-5 items-center justify-end">
+              <div>
+                <h2 className="text-2xl uppercase text-white font-ahle mb-3">
+                  اس ملک میں حقیقی تبدیلی کے لئیے
+                </h2>
+                <h3 className="text-5xl uppercase text-white font-ahle">
+                  مرکزی جمعیت اہل حدیث کے ووٹر بنیں
+                </h3>
+              </div>
+              <div>
+                <Link href="#"
+                  className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-xl px-8 py-2.5 uppercase">
+                  ووٹر بنیں
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Layout>
+      </section>
+
+      {/* <section className="flex justify-center my-20 py-16 bg-[url('/assets/images/slid4.jpeg')] bg-center bg-no-repeat bg-cover bg-[#fff054] bg-blend-multiply relative before:content-[' '] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white/50 before:border group">
         <div className="md:w-2/4 w-3/4 text-center px-5 bg-white dark:bg-light-gray z-[2]">
           <h2 className="text-3xl uppercase font-ahle my-5 ahle-heading after:md:right-[45%] after:right-[40%]">
             خوش آمدید
@@ -209,7 +280,7 @@ const Home1 = () => {
         <div className="overlay absolute top-0 left-0 h-full w-full before:content-[' '] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border-y before:scale-x-0 group-hover:before:scale-x-100 before:transform before:transition before:duration-700 before:ease-in-out 
         after:content-[' '] after:absolute after:top-3 after:bottom-3 after:left-3 after:right-3 after:border-white after:border-x after:scale-y-0 group-hover:after:scale-y-100 after:transform after:transition after:duration-700 after:ease-in-out "
         ></div>
-      </section>
+      </section> */}
 
       <Layout>
         <section className="my-10 md:my-16 md:mt-16">
