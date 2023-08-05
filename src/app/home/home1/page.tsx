@@ -30,7 +30,7 @@ const Home1 = () => {
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               مزید جانیں
             </Link>
-            <Link href="#"
+            <Link href="/"
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               منشور ڈاؤن لوڈ کریں
             </Link>
