@@ -26,7 +26,7 @@ const Home1 = () => {
         <div className="my-10 md:my-20 md:mt-20">
           <Image src="/assets/images/achievements.jpg" alt="img" width={1920} height={250} />
           <div className="flex justify-center gap-5 mt-10">
-            <Link href="#"
+            <Link href="/"
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               مزید جانیں
             </Link>
