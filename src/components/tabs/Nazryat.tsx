@@ -36,9 +36,9 @@ const Nazryat: React.FC<NazryatProps> = ({ selectedName }) => {
 
             <div className="md:w-2/3 w-full">
               {item?.content?.map((contnt: any, _idx: any) => {
-                return <p key={_idx} className='font-ahle text-lg text-gray-600 dark:text-text mb-3'>{contnt?.para}</p>
+                return <p key={_idx} className='font-ahle text-base text-gray-600 dark:text-text mb-3'>{contnt?.para}</p>
               })}
-              <Link className=" lg:py-[8px] px-[36px] bg-yellow text-black float-right mt-[20px] text-[20px] " href={"/"}
+              <Link className=" lg:py-[8px] px-[36px] font-ahle bg-yellow text-black float-right mt-[20px] text-[20px] " href={"/"}
               >تفصیل جانیے
               </Link>
             </div>

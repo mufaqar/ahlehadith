@@ -16,14 +16,14 @@ function Tabs() {
       <Layout>
         <div className='flex md:flex-row flex-col justify-between gap-8 items-center'>
           <div className="md:w-1/3 w-full">
-            <h2 className='text-4xl font-[JameelNoori]'>مرکزی جمعیت اہل حدیث</h2>
-            <h3 className='text-3xl text-[#012f1e] font-[JameelNoori] mb-7'>سب سے منفرد کیوں ہے ؟</h3>
+            <h2 className='text-4xl font-ahle'>مرکزی جمعیت اہل حدیث</h2>
+            <h3 className='text-3xl text-[#012f1e] font-ahle mb-7'>سب سے منفرد کیوں ہے ؟</h3>
           </div>
           <div className="md:w-2/3 w-full">
             <ul className='flex justify-between border-b'>
               {Data.map((item) => (
                 <li key={item.Name} onClick={() => handleItemClick(item.Name)} >
-                  <span className={`hover:bg-[#012f1e] hover:text-white lg:p-4 inline-block  font-[JameelNoori] md:text-xl text-sm text-center sm:p-2 relative tab ${selectedName === item.Name && 'bg-[#012f1e] text-white linkbtn'}`}>
+                  <span className={`hover:bg-[#012f1e] hover:text-white lg:p-4 inline-block font-ahle md:text-xl text-sm text-center sm:p-2 relative tab ${selectedName === item.Name && 'bg-[#012f1e] text-white linkbtn'}`}>
                     {item.Name}
                   </span>
                 </li>

@@ -53,8 +53,8 @@ const Header1 = () => {
                   return (
                     <ul key={idx} className="w-full gap-4 items-center hidden md:flex [&>*:nth-child(1)]:border-r-transparent ">
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
-                        return <li key={_idx} className="px-3 border-r border-pure">
-                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[20px] md:text-pure text-pure hover:text-yellow hover:underline" >
+                        return <li key={_idx} className="px-3 border-r border-pure py-3">
+                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-base md:text-pure text-pure hover:text-yellow hover:underline" >
                             {sub_item.name}
                           </Link>
                         </li>
@@ -63,10 +63,10 @@ const Header1 = () => {
                   );
                 })}
               </nav>
-              <div className="pe-10">
-                <Link href="mailto:mjah106@gmail.com" target='_blank' className='text-pure font-ahle text-lg flex gap-2 items-center'>
+              <div className="pe-10 py-3">
+                <Link href="mailto:mjah106@gmail.com" target='_blank' className='text-pure font-ahle text-base flex gap-x-2 items-end'>
                   mjah106@gmail.com
-                  <BsEnvelopeAtFill size={20} />
+                  <BsEnvelopeAtFill size={18} />
                 </Link>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Header1 = () => {
                     return <li key={idx} className="md:w-auto w-full"
                     >
                       <span className="flex items-center justify-between">
-                        <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[20px] md:text-pure text-pure hover:text-yellow hover:underline" >
+                        <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[17px] md:text-pure text-pure hover:text-yellow hover:underline" >
                           {item.name}
                         </Link>
                         {
@@ -101,10 +101,10 @@ const Header1 = () => {
               <div className="flex gap-5 justify-between md:w-fit w-full items-center md:pe-0 pe-4">
                 <BiSearch size={24} className="me-5 ms-2 mt-1 cursor-pointer text-pure" onClick={() => setSearchOpen(true)} />
                 <div className="bg-[#012f1e] md:pe-10 pe-4 md:block hidden">
-                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] text-black bg-yellow px-10 py-4" >
+                  <Link href="#" className="uppercase inline-block font-ahle text-[17px] text-black bg-yellow px-10 py-4" >
                     عطیات
                   </Link>
-                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] text-white bg-[#012f1e] px-10 py-4" >
+                  <Link href="#" className="uppercase inline-block font-ahle text-[17px] text-white bg-[#012f1e] px-10 py-4" >
                     رضاکار بنیں
                   </Link>
                 </div>
