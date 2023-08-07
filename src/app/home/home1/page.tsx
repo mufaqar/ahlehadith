@@ -10,7 +10,7 @@ import { PostMokeData } from "@/const/post";
 import { GetWordStr } from "@/utils";
 import Image from "next/image";
 import { AiOutlineShareAlt } from "react-icons/ai";
-import Header3 from "@/components/header/header3";
+import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
 
@@ -18,7 +18,7 @@ import Sub_Nav from "@/components/header/sub-nav";
 const Home1 = () => {
   return (
     <>
-      <Header3 />
+      <Header1 />
       <Main1 />
       <Sub_Nav />
       <Tabs />

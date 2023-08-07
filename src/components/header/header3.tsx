@@ -12,7 +12,7 @@ import SideSection from "../side-section/side-section";
 import Mega_menu from "../mega-menu/mega";
 import { BsEnvelopeAtFill } from "react-icons/bs";
 
-const Header3 = () => {
+const Header = () => {
   const { searchOpen, setSearchOpen, isMobile, setIsMobile, setOpenSide, openSide } = useContext(SettingsContext)
 
   const [scrollTop, setScrollTop] = useState<any>(0);
@@ -123,7 +123,7 @@ const Header3 = () => {
   );
 };
 
-export default Header3;
+export default Header;
 
 
 
