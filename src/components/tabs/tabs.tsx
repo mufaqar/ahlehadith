@@ -23,7 +23,7 @@ function Tabs() {
             <ul className='flex justify-between border-b'>
               {Data.map((item) => (
                 <li key={item.Name} onClick={() => handleItemClick(item.Name)} >
-                  <span className={`hover:bg-[#012f1e] hover:text-white lg:p-4 inline-block  font-[JameelNoori] md:text-xl text-sm text-center ${selectedName === item.Name && 'bg-[#012f1e] text-white linkbtn2'}`}>
+                  <span className={`hover:bg-[#012f1e] hover:text-white lg:p-4 inline-block  font-[JameelNoori] md:text-xl text-sm text-center sm:p-2 relative tab ${selectedName === item.Name && 'bg-[#012f1e] text-white linkbtn'}`}>
                     {item.Name}
                   </span>
                 </li>

@@ -75,6 +75,29 @@ h6 {
   width: 8px;
 }
 
+.linkbtn::after{
+  content: '';
+  position: absolute;
+  left: 34%;
+  top: 82%;
+  width: 10px;
+  height: 12px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #012f1e;
+}
+.tab:hover::after{
+  content: '';
+  position: absolute;
+  left: 34%;
+  top: 82%;
+  width: 10px;
+  height: 12px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #012f1e;
+}
+
 @layer base {
   :root {
     --dark-gray: #181818;
@@ -154,6 +177,28 @@ h6 {
 @media (min-width: 920px) {
   .ReactModal__Content {
     width: 50%;
+  }
+  .linkbtn::after{
+    content: '';
+    position: absolute;
+    left: 34%;
+    top: 82%;
+    width: 10px;
+    height: 30px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #012f1e;
+  }
+  .tab:hover::after{
+    content: '';
+    position: absolute;
+    left: 34%;
+    top: 82%;
+    width: 10px;
+    height: 30px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #012f1e;
   }
 }
 
