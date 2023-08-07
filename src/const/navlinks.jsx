@@ -23,19 +23,19 @@ export const NavLinks = [
                },
                {
                     name: 'شورىٰ',
-                    link: '#',
+                    link: '/shaura',
                },
                {
                     name: 'صوبائی نظم',
-                    link: '#',
+                    link: '/subayi-nazam',
                },
                {
                     name: 'ذیلی تنظیمات',
-                    link: '#',
+                    link: '/zilayi-tanzimat',
                },
                {
                     name: 'شعبہ جات',
-                    link: '#',
+                    link: '/shauba-jaat',
                },
           ]
      },
@@ -96,11 +96,11 @@ export const NavLinks = [
           sub_menu: [
                {
                     name: 'آل پاکستان کانفرس',
-                    link: '#',
+                    link: '/all-pakistan-conference',
                },
                {
                     name: 'مرکزی کانفرنسز',
-                    link: '#',
+                    link: '/markazi-conferences',
                },
                {
                     name: 'ریلیاں',

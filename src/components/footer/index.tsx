@@ -153,15 +153,15 @@ const Footer = () => {
           <Layout>
             <div className="py-6">
               <div className='border border-yellow grid md:grid-cols-4 grid-cols-1 gap-5 items-center'>
-                <p className='text-white font-ahle text-lg flex gap-2'>
+                <p className='text-white font-ahle text-base flex gap-2'>
                   <BsPinMapFill size={20} />
                   مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
                 </p>
-                <Link href="mailto:mjah106@gmail.com" target='_blank' className='text-white font-ahle text-lg flex gap-2'>
+                <Link href="mailto:mjah106@gmail.com" target='_blank' className='text-white font-ahle text-base flex gap-2'>
                   <BsEnvelopeAtFill size={20} />
                   mjah106@gmail.com
                 </Link>
-                <Link href="tel:03208453475" className='text-white font-ahle text-lg flex gap-2'>
+                <Link href="tel:03208453475" className='text-white font-ahle text-base flex gap-2'>
                   <BsPhone size={20} />
                   03208453475
                 </Link>

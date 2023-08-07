@@ -110,8 +110,6 @@ const Page = () => {
           </div>
         </div>
       </Layout>
-
-
     </>
   );
 };
