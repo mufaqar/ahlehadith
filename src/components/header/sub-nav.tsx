@@ -24,7 +24,7 @@ const Sub_Nav = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 6,
           slidesToScroll: 1,
           autoplay: true,
         }
@@ -56,7 +56,7 @@ const Sub_Nav = () => {
                       className="mx-auto"
                     />
                   </div>
-                  <div className='text-center mt-3'>
+                  <div className='text-center mt-2'>
                     <Link href={item?.link} className='text-xl font-ahle text-pure'>
                       {item?.name}
                     </Link>
@@ -80,27 +80,27 @@ export const Nav_data = [
     name: "تعارف",
   },
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/tareekh.png",
     link: "#",
     name: "تاریخ",
   },
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/kyadat.png",
     link: "#",
     name: "قیادت",
   },
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/book.png",
     link: "#",
     name: "کتابیں",
   },
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/manshor.png",
     link: "#",
     name: "منشور",
   },
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/dastoor.png",
     link: "#",
     name: "دستور",
   },
