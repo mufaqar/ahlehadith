@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <footer className="bg-[#012f1e]">
         <Layout>
-          <div className='py-12 flex md:flex-row flex-col gap-4 border-b border-[#ffee00]'>
+          <div className='py-12 flex md:flex-row flex-col gap-4 border-b border-yellow'>
             <div className='md:w-1/3 w-full flex gap-3'>
               <div>
                 <BiPhoneCall className='md:text-6xl text-4xl text-white transform rotate-[240deg]' />
@@ -52,7 +52,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="bg-[#ffee00] uppercase text-white w-fit ml-0 p-4 hover:bg-light-blue cursor-pointer">
+                    className="bg-yellow uppercase text-black w-fit ml-0 p-4 hover:bg-light-blue cursor-pointer">
                     <TbLocationFilled size={18} />
                   </button>
                 </div>
@@ -152,7 +152,7 @@ const Footer = () => {
         <div className='bg-[#012f1e]'>
           <Layout>
             <div className="py-6">
-              <div className='border border-[#ffee00] grid md:grid-cols-4 grid-cols-1 gap-5 items-center'>
+              <div className='border border-yellow grid md:grid-cols-4 grid-cols-1 gap-5 items-center'>
                 <p className='text-white font-ahle text-lg flex gap-2'>
                   <BsPinMapFill size={20} />
                   مرکز اہلحدیث، 106 راوی روڈ، لاہور، پاکستان
@@ -166,17 +166,17 @@ const Footer = () => {
                   03208453475
                 </Link>
                 <ul className="flex md:justify-end">
-                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-[#ffee00] bg-transparent hover:bg-[#ffee00] text-white'>
+                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-yellow bg-transparent hover:bg-yellow text-white'>
                     <Link href="#" className="">
                       <FaFacebookF size={20} />
                     </Link>
                   </li>
-                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-[#ffee00] bg-transparent hover:bg-[#ffee00] text-white'>
+                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-yellow bg-transparent hover:bg-yellow text-white'>
                     <Link href="#" className="">
                       <FaTwitter size={20} />
                     </Link>
                   </li>
-                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-[#ffee00] bg-transparent hover:bg-[#ffee00] text-white'>
+                  <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-yellow bg-transparent hover:bg-yellow text-white'>
                     <Link href="#" className="">
                       <FaYoutube size={20} />
                     </Link>
