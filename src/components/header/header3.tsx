@@ -101,10 +101,10 @@ const Header3 = () => {
               <div className="flex gap-5 justify-between md:w-fit w-full items-center md:pe-0 pe-4">
                 <BiSearch size={24} className="me-5 ms-2 mt-1 cursor-pointer text-pure" onClick={() => setSearchOpen(true)} />
                 <div className="bg-[#012f1e] md:pe-10 pe-4 md:block hidden">
-                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] md:text-white text-pure bg-yellow px-10 py-4" >
+                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] text-black bg-yellow px-10 py-4" >
                     عطیات
                   </Link>
-                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] md:text-white text-pure bg-[#012f1e] px-10 py-4" >
+                  <Link href="#" className="uppercase inline-block font-ahle text-[20px] text-white bg-[#012f1e] px-10 py-4" >
                     رضاکار بنیں
                   </Link>
                 </div>
