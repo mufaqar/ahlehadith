@@ -85,6 +85,59 @@ export const Shura_Gallery = [
 ];
 
 
+export const Team_Gallery = [
+  {
+    img: "/assets/images/aamla/1.jpg",
+  },
+  {
+    img: "/assets/images/aamla/2.jpg",
+  },
+  {
+    img: "/assets/images/aamla/3.jpg",
+  },
+  {
+    img: "/assets/images/aamla/4.jpg",
+  },
+  {
+    img: "/assets/images/aamla/5.jpg",
+  },
+  {
+    img: "/assets/images/aamla/6.jpg",
+  },
+  {
+    img: "/assets/images/aamla/7.jpg",
+  },
+  {
+    img: "/assets/images/aamla/8.jpg",
+  },
+  {
+    img: "/assets/images/aamla/9.jpg",
+  },
+  {
+    img: "/assets/images/aamla/10.jpg",
+  },
+  {
+    img: "/assets/images/aamla/11.jpg",
+  },
+  {
+    img: "/assets/images/aamla/12.jpg",
+  },
+  {
+    img: "/assets/images/aamla/13.jpg",
+  },
+  {
+    img: "/assets/images/aamla/14.jpg",
+  },
+  {
+    img: "/assets/images/aamla/15.jpg",
+  },
+  {
+    img: "/assets/images/aamla/16.jpg",
+  },
+];
+
+
+
 
 
 
