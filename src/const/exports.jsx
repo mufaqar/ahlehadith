@@ -21,6 +21,71 @@ export const Gallery = [
 ];
 
 
+export const Shura_Gallery = [
+  {
+    img: "/assets/images/shaura/1.jpg",
+  },
+  {
+    img: "/assets/images/shaura/2.jpg",
+  },
+  {
+    img: "/assets/images/shaura/3.jpg",
+  },
+  {
+    img: "/assets/images/shaura/4.jpg",
+  },
+  {
+    img: "/assets/images/shaura/5.jpg",
+  },
+  {
+    img: "/assets/images/shaura/6.jpg",
+  },
+  {
+    img: "/assets/images/shaura/7.jpg",
+  },
+  {
+    img: "/assets/images/shaura/8.jpg",
+  },
+  {
+    img: "/assets/images/shaura/9.jpg",
+  },
+  {
+    img: "/assets/images/shaura/10.jpg",
+  },
+  {
+    img: "/assets/images/shaura/11.jpg",
+  },
+  {
+    img: "/assets/images/shaura/12.jpg",
+  },
+  {
+    img: "/assets/images/shaura/13.jpg",
+  },
+  {
+    img: "/assets/images/shaura/14.jpg",
+  },
+  {
+    img: "/assets/images/shaura/15.jpg",
+  },
+  {
+    img: "/assets/images/shaura/16.jpg",
+  },
+  {
+    img: "/assets/images/shaura/17.jpg",
+  },
+  {
+    img: "/assets/images/shaura/18.jpg",
+  },
+  {
+    img: "/assets/images/shaura/19.jpg",
+  },
+  {
+    img: "/assets/images/shaura/20.jpg",
+  },
+];
+
+
+
 
 
 export const Marzi_conf_vides = [
