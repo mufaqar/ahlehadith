@@ -77,7 +77,7 @@ export const NavLinks = [
                },
                {
                     name: 'ویڈیو',
-                    link: '#',
+                    link: '/videos',
                },
                {
                     name: 'پرنٹ میڈیا کوریج',
