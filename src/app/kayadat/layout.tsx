@@ -19,7 +19,7 @@ export default function ConatctLayout({
     <>
         <Header1 />
         <PageBanner
-          title="کابینہ"
+          title="قیادت"
           subTitle=""
           image="/assets/images/slid1.jpeg"
           buttontext=""
