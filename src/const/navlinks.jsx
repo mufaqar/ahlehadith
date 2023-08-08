@@ -104,11 +104,11 @@ export const NavLinks = [
                },
                {
                     name: 'ریلیاں',
-                    link: '#',
+                    link: '/railiyaan',
                },
                {
                     name: 'تنظیمی اجلاس',
-                    link: '#',
+                    link: '/tanzimi-ijlaas',
                },
           ]
      },
