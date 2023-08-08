@@ -19,11 +19,11 @@ export const NavLinks = [
                },
                {
                     name: 'عاملہ',
-                    link: '/aamla',
+                    link: '/team',
                },
                {
                     name: 'شورىٰ',
-                    link: '/shaura',
+                    link: '/shura',
                },
                {
                     name: 'صوبائی نظم',
@@ -104,7 +104,7 @@ export const NavLinks = [
                },
                {
                     name: 'ریلیاں',
-                    link: '/railiyaan',
+                    link: '/rallies',
                },
                {
                     name: 'تنظیمی اجلاس',
