@@ -130,9 +130,8 @@ const Footer = () => {
                 </h2>
                 <ul className='list-inside list-square marker:text-yellow'>
                   <li className="text-white font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[11px] before:right-1">
-                    <Link href="#" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
-                      وجود
-                    </Link>
+                    <Link href="https://paigham.tv"  target="_blank" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
+                    Paigham TV                   </Link>
                   </li>
                   <li className="text-white font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[11px] before:right-1">
                     <Link href="#" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
