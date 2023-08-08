@@ -69,7 +69,7 @@ export const NavLinks = [
      {
           id: 4,
           name: 'میڈیا',
-          link: '/blogs',
+          link: '#',
           sub_menu: [
                {
                     name: 'تصاویر',
@@ -92,7 +92,7 @@ export const NavLinks = [
      {
           id: 5,
           name: 'دعوت و تبلیغ',
-          link: '/videos',
+          link: '#',
           sub_menu: [
                {
                     name: 'آل پاکستان کانفرس',

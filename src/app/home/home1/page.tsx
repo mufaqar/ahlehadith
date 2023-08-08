@@ -42,10 +42,10 @@ const Home1 = () => {
           <div className="flex md:flex-row flex-col gap-5">
             <div className="md:w-3/4 w-full flex md:flex-row flex-col gap-5 items-center">
               <div>
-                <h2 className="text-2xl uppercase text-white font-ahle mb-3">
+                <h2 className="text-2xl leading-[4rem] uppercase text-white font-ahle mb-3">
                   خوشحال پاکستان کے لیے
                 </h2>
-                <h3 className="text-5xl uppercase text-white font-ahle">
+                <h3 className="text-5xl leading-[4rem] uppercase text-white font-ahle">
                   مرکزی جمعیت اہل حدیث کےممبربنیں
                 </h3>
               </div>
@@ -65,7 +65,7 @@ const Home1 = () => {
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
-            <h2 className="text-3xl uppercase font-ahle ahle-heading">
+            <h2 className="text-3xl leading-[4rem] uppercase font-ahle ahle-heading">
               جماعتی خبریں
             </h2>
           </div>
@@ -125,7 +125,7 @@ const Home1 = () => {
                           By Danial Alam - <span className="uppercase">22 December</span>
                         </p>
                         <h2
-                          className={`text-[18px] font-medium font-ahle `}
+                          className={`text-[18px] leading-[2.3rem] font-medium font-ahle `}
                         >
                           {item.title}
                         </h2>
@@ -146,7 +146,7 @@ const Home1 = () => {
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
-                <h2 className="text-3xl uppercase font-ahle text-white">
+                <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   روزانہ قرآن
                 </h2>
               </div>
@@ -162,7 +162,7 @@ const Home1 = () => {
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
-                <h2 className="text-3xl uppercase font-ahle text-white">
+                <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   روزانہ کی حدیث
                 </h2>
               </div>
@@ -178,7 +178,7 @@ const Home1 = () => {
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
-                <h2 className="text-3xl uppercase font-ahle text-white">
+                <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   اقتباس
                 </h2>
               </div>
@@ -253,7 +253,7 @@ const Home1 = () => {
             <div className="my-20">
               <div className="my-5">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-3xl uppercase font-ahle ahle-heading">
+                  <h2 className="text-3xl leading-[4rem] uppercase font-ahle ahle-heading">
                     تازہ ترین وڈیوز
                   </h2>
                   <Link
@@ -270,7 +270,7 @@ const Home1 = () => {
             <div>
               <div className="my-5">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-3xl uppercase font-ahle ahle-heading">
+                  <h2 className="text-3xl leading-[4rem] uppercase font-ahle ahle-heading">
                     کتب لائبریری
                   </h2>
                   <Link
@@ -292,7 +292,7 @@ const Home1 = () => {
         <div className="my-20">
           <div className="my-14">
             <div className="flex justify-between items-center">
-              <h2 className="text-3xl uppercase font-ahle ahle-heading">
+              <h2 className="text-3xl leading-[4rem] uppercase font-ahle ahle-heading">
                 مشہور شخصیات
               </h2>
               <Link

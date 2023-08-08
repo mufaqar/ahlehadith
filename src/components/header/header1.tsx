@@ -54,7 +54,7 @@ const Header1 = () => {
                     <ul key={idx} className="w-full gap-4 items-center hidden md:flex [&>*:nth-child(1)]:border-r-transparent ">
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
                         return <li key={_idx} className="px-3 border-r border-pure py-3">
-                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-base md:text-pure text-pure hover:text-yellow hover:underline" >
+                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-base md:text-pure text-pure hover:text-[#012f1e] hover:underline" >
                             {sub_item.name}
                           </Link>
                         </li>
@@ -72,24 +72,30 @@ const Header1 = () => {
             </div>
             <div className="flex text-white justify-between items-center">
               <nav>
-                <ul className={`w-full gap-4 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
+                <ul className={`w-full gap-4 me-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 md:bg-light-gray bg-[#012f1e] w-full' : 'hidden md:flex'}`}>
                   {NavLinks.slice(0, 6).map((item: NavLinksType, idx: number) => {
                     return <li key={idx} className="md:w-auto w-full"
                     >
-                      <span className="flex items-center justify-between">
-                        <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[17px] md:text-pure text-pure hover:text-yellow hover:underline" >
-                          {item.name}
-                        </Link>
-                        {
-                          item.sub_menu ? (
-                            <span className="cursor-pointer md:text-pure text-pure">
-                              <BiChevronDown onMouseEnter={() => handleMenu(item.id)} />
+                      {
+                        item.sub_menu ? (
+                          <span className="flex items-center justify-between"  >
+                            <Link onMouseEnter={() => handleMenu(item.id)} onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[17px] md:text-pure text-white md:hover:text-[#012f1e] hover:text-yellow hover:underline" >
+                              {item.name}
+                            </Link>
+                            <span className="cursor-pointer md:text-pure text-white">
+                              <BiChevronDown onMouseEnter={() => handleMenu(item.id)}/>
                             </span>
-                          ) :
-                            ''
-                        }
-                      </span>
-                      <ul onMouseLeave={() => setDropdown(null)} className={` flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 2xl:top-[81px] top-[91px] gap-4 md:bg-light-gray ${dropdown === item.id ? 'flex' : 'hidden'} `}>
+                          </span>
+                        ) :
+                        (
+                          <span className="flex items-center justify-between">
+                            <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-[17px] md:text-pure text-white md:hover:text-[#012f1e] hover:text-yellow hover:underline" >
+                              {item.name}
+                            </Link>
+                          </span>
+                        )
+                      }
+                      <ul onMouseLeave={() => setDropdown(null)} className={` min-w-[230px] flex-col md:absolute md:px-5 md:pb-5 pb-0 pt-5 md:top-[105px] top-[91px] gap-4 md:bg-[#012f1e] ${dropdown === item.id ? 'flex' : 'hidden'} `}>
                         {item.sub_menu?.map((sub_item: any, _idx: any) => {
                           return <Mega_menu sub_item={sub_item} key={_idx} click={() => { setDropdown(null), setIsMobile(false) }} />
                         })}

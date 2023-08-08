@@ -75,7 +75,7 @@ export default Sub_Nav
 
 export const Nav_data = [
   {
-    img: "/assets/images/maka-icon.png",
+    img: "/assets/images/siteicon.png",
     link: "#",
     name: "تعارف",
   },
