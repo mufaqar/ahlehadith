@@ -3,6 +3,8 @@ import Layout from "@/components/Layout/Layout";
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModelBox from '../../components/ModelBox/ModelBox'
+import { Gallery } from "@/const/exports";
+
 
 interface IGallery {
 img: string
@@ -31,7 +33,7 @@ const Page = () => {
               <Masonry columnsCount={3} gutter="20px">
                 {Gallery.map((image:IGallery) => (
                   <figure key={image.img} className="p-1 hover:shadow-lg cursor-pointer">
-                    <img src={image.img} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
+                    <img src={image.img} alt="Gallery" className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
                   </figure>
                 ))}
               </Masonry>
@@ -47,24 +49,3 @@ const Page = () => {
 };
 
 export default Page;
-
-export const Gallery = [
-  {
-    img: "/assets/images/khidmat/1.jpg",
-  },
-  {
-    img: "/assets/images/khidmat/2.jpg",
-  },
-  {
-    img: "/assets/images/khidmat/3.jpg",
-  },
-  {
-    img: "/assets/images/khidmat/4.jpg",
-  },
-  {
-    img: "/assets/images/khidmat/5.jpg",
-  },
-  {
-    img: "/assets/images/khidmat/6.jpg",
-  },
-];
