@@ -11,3 +11,8 @@ export type NavLinksType = {
     img:string;
     body:string;
  }
+
+ export type TVideo = {
+   url: string;
+ 
+}
