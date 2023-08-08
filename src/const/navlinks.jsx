@@ -7,7 +7,7 @@ export const NavLinks = [
      {
           id: 2,
           name: 'تنظیم',
-          link: '/categories',
+          link: '#',
           sub_menu: [
                {
                     name: 'قیادت',
