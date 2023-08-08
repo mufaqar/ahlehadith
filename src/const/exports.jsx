@@ -115,3 +115,15 @@ export const Marzi_conf_vides = [
     url: 'yVHbxc0MTe4',
   },
 ];
+
+export const Rallies_vides = [
+  {
+    url: 'mrV98P74wbQ',
+  },
+  {
+    url: 'Hhezdb37AUg',
+  },
+  {
+    url: 'Vrnwkm0A',
+  },
+];
