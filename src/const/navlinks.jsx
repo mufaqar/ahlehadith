@@ -11,11 +11,11 @@ export const NavLinks = [
           sub_menu: [
                {
                     name: 'قیادت',
-                    link: '/kayadat',
+                    link: '/leadership',
                },
                {
                     name: 'کابینہ',
-                    link: '/kabina',
+                    link: '/cabinet',
                },
                {
                     name: 'عاملہ',
@@ -35,7 +35,7 @@ export const NavLinks = [
                },
                {
                     name: 'شعبہ جات',
-                    link: '/shauba-jaat',
+                    link: '/departments',
                },
           ]
      },
