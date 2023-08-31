@@ -22,10 +22,10 @@ const Home1 = () => {
       <Main1 />
       <Sub_Nav />
       <Tabs />
-      <Layout>
-        <div className="my-10 md:my-20 md:mt-20">
-          <Image src="/assets/images/achievements.jpg" alt="img" width={1920} height={250} />
-          <div className="flex justify-center gap-5 mt-10">
+      <section className="my-10 md:my-20 md:mt-20 bg-black">
+        <Image src="/assets/images/manshoor.jpg" alt="img" width={1920} height={250} className="w-full max-h-[900px] object-cover object-center" />
+        <Layout>
+          <div className="flex justify-center gap-5">
             <Link href="/"
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               مزید جانیں
@@ -33,10 +33,10 @@ const Home1 = () => {
             <Link href="/"
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               منشور ڈاؤن لوڈ کریں
-            </Link>
+            </Link> 
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </section>
       <section className="py-12 bg-[url('/assets/images/bg-jui.jpg')] bg-center bg-cover">
         <Layout>
           <div className="flex md:flex-row flex-col gap-5">
