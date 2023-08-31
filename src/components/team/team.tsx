@@ -91,30 +91,30 @@ export default Team
 export const Team_data = [
     {
         name: "سید داؤد غزنوی",
-        img: "/assets/images//team/1.jpeg",
+        img: "/assets/images/team/1.jpg",
     },
     {
         name: "مولانا ابراہیم میر سیالکوٹی",
-        img: "/assets/images//team/2.jpg",
+        img: "/assets/images/team/2.jpg",
     },
     {
         name: "مولانا اسماعیل سلفی",
-        img: "/assets/images//team/3.jpeg",
+        img: "/assets/images/team/3.jpg",
     },
     {
         name: "حافظ عبداللہ بڈھیمالوی",
-        img: "/assets/images//team/4.jpeg",
+        img: "/assets/images/team/4.jpg",
     },
     {
         name: "علامہ احسان الہی ظہیر",
-        img: "/assets/images//team/5.jpeg",
+        img: "/assets/images/team/5.jpg",
     },
     {
         name: "مولانا معین الدین لکھوی",
-        img: "/assets/images//team/6.jpeg",
+        img: "/assets/images/team/6.jpg",
     },
     {
         name: "مولانا حبیب الرحمان یزدانی",
-        img: "/assets/images//team/7.jpeg",
+        img: "/assets/images/team/7.jpg",
     },
 ];

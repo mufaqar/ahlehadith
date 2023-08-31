@@ -10,7 +10,7 @@ const Main1 = () => {
   const [post, setPost] = useState<any>([])
 
   useEffect(() => {
-    windowSize[0] <= 1080 ? setPost(Slide_BG.slice(0, 4)) : setPost(Slide_BG.slice(0, 4))
+    windowSize[0] <= 1080 ? setPost(Slide_BG) : setPost(Slide_BG)
   }, [])
 
   const settings = {
@@ -75,18 +75,24 @@ const MainPost = ({ className, post }: any) => {
 
 export const Slide_BG = [
   {
-    img: "/assets/images/slid1.jpeg",
+    img: "/assets/images/banner/1.jpg",
   },
   {
-    img: "/assets/images/slid2.jpeg",
+    img: "/assets/images/banner/2.jpg",
   },
   {
-    img: "/assets/images/slid3.jpeg",
+    img: "/assets/images/banner/3.jpg",
   },
   {
-    img: "/assets/images/slid4.jpeg",
+    img: "/assets/images/banner/4.jpg",
   },
   {
-    img: "/assets/images/slid5.jpeg",
+    img: "/assets/images/banner/5.jpg",
+  },
+  {
+    img: "/assets/images/banner/6.jpg",
+  },
+  {
+    img: "/assets/images/banner/7.jpg",
   },
 ];

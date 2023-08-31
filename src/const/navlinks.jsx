@@ -58,7 +58,7 @@ export const NavLinks = [
                },
                {
                     name: 'علمائےکرام/معروف شخصیات',
-                    link: '#',
+                    link: '/ulma-ikram',
                },
                {
                     name: 'یادرفتگاں',
