@@ -50,21 +50,21 @@ const Team = () => {
         <>
             <section className="relative blogs">
                 <Slider ref={slider} {...settings}>
-                    {Team_data.map((image) => {
+                    {Team_data?.map((item) => {
                         return (
-                            <div key={image.img} className='px-5'>
+                            <div key={item.img} className='px-5'>
                                 <div className='shadow-md'>
                                     <div className={`relative h-[225px] w-full`}
-                                        onClick={() => OpenModelBox(image)} >
+                                        onClick={() => OpenModelBox(item)} >
                                         <img
-                                            src={image.img}
+                                            src={item?.img}
                                             alt="img"
                                             className="h-full w-full object-cover"
                                         />
                                     </div>
                                     <div className='p-5 text-center'>
-                                        <h3 className='text-xl font-ahle text-yellow mb-5'>
-                                            سید منور حسنؒ
+                                        <h3 className='text-xl font-ahle text-yellow mb-10'>
+                                            {item?.name}
                                         </h3>
                                         <Link href="#"
                                             className="bg-transparent text-pure hover:bg-yellow hover:text-white border hover:border-yellow text-base px-8 py-2.5 uppercase">
@@ -90,21 +90,31 @@ export default Team
 
 export const Team_data = [
     {
-        img: "/assets/images/07.jpg",
+        name: "سید داؤد غزنوی",
+        img: "/assets/images//team/1.jpeg",
     },
     {
-        img: "/assets/images/08.jpg",
+        name: "مولانا ابراہیم میر سیالکوٹی",
+        img: "/assets/images//team/2.jpg",
     },
     {
-        img: "/assets/images/09.jpg",
+        name: "مولانا اسماعیل سلفی",
+        img: "/assets/images//team/3.jpeg",
     },
     {
-        img: "/assets/images/10.jpg",
+        name: "حافظ عبداللہ بڈھیمالوی",
+        img: "/assets/images//team/4.jpeg",
     },
     {
-        img: "/assets/images/11.jpg",
+        name: "علامہ احسان الہی ظہیر",
+        img: "/assets/images//team/5.jpeg",
     },
     {
-        img: "/assets/images/12.jpg",
+        name: "مولانا معین الدین لکھوی",
+        img: "/assets/images//team/6.jpeg",
+    },
+    {
+        name: "مولانا حبیب الرحمان یزدانی",
+        img: "/assets/images//team/7.jpeg",
     },
 ];
