@@ -81,7 +81,7 @@ export const NavLinks = [
                },
                {
                     name: 'پرنٹ میڈیا کوریج',
-                    link: '#',
+                    link: '/print-media',
                },
                {
                     name: 'الیکٹرانک میڈیا کوریج',

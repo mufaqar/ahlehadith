@@ -54,7 +54,7 @@ const Header1 = () => {
                     <ul key={idx} className="w-full gap-4 items-center hidden md:flex [&>*:nth-child(1)]:border-r-transparent ">
                       {item.sub_menu?.map((sub_item: any, _idx: any) => {
                         return <li key={_idx} className="px-3 border-r border-pure py-3">
-                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={item.link} className="uppercase font-ahle text-base md:text-pure text-pure hover:text-[#012f1e] hover:underline" >
+                          <Link onClick={() => { setDropdown(null), setIsMobile(false) }} href={sub_item.link} className="uppercase font-ahle text-base md:text-pure text-pure hover:text-[#012f1e] hover:underline" >
                             {sub_item.name}
                           </Link>
                         </li>
