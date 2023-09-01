@@ -4,11 +4,9 @@ import Layout from '@/components/Layout/Layout';
 import { PrintMedia_Data } from '@/const/print-media';
 import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import { THadith } from '@/utils/types';
 
+const Print_Media = () => {
 
-
-const Ahlehadith_Magazine = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
   const [modalIsOpen, setIsOpen] = useState(false);
   const [URL, setURL] = useState('');
@@ -16,6 +14,7 @@ const Ahlehadith_Magazine = () => {
     setURL(image)
     setIsOpen(true);
   }
+
   return (
     <>
       <Layout>
@@ -40,4 +39,4 @@ const Ahlehadith_Magazine = () => {
   )
 }
 
-export default Ahlehadith_Magazine
+export default Print_Media

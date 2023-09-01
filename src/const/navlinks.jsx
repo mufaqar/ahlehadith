@@ -62,7 +62,7 @@ export const NavLinks = [
                },
                {
                     name: 'یادرفتگاں',
-                    link: '#',
+                    link: '/visits',
                },
           ]
      },
