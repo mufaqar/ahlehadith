@@ -16,3 +16,7 @@ export type NavLinksType = {
    url: string;
  
 }
+
+export type THadith = {
+   img:string;
+}
