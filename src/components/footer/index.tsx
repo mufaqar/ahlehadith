@@ -103,7 +103,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
-                    <Link href="/blogs" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
+                    <Link href="/news" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
                       جماعتی خبریں
                     </Link>
                   </li>

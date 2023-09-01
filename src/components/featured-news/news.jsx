@@ -55,7 +55,7 @@ const Featured_News = () => {
 
                 <div className="absolute bottom-0 md:p-2 p-2 w-full bg-white border-t-4 border-yellow">
                   <Link href="#" className="text-xl font-ahle text-black">
-                  {GetWordStr(item?.title, 10)}
+                    {GetWordStr(item?.title, 10)}
                   </Link>
                 </div>
               </div>
