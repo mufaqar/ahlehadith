@@ -23,64 +23,64 @@ export const Gallery = [
 
 export const Shura_Gallery = [
   {
-    img: "1.jpg",
+    img: "1.JPG",
   },
   {
-    img: "2.jpg",
+    img: "2.JPG",
   },
   {
-    img: "3.jpg",
+    img: "3.JPG",
   },
   {
-    img: "4.jpg",
+    img: "4.JPG",
   },
   {
-    img: "5.jpg",
+    img: "5.JPG",
   },
   {
-    img: "6.jpg",
+    img: "6.JPG",
   },
   {
-    img: "7.jpg",
+    img: "7.JPG",
   },
   {
-    img: "8.jpg",
+    img: "8.JPG",
   },
   {
-    img: "9.jpg",
+    img: "9.JPG",
   },
   {
-    img: "10.jpg",
+    img: "10.JPG",
   },
   {
-    img: "11.jpg",
+    img: "11.JPG",
   },
   {
-    img: "12.jpg",
+    img: "12.JPG",
   },
   {
-    img: "13.jpg",
+    img: "13.JPG",
   },
   {
-    img: "14.jpg",
+    img: "14.JPG",
   },
   {
-    img: "15.jpg",
+    img: "15.JPG",
   },
   {
-    img: "16.jpg",
+    img: "16.JPG",
   },
   {
-    img: "17.jpg",
+    img: "17.JPG",
   },
   {
-    img: "18.jpg",
+    img: "18.JPG",
   },
   {
-    img: "19.jpg",
+    img: "19.JPG",
   },
   {
-    img: "20.jpg",
+    img: "20.JPG",
   },
 ];
 
