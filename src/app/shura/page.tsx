@@ -21,8 +21,9 @@ const Page = () => {
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
               <Masonry columnsCount={3} gutter="20px">
                 {Shura_Gallery.map((image:any) => (
+                  
                   <figure key={image.img} className="p-1 hover:shadow-lg cursor-pointer">
-                    <img src={image.img} alt="Gallery" className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
+                    <img src={`/assets/images/shaura/${image.img}`} alt={image.img} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
                   </figure>
                 ))}
               </Masonry>
