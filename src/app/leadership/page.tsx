@@ -93,21 +93,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="mb-10">
-              <h2 className="text-3xl uppercase font-ahle ">
-                پروفیسر سینیٹر ساجد میر حفظہ اللہ امیر مرکزی جمعیت اہلحدیث پاکستان
-              </h2>
-            </div>
-            <div className="flex md:flex-row flex-col justify-between gap-8">
-              <div className="md:w-1/4 w-full">
-                <img className='' src="/assets/images/slid3.jpeg" alt="img" />
-              </div>
-              <div className="md:w-3/4 w-full">
-                
-              </div>
-            </div>
-          </div>
+       
         </div>
       </Layout>
     </>

@@ -22,46 +22,8 @@ const Home1 = () => {
       <Main1 />
       <Sub_Nav />
       <Tabs />
-      <section className=" bg-black">
-        <Image src="/assets/images/manshoor.jpg" alt="img" width={1000} height={600} className=" max-h-[600px] mx-auto object-center" />
-        <Layout>
-          <div className="flex justify-center gap-5 ">
-            <Link href="/"
-              className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
-              مزید جانیں
-            </Link>
-            <Link href="/"
-              className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
-              منشور ڈاؤن لوڈ کریں
-            </Link> 
-          </div>
-        </Layout>
-      </section>
-      <section className="py-12 bg-[url('/assets/images/bg-jui.jpg')] bg-center bg-cover">
-        <Layout>
-          <div className="flex md:flex-row flex-col gap-5">
-            <div className="md:w-3/4 w-full flex md:flex-row flex-col gap-5 items-center">
-              <div>
-                <h2 className="text-2xl leading-[4rem] uppercase text-white font-ahle mb-3">
-                  خوشحال پاکستان کے لیے
-                </h2>
-                <h3 className="text-5xl leading-[4rem] uppercase text-white font-ahle">
-                  مرکزی جمعیت اہل حدیث کےممبربنیں
-                </h3>
-              </div>
-              <div>
-                <Link href="#"
-                  className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-xl px-8 py-2.5 uppercase">
-                  ممبر بنیں
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/4 w-full">
-              <Image src='/assets/images/sajid-mir.jpg' alt="sajid-mir" width={300} height={300} className="rounded-full h-60 w-60 object-cover mx-auto" />
-            </div>
-          </div>
-        </Layout>
-      </section>
+    
+      
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
