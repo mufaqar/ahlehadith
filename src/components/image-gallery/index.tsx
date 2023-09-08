@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModelBox from "../ModelBox/ModelBox";
+import Image from "next/image";
 
 const Gallery_images = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
@@ -18,7 +19,9 @@ const Gallery_images = () => {
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
           <Masonry columnsCount={3} gutter="20px">
             {Gallery.map((image) => (
-              <figure key={image.img} className="p-1 hover:shadow-lg cursor-pointer"><img src={image.img} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} /></figure>
+              <figure key={image.img} className="p-1 hover:shadow-lg cursor-pointer">
+                <Image src={image.img} alt={image.img} width={960} height={640} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
+              </figure>
             ))}
           </Masonry>
         </ResponsiveMasonry>
@@ -34,21 +37,27 @@ export default Gallery_images;
 
 export const Gallery = [
   {
-    img: "/assets/images/07.jpg",
+    img: "/assets/images/picture/1.jpg",
   },
   {
-    img: "/assets/images/08.jpg",
+    img: "/assets/images/picture/2.jpg",
   },
   {
-    img: "/assets/images/09.jpg",
+    img: "/assets/images/picture/3.jpg",
   },
   {
-    img: "/assets/images/10.jpg",
+    img: "/assets/images/picture/4.jpg",
   },
   {
-    img: "/assets/images/11.jpg",
+    img: "/assets/images/picture/5.jpg",
   },
   {
-    img: "/assets/images/12.jpg",
+    img: "/assets/images/picture/6.jpg",
+  },
+  {
+    img: "/assets/images/picture/7.jpg",
+  },
+  {
+    img: "/assets/images/picture/8.jpg",
   },
 ];

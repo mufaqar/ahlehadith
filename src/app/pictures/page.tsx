@@ -7,7 +7,10 @@ const Pictures = () => {
     <>
       <Layout>
         <section className="my-20">
-        <Gallery_images />
+          <h2 className="text-2xl font-ahle capitalize">
+            صدر آزاد جموں کشمیر سردار مسعود خاں
+          </h2>
+          <Gallery_images />
         </section>
       </Layout>
     </>
