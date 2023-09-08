@@ -23,8 +23,8 @@ const Nazryat: React.FC<NazryatProps> = ({ selectedName }) => {
                     {item?.info?.map((info: any, _idx: any) => {
                       return <div key={_idx}>
                         <h6 className='mb-3 text-xl font-ahle'>{info?.position}</h6>
-                        <h4 className='mb-3 text-4xl font-ahle'>{info?.name}</h4>
-                        <h5 className='mb-3 text-2xl font-ahle'>{info?.year}</h5>
+                        <h4 className='mb-3 text-2xl font-ahle'>{info?.name}</h4>
+                        
                       </div>
                     })}
                   </div>
