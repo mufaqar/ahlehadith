@@ -30,7 +30,7 @@ const Main1 = () => {
         <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
-              post.map((item: any, idx: number) => {
+              Slide_BG.map((item: any, idx: number) => {
                 return (
                   <img src={item.img} alt="img" key={idx} className="h-[580px] w-full object-cover"/>
                 )
@@ -91,8 +91,5 @@ export const Slide_BG = [
   },
   {
     img: "/assets/images/banner/6.jpg",
-  },
-  {
-    img: "/assets/images/banner/7.jpg",
-  },
+  }
 ];
