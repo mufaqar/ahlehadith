@@ -4,6 +4,7 @@ import Layout from '@/components/Layout/Layout';
 import { PrintMedia_Data } from '@/const/print-media';
 import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import Image from 'next/image';
 
 const Print_Media = () => {
 
@@ -24,7 +25,7 @@ const Print_Media = () => {
               <Masonry columnsCount={3} gutter="20px">
                 {PrintMedia_Data?.map((item: any, idx: any) => {
                   return <figure key={idx} className="p-1 hover:shadow-lg cursor-pointer">
-                    <img src={item.img} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(item)} />
+                    <Image src={item?.img} alt={item?.img} width={500} height={1311} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(item)} />
                   </figure>
                 })}
               </Masonry>
