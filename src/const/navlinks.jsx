@@ -45,8 +45,8 @@ export const NavLinks = [
           link: '/introduction',
           sub_menu: [
                {
-                    name: 'منشور',
-                    link: '#',
+                    name: 'دستور',
+                    link: '/dastoor',
                },
                {
                     name: 'تاریخ اہلحدیث',
