@@ -22,10 +22,10 @@ const Home1 = () => {
       <Main1 />
       <Sub_Nav />
       <Tabs />
-      <section className="my-10 md:my-20 md:mt-20 bg-black">
-        <Image src="/assets/images/manshoor.jpg" alt="img" width={1920} height={250} className="w-full max-h-[900px] object-cover object-center" />
+      <section className=" bg-black">
+        <Image src="/assets/images/manshoor.jpg" alt="img" width={1000} height={600} className=" max-h-[600px] mx-auto object-center" />
         <Layout>
-          <div className="flex justify-center gap-5">
+          <div className="flex justify-center gap-5 ">
             <Link href="/"
               className="bg-yellow text-pure hover:bg-light-blue border-yellow hover:text-white border hover:border-light-blue text-base px-8 py-2.5 uppercase">
               مزید جانیں
@@ -111,10 +111,7 @@ const Home1 = () => {
                           width={200}
                           height={160}
                           className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
-                        />
-                        <div className={`absolute top-8 right-0 bg-yellow p-1.5 cursor-pointer px-4 text-sm uppercase text-dark-gray flex items-center `}>
-                          Share <AiOutlineShareAlt size={22} />
-                        </div>
+                        />                        
                       </figure>
                     </Link>
                     <div
@@ -122,7 +119,7 @@ const Home1 = () => {
                     >
                       <div className={``}>
                         <p className="capitalize text-light-blue text-sm">
-                          By Danial Alam - <span className="uppercase">22 December</span>
+                          By Farhan  - <span className="uppercase">23 September</span>
                         </p>
                         <h2
                           className={`text-[18px] leading-[2.3rem] font-medium font-ahle `}
@@ -152,10 +149,14 @@ const Home1 = () => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                  ترجمہ :  ہاں، اللہ اس سے ہرگز نہیں شرماتا کہ مچھر یا اس سے بھی حقیر تر کسی چیز کی تمثیلیں دے جو لوگ حق بات کو قبول کرنے والے ہیں، وہ انہی تمثیلوں کو دیکھ کر جان لیتے ہیں کہ یہ حق ہے جو ان کے رب ہی کی طرف سے آیا ہے، اور جو ماننے والے نہیں ہیں، وہ انہیں سن کر کہنے لگتے ہیں کہ ایسی تمثیلوں سے اللہ کو کیا سروکار؟ اس طرح اللہ ایک ہی بات سے بہتوں کو گمراہی میں مبتلا کر دیتا ہے اور بہتوں کو راہ راست دکھا دیتا ہے اور گمراہی میں وہ انہی کو مبتلا کرتا ہے، جو فاسق ہیں ﴿۲۶﴾
-                </p>
+                وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَطِيعُوا الرَّسُولَ لَعَلَّكُمْ تُرْحَمُونَ
+              </p>
+               <p className="font-ahle text-lg text-gray-600 dark:text-text">
+                
+                  اور چاہیے کہ نماز کا اہتمام کرو، زکوۃ ادا کرنے میں سرگرم رہو اور اللہ کے رسول کا کہا مانو، کچھ بعید نہیں کہ رحمت الٰہی کے سزاوار ہو
+               </p>
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                  سُوۡرَةُ البَقَرَة : 26
+                ۔النور:56
                 </p>
               </div>
             </div>
@@ -168,10 +169,9 @@ const Home1 = () => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                  ترجمہ :  رسول اللہ ﷺ نے فرمایا جب اللہ تعالیٰ کسی بندے کی موت کے لیے کسی زمین کا فیصلہ کر دیتا ہے تو وہاں اس کی کوئی حاجت پیدا کر دیتا ہے۔
-                </p>
+                رسول اللہ ﷺ نے فرمایا: ”تم میں سے جو شخص اس حال میں صبح کرے کہ وہ اپنی جان کی طرف سے بے خوف ہو، جسمانی اعتبار سے صحت مند ہو، ایک دن کی خوراک کا سامان اس کے پاس ہو، تو گویا اس کے لیے ساری دنیا جمع کردی گئی  </p>
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                  (جامع ترمذی ،۲۱۴۷)
+                ۔صحیح الجامع:6042
                 </p>
               </div>
             </div>
@@ -179,51 +179,30 @@ const Home1 = () => {
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
-                  اقتباس
+                اقوالِ سلف
                 </h2>
               </div>
               <div className="px-5">
                 <ul className="divide-y divide-border ">
+                
                   <li className="py-3">
                     <p className="font-ahle text-lg text-pure">
-                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
-                    </p>
+                    تابعی طاؤوس بن كيسان رحمہ اللہ دعا کیا کرتے تھے  </p>
                     <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
-                    </p>
-                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
-                      مزید پڑھیں
-                    </Link>
+                    :"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ غِنًى مُبْطِرٍ، وَفَقْرٍ مُلِبٍّ، أَوْ مُرِبٍّ."
+                    ”اے اللہ! میں تیری پناہ میں آتا ہوں آپے سے باہر کر دینے والی امیری سے، اور جان نہ چھوڑنے والی فقیری سے۔“
+                      </p>
+                    <p className="font-ahle text-lg text-pure dark:text-text">
+                    (جامع معمر بن راشد : ١٩٦٣٣)  </p>
                   </li>
-                  <li className="py-3">
-                    <p className="font-ahle text-lg text-pure">
-                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
-                    </p>
-                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
-                    </p>
-                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
-                      مزید پڑھیں
-                    </Link>
-                  </li>
-                  <li className="py-3">
-                    <p className="font-ahle text-lg text-pure">
-                      شاہ کلید از "سید ابو الاعلیٰ مودودیؒ"
-                    </p>
-                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                      جاہلیت کے زمانے میں میں نے بہت کچھ پڑھا ہے۔ قدیم و جدید فلسفہ، سائنس
-                    </p>
-                    <Link href="#" className="font-ahle text-lg text-pure dark:text-text">
-                      مزید پڑھیں
-                    </Link>
-                  </li>
-                </ul>
+                  </ul>
+                 
               </div>
             </div>
           </div>
         </div>
       </Layout>
-      <section className="py-16 bg-[url('/assets/images/tabdeeli.jpg')] bg-center bg-cover">
+      <section className="py-16 bg-[url('/assets/images/tabdeeli.jpg')] bg-center bg-cover bg-black/50 bg-blend-multiply">
         <Layout>
           <div className="flex md:flex-row flex-col gap-5">
             <div className="md:w-1/4 w-full">
