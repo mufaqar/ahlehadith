@@ -21,7 +21,7 @@ export default function ConatctLayout({
         <PageBanner
           title="قیادت"
           subTitle=""
-          image="/assets/images/slid1.jpeg"
+          image="/assets/images/banner/3.jpg"
           buttontext=""
           buttonLink=""
         />
