@@ -22,8 +22,8 @@ const Footer = () => {
                 <h2 className="text-2xl text-white uppercase ahle-heading font-ahle footer-heading">
                   ٹیلی فون:
                 </h2>
-                <Link href="tel:04237729933" className="md:text-4xl text-2xl text-white uppercase font-ahle">
-                  04237729933
+                <Link href="tel:03060483779" className="md:text-4xl text-2xl text-white uppercase font-ahle">
+                977 3840 6030 92+
                 </Link>
               </div>
             </div>
@@ -94,11 +94,11 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle footer-heading">
-                  کوئک لنکس / فوری رسائی
+                  کوئک لنکس 
                 </h2>
                 <ul className="list-inside list-square marker:text-yellow">
                   <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
-                    <Link href="#" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
+                    <Link href="/" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
                       دستور مرکزی جمعیت اہل حدیث پاکستان
                     </Link>
                   </li>
@@ -113,7 +113,15 @@ const Footer = () => {
                   <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
                     <Link href="/pictures" className="text-white hover:opacity-80 font-ahle text-lg ms-1">تصاویر</Link>
                   </li>
-                  <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
+                 
+                </ul>
+              </div>
+              <div>
+                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle footer-heading">
+                فوری رسائی
+                </h2>
+                <ul className='list-inside list-square marker:text-yellow'>
+                <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
                     <Link href="islamic-graphics" className="text-white hover:opacity-80 font-ahle text-lg ms-1">اسلامک گرافکس</Link>
                   </li>
                   <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
@@ -122,27 +130,7 @@ const Footer = () => {
                   <li className="mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[13px] before:right-1">
                     <Link href="/contact-us" className="text-white hover:opacity-80 font-ahle text-lg ms-1">رابطہ کریں</Link>
                   </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-2xl text-white uppercase ahle-heading font-ahle footer-heading">
-                  ہمارا نیٹ ورک
-                </h2>
-                <ul className='list-inside list-square marker:text-yellow'>
-                  <li className="text-white font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[11px] before:right-1">
-                    <Link href="https://paigham.tv"  target="_blank" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
-                    Paigham TV                   </Link>
-                  </li>
-                  <li className="text-white font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[11px] before:right-1">
-                    <Link href="#" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
-                      فورم
-                    </Link>
-                  </li>
-                  <li className="text-white font-ahle text-lg mb-4 relative before:content-[' '] before:h-[1px] before:w-3 before:bg-[#397524] before:absolute before:top-[11px] before:right-1">
-                    <Link href="#" className="text-white hover:opacity-80 font-ahle text-lg ms-1">
-                      بلاگ
-                    </Link>
-                  </li>
+                
                 </ul>
               </div>
             </div>
@@ -160,13 +148,13 @@ const Footer = () => {
                   <BsEnvelopeAtFill size={20} />
                   mjah106@gmail.com
                 </Link>
-                <Link href="tel:03208453475" className='text-white font-ahle text-base flex gap-2'>
+                <Link href="tel:+923060483779" className='text-white font-ahle text-base flex gap-2'>
                   <BsPhone size={20} />
-                  03208453475
+                  977 3840 6030 92+
                 </Link>
                 <ul className="flex md:justify-end">
                   <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-yellow bg-transparent hover:bg-yellow text-white'>
-                    <Link href="#" className="">
+                    <Link href="https://www.facebook.com/AllamaSajidMir" className="">
                       <FaFacebookF size={20} />
                     </Link>
                   </li>
