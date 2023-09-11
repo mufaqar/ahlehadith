@@ -25,7 +25,7 @@ const Pictures = () => {
               <Masonry columnsCount={3} gutter="20px">
                 {Dastoor_Data?.map((item: any, idx: any) => {
                   return <figure key={idx} className="p-1 hover:shadow-lg cursor-pointer">
-                    <Image src={item?.img} alt="image" width={500} height={1311} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(item)} />
+                    <Image src={item?.img} alt="image" width={1080} height={857} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(item)} />
                   </figure>
                 })}
               </Masonry>
