@@ -23,7 +23,7 @@ const Footer = () => {
                   ٹیلی فون:
                 </h2>
                 <Link href="tel:03060483779" className="md:text-4xl text-2xl text-white uppercase font-ahle">
-                97 73 840 3060  92+
+                97 73 840 0306  92+
                 </Link>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Footer = () => {
                 </Link>
                 <Link href="tel:+923060483779" className='text-white font-ahle text-base flex gap-2'>
                   <BsPhone size={20} />
-                  97 73 840 3060 
+                  97 73 840 0306  92+
                 </Link>
                 <ul className="flex md:justify-end">
                   <li className='p-3 md:border-r md:border-y-0 md:border-l-0 border border-yellow bg-transparent hover:bg-yellow text-white'>
