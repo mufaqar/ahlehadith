@@ -42,7 +42,7 @@ export default function Home() {
                       alt="thumbnil"
                       width={900}
                       height={50}
-                      className="w-full h-full object-cover opacity-60"
+                      className="w-full h-full opacity-60"
                     />
                     <span className="bg-yellow text-black py-1 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
                       {item?.categories}
@@ -66,14 +66,14 @@ export default function Home() {
                   >
                     <Link href={`/blogs/${item.title}`} className={`md:w-1/3`}>
                       <figure
-                        className={`overflow-hidden relative md:w-full`}
+                        className={`overflow-hidden relative md:w-full h-full`}
                       >
                         <Image
                           src={item?.img}
                           alt=""
                           width={200}
                           height={160}
-                          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
+                          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full`}
                         />
                       </figure>
                     </Link>
