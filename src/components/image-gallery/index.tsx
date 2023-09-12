@@ -37,27 +37,27 @@ export default Gallery_images;
 
 export const Gallery = [
   {
-    img: "/assets/images/picture/1.jpg",
+    img: "/assets/images/picture/1.JPG",
   },
   {
-    img: "/assets/images/picture/2.jpg",
+    img: "/assets/images/picture/2.JPG",
   },
   {
-    img: "/assets/images/picture/3.jpg",
+    img: "/assets/images/picture/3.JPG",
   },
   {
-    img: "/assets/images/picture/4.jpg",
+    img: "/assets/images/picture/4.JPG",
   },
   {
-    img: "/assets/images/picture/5.jpg",
+    img: "/assets/images/picture/5.JPG",
   },
   {
-    img: "/assets/images/picture/6.jpg",
+    img: "/assets/images/picture/6.JPG",
   },
   {
-    img: "/assets/images/picture/7.jpg",
+    img: "/assets/images/picture/7.JPG",
   },
   {
-    img: "/assets/images/picture/8.jpg",
+    img: "/assets/images/picture/8.JPG",
   },
 ];
