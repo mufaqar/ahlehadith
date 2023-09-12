@@ -22,8 +22,6 @@ const Home1 = () => {
       <Main1 />
       <Sub_Nav />
       <Tabs />
-    
-      
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
@@ -73,7 +71,7 @@ const Home1 = () => {
                           width={200}
                           height={160}
                           className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
-                        />                        
+                        />
                       </figure>
                     </Link>
                     <div
@@ -90,7 +88,6 @@ const Home1 = () => {
                         </h2>
                       </div>
                       <p className="mt-3 text-text font-normal">{GetWordStr(item?.body)}</p>
-
                     </div>
                   </div>
                 );
@@ -111,14 +108,13 @@ const Home1 = () => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَطِيعُوا الرَّسُولَ لَعَلَّكُمْ تُرْحَمُونَ
-              </p>
-               <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                
+                  وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَطِيعُوا الرَّسُولَ لَعَلَّكُمْ تُرْحَمُونَ
+                </p>
+                <p className="font-ahle text-lg text-gray-600 dark:text-text">
                   اور چاہیے کہ نماز کا اہتمام کرو، زکوۃ ادا کرنے میں سرگرم رہو اور اللہ کے رسول کا کہا مانو، کچھ بعید نہیں کہ رحمت الٰہی کے سزاوار ہو
-               </p>
+                </p>
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                ۔النور:56
+                  ۔النور:56
                 </p>
               </div>
             </div>
@@ -131,9 +127,9 @@ const Home1 = () => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                رسول اللہ ﷺ نے فرمایا: ”تم میں سے جو شخص اس حال میں صبح کرے کہ وہ اپنی جان کی طرف سے بے خوف ہو، جسمانی اعتبار سے صحت مند ہو، ایک دن کی خوراک کا سامان اس کے پاس ہو، تو گویا اس کے لیے ساری دنیا جمع کردی گئی  </p>
+                  رسول اللہ ﷺ نے فرمایا: ”تم میں سے جو شخص اس حال میں صبح کرے کہ وہ اپنی جان کی طرف سے بے خوف ہو، جسمانی اعتبار سے صحت مند ہو، ایک دن کی خوراک کا سامان اس کے پاس ہو، تو گویا اس کے لیے ساری دنیا جمع کردی گئی  </p>
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                ۔صحیح الجامع:6042
+                  ۔صحیح الجامع:6042
                 </p>
               </div>
             </div>
@@ -141,24 +137,22 @@ const Home1 = () => {
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
-                اقوالِ سلف
+                  اقوالِ سلف
                 </h2>
               </div>
               <div className="px-5">
                 <ul className="divide-y divide-border ">
-                
                   <li className="py-3">
                     <p className="font-ahle text-lg text-pure">
-                    تابعی طاؤوس بن كيسان رحمہ اللہ دعا کیا کرتے تھے  </p>
+                      تابعی طاؤوس بن كيسان رحمہ اللہ دعا کیا کرتے تھے  </p>
                     <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                    :"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ غِنًى مُبْطِرٍ، وَفَقْرٍ مُلِبٍّ، أَوْ مُرِبٍّ."
-                    ”اے اللہ! میں تیری پناہ میں آتا ہوں آپے سے باہر کر دینے والی امیری سے، اور جان نہ چھوڑنے والی فقیری سے۔“
-                      </p>
+                      :"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ غِنًى مُبْطِرٍ، وَفَقْرٍ مُلِبٍّ، أَوْ مُرِبٍّ."
+                      ”اے اللہ! میں تیری پناہ میں آتا ہوں آپے سے باہر کر دینے والی امیری سے، اور جان نہ چھوڑنے والی فقیری سے۔“
+                    </p>
                     <p className="font-ahle text-lg text-pure dark:text-text">
-                    (جامع معمر بن راشد : ١٩٦٣٣)  </p>
+                      (جامع معمر بن راشد : ١٩٦٣٣)  </p>
                   </li>
-                  </ul>
-                 
+                </ul>
               </div>
             </div>
           </div>
@@ -207,7 +201,6 @@ const Home1 = () => {
               </div>
               <VideosGallery />
             </div>
-
             <div>
               <div className="my-5">
                 <div className="flex justify-between items-center">
@@ -253,5 +246,3 @@ const Home1 = () => {
 };
 
 export default Home1;
-
-

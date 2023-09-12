@@ -17,7 +17,6 @@ function Tabs() {
         <div className='flex md:flex-row flex-col justify-between gap-8 items-center'>
           <div className="md:w-1/3 w-full">
             <h2 className='text-4xl leading-[4rem] font-ahle'>مرکزی جمعیت اہل حدیث</h2>
-           
           </div>
           <div className="md:w-2/3 w-full">
             <ul className='flex justify-between border-b'>
