@@ -12,7 +12,7 @@ function Tabs() {
     setSelectedName(itemName);
   };
   return (
-    <section className='bg-light-gray py-10 md:py-20'>
+    <section className='bg-light-gray py-10 md:py-20' id='history'>
       <Layout>
         <div className='flex md:flex-row flex-col justify-between gap-8 items-center'>
           <div className="md:w-1/3 w-full">

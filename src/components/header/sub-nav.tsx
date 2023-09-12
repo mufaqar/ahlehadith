@@ -10,21 +10,21 @@ const Sub_Nav = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 1,
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 1,
           autoplay: true,
         }
@@ -76,32 +76,27 @@ export default Sub_Nav
 export const Nav_data = [
   {
     img: "/assets/images/siteicon.png",
-    link: "#",
+    link: "/introduction",
     name: "تعارف",
   },
   {
     img: "/assets/images/tareekh.png",
-    link: "#",
+    link: "/#history",
     name: "تاریخ",
   },
   {
     img: "/assets/images/kyadat.png",
-    link: "#",
+    link: "/leadership",
     name: "قیادت",
   },
   {
     img: "/assets/images/book.png",
-    link: "#",
+    link: "/books-library",
     name: "کتابیں",
   },
   {
-    img: "/assets/images/manshor.png",
-    link: "#",
-    name: "منشور",
-  },
-  {
     img: "/assets/images/dastoor.png",
-    link: "#",
+    link: "/dastoor",
     name: "دستور",
   },
 ];
