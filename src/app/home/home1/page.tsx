@@ -13,17 +13,21 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
+import apolloClient from '@/config/client';
+import { AllPosts } from '@/config/queries';
 
 
-const Home1 = () => {
+const Home1 = async() => {
+
+  const posts = await getData()
+  console.log("🚀 ~ file: page.tsx:30 ~ Home ~ data:", posts)
+
   return (
     <>
       <Header1 />
       <Main1 />
       <Sub_Nav />
-      <Tabs />
-    
-      
+      <Tabs/>
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
@@ -33,11 +37,11 @@ const Home1 = () => {
           </div>
           <div className="md:flex gap-6">
             <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
-              {PostMokeData.slice(0, 1).map((item, idx) => {
+              {posts?.slice(0, 1).map((item:any, idx:number) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
                     <Image
-                      src={item.img}
+                      src={item.featuredImage.node.mediaItemUrl}
                       alt="thumbnil"
                       width={900}
                       height={50}
@@ -47,7 +51,7 @@ const Home1 = () => {
                       {item?.categories}
                     </span>
                     <span className="bg-black text-yellow py-1 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
-                      22 فروری
+                      {item.date}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
                       <Link href="#" className="text-2xl font-ahle text-black">
@@ -59,16 +63,16 @@ const Home1 = () => {
               })}
             </div>
             <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
-              {PostMokeData.slice(0, 3).map((item, idx) => {
+              {posts?.slice(0, 3).map((item:any, idx:number) => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
-                    <Link href={`/blogs/${item.title}`} className={`md:w-1/3`}>
+                    <Link href={`/blogs/${item.slug}`} className={`md:w-1/3`}>
                       <figure
                         className={`overflow-hidden relative md:w-full`}
                       >
                         <Image
-                          src={item?.img}
+                          src={item.featuredImage.node.mediaItemUrl}
                           alt=""
                           width={200}
                           height={160}
@@ -81,7 +85,7 @@ const Home1 = () => {
                     >
                       <div className={``}>
                         <p className="capitalize text-light-blue text-sm">
-                          By Farhan  - <span className="uppercase">23 September</span>
+                          By Farhan  - <span className="uppercase">{item.date}</span>
                         </p>
                         <h2
                           className={`text-[18px] leading-[2.3rem] font-medium font-ahle `}
@@ -89,7 +93,7 @@ const Home1 = () => {
                           {item.title}
                         </h2>
                       </div>
-                      <p className="mt-3 text-text font-normal">{GetWordStr(item?.body)}</p>
+                      <p className="mt-3 text-text font-normal">{GetWordStr(item?.excerpt)}</p>
 
                     </div>
                   </div>
@@ -255,3 +259,18 @@ const Home1 = () => {
 export default Home1;
 
 
+
+
+async function getData() {
+  const [posts] = await Promise.all([
+    apolloClient.query({ query: AllPosts }),
+  ]);
+  const postData = posts?.data?.posts?.nodes
+
+  if (!postData) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return postData
+}
