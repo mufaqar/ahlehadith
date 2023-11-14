@@ -7,27 +7,28 @@ import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import Team from "@/components/team/team";
 import { PostMokeData } from "@/const/post";
-import { GetWordStr } from "@/utils";
+import { ConvertDateIntoUrdu, GetWordStr } from "@/utils";
 import Image from "next/image";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
 import apolloClient from '@/config/client';
-import { AllPosts } from '@/config/queries';
+import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQoute, UpdatesByCategoryQuran, Videos } from '@/config/queries';
 
 
-const Home1 = async() => {
+const Home1 = async () => {
 
-  const posts = await getData()
-  console.log("🚀 ~ file: page.tsx:30 ~ Home ~ data:", posts)
+  const { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData } = await getData()
+  
+  const posts = postData
 
   return (
     <>
       <Header1 />
       <Main1 />
       <Sub_Nav />
-      <Tabs/>
+      <Tabs />
       <Layout>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
@@ -37,7 +38,7 @@ const Home1 = async() => {
           </div>
           <div className="md:flex gap-6">
             <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
-              {posts?.slice(0, 1).map((item:any, idx:number) => {
+              {posts?.slice(0, 1).map((item: any, idx: number) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
                     <Image
@@ -47,14 +48,14 @@ const Home1 = async() => {
                       height={50}
                       className="w-full h-full object-cover opacity-60"
                     />
-                    <span className="bg-yellow text-black py-1 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
-                      {item?.categories}
+                    <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
+                      {item?.categories?.nodes[0]?.name}
                     </span>
-                    <span className="bg-black text-yellow py-1 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
-                      {item.date}
+                    <span className="bg-black text-yellow py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
+                      {ConvertDateIntoUrdu(item.date)}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
-                      <Link href="#" className="text-2xl font-ahle text-black">
+                      <Link href={`/blogs/${item.slug}`} className="text-2xl font-ahle text-black">
                         {item.title}
                       </Link>
                     </div>
@@ -63,21 +64,21 @@ const Home1 = async() => {
               })}
             </div>
             <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
-              {posts?.slice(0, 3).map((item:any, idx:number) => {
+              {posts?.slice(1, 4).map((item: any, idx: number) => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
                     <Link href={`/blogs/${item.slug}`} className={`md:w-1/3`}>
                       <figure
-                        className={`overflow-hidden relative md:w-full`}
+                        className={`overflow-hidden relative md:w-full h-full`}
                       >
                         <Image
                           src={item.featuredImage.node.mediaItemUrl}
                           alt=""
                           width={200}
-                          height={160}
-                          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
-                        />                        
+                          height={200}
+                          className={`w-full md:h-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
+                        />
                       </figure>
                     </Link>
                     <div
@@ -85,16 +86,17 @@ const Home1 = async() => {
                     >
                       <div className={``}>
                         <p className="capitalize text-light-blue text-sm">
-                          By Farhan  - <span className="uppercase">{item.date}</span>
+                          <span className="uppercase">{ConvertDateIntoUrdu(item.date)}</span>
+                          <span> - </span>
+                          <span>By {item?.author?.node?.name}</span>
                         </p>
                         <h2
-                          className={`text-[18px] leading-[2.3rem] font-medium font-ahle `}
+                          className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
                         >
                           {item.title}
                         </h2>
                       </div>
-                      <p className="mt-3 text-text font-normal">{GetWordStr(item?.excerpt)}</p>
-
+                      <div className="mt-3 text-text leading-8 font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(item?.excerpt) }} />
                     </div>
                   </div>
                 );
@@ -115,14 +117,12 @@ const Home1 = async() => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَطِيعُوا الرَّسُولَ لَعَلَّكُمْ تُرْحَمُونَ
-              </p>
-               <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                
-                  اور چاہیے کہ نماز کا اہتمام کرو، زکوۃ ادا کرنے میں سرگرم رہو اور اللہ کے رسول کا کہا مانو، کچھ بعید نہیں کہ رحمت الٰہی کے سزاوار ہو
-               </p>
+                  <span>{dailyQuran[0]?.title}: </span>
+                  <span>{dailyQuran[0]?.dailyUpdatesInfo?.description}</span>
+                </p>
+
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                ۔النور:56
+                  {dailyQuran[0]?.dailyUpdatesInfo?.source}
                 </p>
               </div>
             </div>
@@ -135,34 +135,30 @@ const Home1 = async() => {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                رسول اللہ ﷺ نے فرمایا: ”تم میں سے جو شخص اس حال میں صبح کرے کہ وہ اپنی جان کی طرف سے بے خوف ہو، جسمانی اعتبار سے صحت مند ہو، ایک دن کی خوراک کا سامان اس کے پاس ہو، تو گویا اس کے لیے ساری دنیا جمع کردی گئی  </p>
-                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                ۔صحیح الجامع:6042
+                  <span>{dailyHadees[0]?.title}: </span>
+                  <span>{dailyHadees[0]?.dailyUpdatesInfo?.description}</span>
                 </p>
+                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">۔ {dailyHadees[0]?.dailyUpdatesInfo?.source}</p>
               </div>
             </div>
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
                 <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
-                اقوالِ سلف
+                  اقوالِ سلف
                 </h2>
               </div>
               <div className="px-5">
                 <ul className="divide-y divide-border ">
-                
                   <li className="py-3">
                     <p className="font-ahle text-lg text-pure">
-                    تابعی طاؤوس بن كيسان رحمہ اللہ دعا کیا کرتے تھے  </p>
-                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                    :"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ غِنًى مُبْطِرٍ، وَفَقْرٍ مُلِبٍّ، أَوْ مُرِبٍّ."
-                    ”اے اللہ! میں تیری پناہ میں آتا ہوں آپے سے باہر کر دینے والی امیری سے، اور جان نہ چھوڑنے والی فقیری سے۔“
-                      </p>
-                    <p className="font-ahle text-lg text-pure dark:text-text">
-                    (جامع معمر بن راشد : ١٩٦٣٣)  </p>
+                      <span>{dailyQoute[0]?.title}: </span>
+                      <span>{dailyQoute[0]?.dailyUpdatesInfo?.description}</span>
+                    </p>
+                    <p className="font-ahle text-lg text-pure dark:text-text mt-5">۔ {dailyQoute[0]?.dailyUpdatesInfo?.source}</p>
                   </li>
-                  </ul>
-                 
+                </ul>
+
               </div>
             </div>
           </div>
@@ -209,7 +205,7 @@ const Home1 = async() => {
                   </Link>
                 </div>
               </div>
-              <VideosGallery />
+              <VideosGallery videosData={videosData}/>
             </div>
 
             <div>
@@ -227,7 +223,7 @@ const Home1 = async() => {
                 </div>
               </div>
               <div className="">
-                <BooksSection />
+                <BooksSection booksData={booksData} />
               </div>
             </div>
           </div >
@@ -248,7 +244,7 @@ const Home1 = async() => {
               </Link>
             </div>
           </div>
-          <Team />
+          <Team membersData={membersData}/>
         </div>
       </Layout>
       <Footer />
@@ -262,15 +258,32 @@ export default Home1;
 
 
 async function getData() {
-  const [posts] = await Promise.all([
+  const [posts, hadees, quran, qoute, videos, books, members] = await Promise.all([
     apolloClient.query({ query: AllPosts }),
+    apolloClient.query({ query: UpdatesByCategoryHadees }),
+    apolloClient.query({ query: UpdatesByCategoryQuran }),
+    apolloClient.query({ query: UpdatesByCategoryQoute }),
+    apolloClient.query({ query: Videos }),
+    apolloClient.query({ query: Books }),
+    apolloClient.query({
+        query: Members,
+        variables: {
+          first: 10,
+        },
+    }),
   ]);
   const postData = posts?.data?.posts?.nodes
+  const dailyHadees = hadees?.data?.updateType?.updates?.nodes
+  const dailyQuran = quran?.data?.updateType?.updates?.nodes
+  const dailyQoute = qoute?.data?.updateType?.updates?.nodes
+  const videosData = videos?.data?.videos?.nodes
+  const booksData = books?.data?.books?.edges
+  const membersData = members?.data?.members?.nodes
 
   if (!postData) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
- 
-  return postData
+
+  return { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }
 }

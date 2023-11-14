@@ -54,7 +54,7 @@ const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
               </div>
             ) : (
               <Image
-                src={URL.img}
+                src={URL.img || URL}
                 alt="image"
                 width={800}
                 height={600}

@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/map/googleMap.tsx", "src/components/Homedata.tsx", "src/const/jammattest.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/map/googleMap.tsx", "src/components/Homedata.tsx", "src/const/jammattest.jsx", "src/app/videos/page.jsx", "src/components/team/team.jsx", "src/app/ulma-ikram/page.jsx"],
   "exclude": ["node_modules"]
 }

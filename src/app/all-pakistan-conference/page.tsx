@@ -7,12 +7,12 @@ const Page = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
     event.target.pauseVideo();
   }
-
   const opts: YouTubeProps['opts'] = {
     playerVars: {
       autoplay: 0,
     },
   };
+  
   return (
     <>
       <Layout>

@@ -1,50 +1,29 @@
 "use client";
 import Layout from "@/components/Layout/Layout";
 import ModelBox from "@/components/ModelBox/ModelBox";
-import React, { useState } from "react";
-import Slider from "react-slick";
+import React, { useEffect, useState } from "react";
 import {Ulma_Data} from '@/const/ulma'
+import apolloClient from "@/config/client";
+import { Members } from "@/config/queries";
 
-const Page = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-    const slider = React.useRef<Slider>(null);
+const Page = async () => {
+
+   
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [URL, setURL] = useState('');
-    const OpenModelBox = (image: any) => {
+    const OpenModelBox = (image) => {
         setURL(image)
         setIsOpen(true);
     }
+    // useEffect(()=>{
+    //     const f = async () =>{
+    //         const {membersData} = await getData()
+    //         console.log("🚀 ~ file: page.jsx:22 ~ f ~ membersData:", membersData)
+    //     }
+    //     f()
+    // })
+
     return (
         <>
             <section className="relative blogs">
@@ -84,3 +63,21 @@ const Page = () => {
 }
 
 export default Page;
+
+
+
+const getData = async() => {
+    const [members] = await Promise.all([
+      apolloClient.query({
+          query: Members,
+          variables: {
+            first: 100,
+          },
+      }),
+    ]);
+    const membersData = members?.data?.members?.nodes
+    if (!members) {
+      throw new Error('Failed to fetch data')
+    }
+    return { membersData }
+}

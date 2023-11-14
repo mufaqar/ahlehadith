@@ -7,7 +7,7 @@ import ModelBox from '../ModelBox/ModelBox';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Team = () => {
+const Team = ({membersData}) => {
     const settings = {
         dots: false,
         infinite: true,
@@ -39,11 +39,11 @@ const Team = () => {
             }
         ]
     };
-    const slider = React.useRef<Slider>(null);
+    const slider = React.useRef(null);
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [URL, setURL] = useState('');
-    const OpenModelBox = (image: any) => {
+    const OpenModelBox = (image) => {
         setURL(image)
         setIsOpen(true);
     }
@@ -51,12 +51,12 @@ const Team = () => {
         <>
             <section className="relative blogs ">
                 <Slider ref={slider} {...settings}>
-                    {Team_data?.map((item) => {
+                    {membersData?.map((item) => {
                         return (
                            <div className='px-3' key={item.img}>
                             <div  className='h-[590px] relative before:content-[" "] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border group'>
                             <div className='h-full w-full '>
-                                <Image src={item?.img}
+                                <Image src={item?.featuredImage?.node?.mediaItemUrl}
                                     alt='image'
                                     height={300}
                                     width={300}
@@ -64,7 +64,7 @@ const Team = () => {
                                 <div className='absolute bottom-8 right-5 z-[1]'>
                                     <p
                                         className="bg-yellow text-black group-hover:bg-light-blue group-hover:text-white text-base px-8 py-2.5 uppercase ">
-                                        {item?.name}
+                                        {item?.title}
                                     </p>
                                 </div>
                             </div>
@@ -72,9 +72,6 @@ const Team = () => {
                                     after:content-[' '] after:absolute after:top-3 after:bottom-3 after:left-3 after:right-3 after:border-yellow after:border-x after:scale-y-0 group-hover:after:scale-y-100 after:transform after:transition after:duration-700 after:ease-in-out "
                             ></div>
                             </div></div>
-
-
-
                         );
                     })}
                 </Slider>
