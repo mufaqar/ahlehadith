@@ -5,7 +5,7 @@ import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 import {CgArrowLongRight} from 'react-icons/cg'
 import Layout from "../Layout/Layout";
 
-const SliderComponent2 = ({ data }: any) => {
+const SliderComponent2 = ({ data }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,7 +14,7 @@ const SliderComponent2 = ({ data }: any) => {
     slidesToScroll: 1,
     arrows: false,
   };
-  const slider = React.useRef<Slider>(null);
+  const slider = React.useRef(null);
 
 
   return (
@@ -23,7 +23,7 @@ const SliderComponent2 = ({ data }: any) => {
       <section className="mt-36 container overflow-hidden px-4 h-[400px] md:px-10 mx-auto relative md:h-[600px] blogs">
         <div className="rounded-[60px] overflow-hidden ">
         <Slider ref={slider} {...settings}>
-        {data.map((item: any, idx: number) => {
+        {data.map((item, idx) => {
           return (
             <div className={`relative h-[400px] md:h-[600px] rounded-[60px] overflow-hidden `} key={idx}>
               <img

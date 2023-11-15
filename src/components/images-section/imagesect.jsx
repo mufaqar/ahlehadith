@@ -41,7 +41,7 @@ const ImagesSection = () => {
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [URL, setURL] = useState('');
-    const OpenModelBox = (image: any) => {
+    const OpenModelBox = (image) => {
         setURL(image)
         setIsOpen(true);
     }

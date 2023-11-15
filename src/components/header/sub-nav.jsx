@@ -44,7 +44,7 @@ const Sub_Nav = () => {
       <div className='py-10 max-w-[950px] mx-auto'>
         <Layout>
           <Slider {...settings}>
-            {Nav_data.map((item: any, idx: number) => {
+            {Nav_data.map((item, idx) => {
               return (
                 <div key={idx} className='px-5'>
                   <div className={``}>

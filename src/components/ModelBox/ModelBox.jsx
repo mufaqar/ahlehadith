@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }: any) => {
+const ImagesModelBox = ({ setIsOpen, modalIsOpen, URL, video }) => {
   function closeModal() {
     setIsOpen(false);
   }

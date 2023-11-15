@@ -4,13 +4,13 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModelBox from "../ModelBox/ModelBox";
 import Image from "next/image";
 
-const Gallery_images = ({picturesData}:any) => {
+const Gallery_images = ({picturesData}) => {
 console.log("🚀 ~ file: index.tsx:8 ~ picturesData:", picturesData)
 
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
   const [modalIsOpen, setIsOpen] = useState(false);
   const [URL, setURL] = useState('');
-  const OpenModelBox = (image: any) => {
+  const OpenModelBox = (image) => {
     setURL(image)
     setIsOpen(true);
   }
@@ -20,7 +20,7 @@ console.log("🚀 ~ file: index.tsx:8 ~ picturesData:", picturesData)
       <div className="my-10">
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
           <Masonry columnsCount={3} gutter="20px">
-            {picturesData?.pictureInfo?.gallery?.map((image:any,i:number) => (
+            {picturesData?.pictureInfo?.gallery?.map((image,i) => (
               <figure key={i} className="p-1 hover:shadow-lg cursor-pointer">
                 <Image src={image?.mediaItemUrl} alt={image?.altText} width={960} height={640} className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image?.mediaItemUrl)} />
               </figure>

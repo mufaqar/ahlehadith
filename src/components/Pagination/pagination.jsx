@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 import {GrNext, GrPrevious} from 'react-icons/gr'
 
 
-const Pagination = ({ data, PaginatedData, perpage }: any) => {
+const Pagination = ({ data, PaginatedData, perpage }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   const itemsPerPage = perpage | 9;
@@ -12,7 +12,7 @@ const Pagination = ({ data, PaginatedData, perpage }: any) => {
   const currentItems = data.slice(itemOffset, endOffset);
 
   const pageCount = Math.ceil(data.length / itemsPerPage);
-  const handlePageClick = (event: any) => {
+  const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
     setItemOffset(newOffset);
   };

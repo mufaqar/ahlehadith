@@ -29,7 +29,7 @@ const Main1 = () => {
         <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
-              Slide_BG.map((item: any, idx: number) => {
+              Slide_BG.map((item, idx) => {
                 return (
                   <img src={item.img} alt="img" key={idx} className="h-[580px] w-full object-cover"/>
                 )

@@ -6,10 +6,8 @@ import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import Team from "@/components/team/team";
-import { PostMokeData } from "@/const/post";
 import { ConvertDateIntoUrdu, GetWordStr } from "@/utils";
 import Image from "next/image";
-import { AiOutlineShareAlt } from "react-icons/ai";
 import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
@@ -38,7 +36,7 @@ const Home1 = async () => {
           </div>
           <div className="md:flex gap-6">
             <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
-              {posts?.slice(0, 1).map((item: any, idx: number) => {
+              {posts?.slice(0, 1).map((item, idx) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
                     <Image
@@ -64,7 +62,7 @@ const Home1 = async () => {
               })}
             </div>
             <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
-              {posts?.slice(1, 4).map((item: any, idx: number) => {
+              {posts?.slice(1, 4).map((item, idx) => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >

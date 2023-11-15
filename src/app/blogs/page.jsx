@@ -19,8 +19,8 @@ import {
 
 const Blog = () => {
 
-  const [pData, setPData] = useState<any>()
-  const PaginatedData = (res: any) => {
+  const [pData, setPData] = useState()
+  const PaginatedData = (res) => {
     setPData(res)
   }
 
@@ -45,7 +45,7 @@ const Blog = () => {
         <div className="pt-[1px] bg-border" />
         <section className="my-24">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8">
-            {pData?.map((post: any, idx: number) => {
+            {pData?.map((post, idx) => {
               if (idx === 3) {
                 return (
                   <div

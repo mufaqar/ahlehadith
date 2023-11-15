@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/map/googleMap.tsx", "src/components/Homedata.tsx", "src/const/jammattest.jsx", "src/app/videos/page.jsx", "src/components/team/team.jsx", "src/app/ulma-ikram/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/map/googleMap.tsx", "src/components/Homedata.tsx", "src/const/jammattest.jsx", "src/app/videos/page.jsx", "src/components/team/team.jsx", "src/app/ulma-ikram/page.jsx", "src/app/page.jsx", "src/app/home/home1/page.jsx", "src/components/header/sub-nav.jsx", "src/components/images-section/imagesect.jsx", "src/components/main/main1.jsx", "src/components/Slider/Slider2.jsx", "src/components/Slider/Slider.jsx", "src/components/ModelBox/ModelBox.jsx", "src/app/departments/page.jsx", "src/app/ahlehadith-magazine/page.jsx", "src/app/visits/page.jsx", "src/app/team/page.jsx", "src/app/dastoor/page.jsx", "src/components/image-gallery/index.jsx", "src/app/shura/page.jsx", "src/app/islamic-graphics/page.jsx", "src/components/Pagination/pagination.jsx", "src/app/blogs/page.jsx"],
   "exclude": ["node_modules"]
 }
