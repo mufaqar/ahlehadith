@@ -37,7 +37,7 @@ const ImagesSection = () => {
             }
           ]
     };
-    const slider = React.useRef<Slider>(null);
+    const slider = React.useRef(null);
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [URL, setURL] = useState('');

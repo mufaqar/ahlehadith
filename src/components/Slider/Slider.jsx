@@ -11,7 +11,7 @@ const SliderComponent = (_data) => {
     slidesToScroll: 1,
     arrows: false,
   };
-  const slider = React.useRef<Slider>(null);
+  const slider = React.useRef(null);
 
 
   return (

@@ -6,7 +6,7 @@ import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 
 const Main1 = () => {
   const { windowSize } = useContext(SettingsContext)
-  const [post, setPost] = useState<any>([])
+  const [post, setPost] = useState([])
 
   useEffect(() => {
     windowSize[0] <= 1080 ? setPost(Slide_BG) : setPost(Slide_BG)
@@ -21,7 +21,7 @@ const Main1 = () => {
     autoplay: false,
     arrows: false,
   };
-  const slider = React.useRef<Slider>(null);
+  const slider = React.useRef(null);
 
   return (
     <>
