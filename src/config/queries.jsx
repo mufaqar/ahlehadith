@@ -153,3 +153,17 @@ query PictureData($id: ID!) {
     }
   }
 }`;
+
+
+export const VideoByTypes = gql`
+query videoType($id: ID = "") {
+  videoType(id: $id, idType: SLUG) {
+    videos(first: 100) {
+      nodes {
+        videoInfo {
+          videoUrl
+        }
+      }
+    }
+  }
+}`;

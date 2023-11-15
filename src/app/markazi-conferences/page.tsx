@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
 import Layout from "@/components/Layout/Layout";
-import { Marzi_conf_vides } from '@/const/exports';
-import { TVideo } from '@/utils/types';
 import YouTube, { YouTubeProps } from 'react-youtube';
+import { useQuery } from '@apollo/client';
+import { VideoByTypes } from '@/config/queries';
+import { getIDFromURL } from '@/utils';
 
 const Page = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
@@ -16,14 +17,21 @@ const opts: YouTubeProps['opts'] = {
   },
 };
 
+const { loading, error, data } = useQuery(VideoByTypes, {
+  variables: { id: "مرکزی-کانفرنسز" },
+});
+
+const videosList = data?.videoType?.videos?.nodes;
+
   return (
     <>
       <Layout>
         <div className='items-center font-ahle my-10 md:my-20 md:mt-20 grid gap-10'>
           <div className="my-10 grid md:grid-cols-3 grid-cols-1 gap-7">
-            {Marzi_conf_vides.map((item:TVideo, idx:number) => {
+            {videosList?.map((item:any, idx:number) => {
+              var url = getIDFromURL(item?.videoInfo?.videoUrl)
               return <YouTube key={idx}
-              videoId={item?.url}
+              videoId={url}
               opts={opts}
               className={`videocontainer`}
               iframeClassName={`w-full h-full aspect-square`}

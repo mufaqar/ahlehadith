@@ -12,3 +12,14 @@ export const ConvertDateIntoUrdu = (inputDate) => {
      const formattedDate = formatter.format(date);
      return formattedDate
 }
+
+
+export const getIDFromURL = (url) =>{
+     var id
+     if(url.includes('www')){
+          id = url.replace('https://www.youtube.com/watch?v=', '')
+     }else{
+          id = url.replace('https://youtube.com/watch?v=', '')
+     }
+     return id
+}
