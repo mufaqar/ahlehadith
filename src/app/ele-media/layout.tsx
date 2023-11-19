@@ -4,7 +4,7 @@ import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 
 export const metadata = {
-  title: ' Electonic Media',
+  title: ' الیکٹرانک میڈیا',
   description: '',
 };
 
@@ -17,7 +17,7 @@ export default function  ElectonicMedia({
     <>
         <Header1 />
         <PageBanner
-        title=" Electonic Media"
+        title=" الیکٹرانک میڈیا"
         subTitle=""
         image="/assets/images/contat.jpg"
         buttontext=""
