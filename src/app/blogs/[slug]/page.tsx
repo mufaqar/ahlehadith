@@ -6,7 +6,10 @@ import Footer from "@/components/footer";
 
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
+import apolloClient from "@/config/client";
+import { AllPosts } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
+import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,7 +23,8 @@ import {
 } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
-const Slug = () => {
+const Slug = ({PostsData}:any) => {
+  console.log("🚀 ~ file: page.tsx:27 ~ Slug ~ PostsData:", PostsData)
   return (
     <>
       <PageBanner
@@ -265,3 +269,20 @@ const CommentForm = () => {
     </form>
   );
 };
+
+
+export const getServerSideProps: GetServerSideProps = async () => {  
+  const response = await apolloClient.query({
+    query: AllPosts,
+  });
+  
+
+  const PostsData = response.data.posts.nodes;
+
+  return {
+    props: {
+      PostsData,
+    },
+  };
+}
+
