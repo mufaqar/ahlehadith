@@ -11,10 +11,10 @@ const BooksSection = ({booksData}) => {
                 return (
                     <div key={idx} className='h-[450px] relative before:content-[" "] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border group'>
                         <div className='h-full w-full '>
-                            <Image src={item?.node?.featuredImage?.node?.mediaItemUrl}
+                            <img src={item?.node?.featuredImage?.node?.mediaItemUrl}
                                 alt='image'
-                                height={300}
-                                width={300}
+                                // height={300}
+                                // width={300}
                                 className='h-full w-full z-[1] object-cover ' />
                             <div className='absolute bottom-9 right-5 z-[1]'>
                                 <Link href={item?.node?.booksInfo?.downloadFile?.mediaItemUrl} target="_blank"

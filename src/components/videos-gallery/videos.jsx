@@ -23,14 +23,14 @@ const VideosGallery = ({videosData, type}) => {
     <>
       <section className="md:flex gap-6 max-h-[600px]">
         <div className="rounded-xl relative md:w-[77%] w-full overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
-          <Image
+          <img
             src={`${videosData[0]?.videoInfo?.videoUrl?.replace(
               "https://www.youtube.com/watch?v=",
               "https://i.ytimg.com/vi/"
             )}/hqdefault.jpg`}
             alt="thumbnil"
-            width={900}
-            height={900}
+            // width={900}
+            // height={900}
             className="w-full h-full object-cover"
           />
           <BsPlayCircle
@@ -47,14 +47,14 @@ const VideosGallery = ({videosData, type}) => {
                 key={idx}
                 className="rounded-xl relative md:rounded-xl h-[33%] border-[6px] border-white dark:border-transparent shadow-xl overflow-hidden inline-block"
               >
-                <Image
+                <img
                   src={`${item?.videoInfo?.videoUrl?.replace(
                     "https://www.youtube.com/watch?v=",
                     "https://i.ytimg.com/vi/"
                   )}/hqdefault.jpg`}
                   alt="thumbnil"
-                  width={900}
-                  height={900}
+                  // width={900}
+                  // height={900}
                   className="w-full h-full object-cover"
                 />
                 <BsPlayCircle
