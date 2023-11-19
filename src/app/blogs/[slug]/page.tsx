@@ -23,8 +23,8 @@ import {
 } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
-const Slug = ({PostsData}:any) => {
-  console.log("🚀 ~ file: page.tsx:27 ~ Slug ~ PostsData:", PostsData)
+const Slug = () => {
+
   return (
     <>
       <PageBanner
@@ -271,18 +271,18 @@ const CommentForm = () => {
 };
 
 
-export const getServerSideProps: GetServerSideProps = async () => {  
-  const response = await apolloClient.query({
-    query: AllPosts,
-  });
+// export const getServerSideProps: GetServerSideProps = async () => {  
+//   const response = await apolloClient.query({
+//     query: AllPosts,
+//   });
   
 
-  const PostsData = response.data.posts.nodes;
+//   const PostsData = response.data.posts.nodes;
 
-  return {
-    props: {
-      PostsData,
-    },
-  };
-}
+//   return {
+//     props: {
+//       PostsData,
+//     },
+//   };
+// }
 
