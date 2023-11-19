@@ -33,12 +33,10 @@ const Aside = ({
 }: ISidebar) => {
   return (
     <aside className="lg:w-[27%] mt-10 md:mt-0 h-full bg-light-gray py-10">
-      {aboutAuthor && <AboutAuthorSection />}
-      {social && <SocialSection />}
-      {newsletter && <NewsLetterSection />}
+    
       {latestPost.length > 0 && <LatestPostSection posts={latestPost} />}
       {latestCategories && <LatestCategories posts={latestCategories} />}
-      {advertisement && <Advertisement />}
+    
     </aside>
   );
 };
