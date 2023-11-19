@@ -14,7 +14,6 @@ import Sub_Nav from "@/components/header/sub-nav";
 import apolloClient from '@/config/client';
 import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQoute, UpdatesByCategoryQuran, Videos } from '@/config/queries';
 
-
 const Home1 = async () => {
 
   const { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData } = await getData()
@@ -50,11 +49,11 @@ const Home1 = async () => {
                       {item?.categories?.nodes[0]?.name}
                     </span>
                     <span className="bg-black text-yellow py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
-                      {ConvertDateIntoUrdu(item.date)}
+                      {ConvertDateIntoUrdu(item?.date)}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
                       <Link href={`/blogs/${item.slug}`} className="text-2xl font-ahle text-black">
-                        {item.title}
+                        {item?.title}
                       </Link>
                     </div>
                   </div>

@@ -98,7 +98,7 @@ export const Videos = gql`
 
 export const Books = gql`
   query books {
-    books(first: 10) {
+    books(first: 20) {
       edges {
         node {
           booksInfo {
