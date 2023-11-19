@@ -74,8 +74,6 @@ export const BooksData = [
   },
   {
     img: "/assets/images/book4.jpg",
-  },
-  {
-    img: "/assets/images/book2.jpg",
-  },
+  }
+ 
 ];
