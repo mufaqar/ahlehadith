@@ -39,7 +39,7 @@ const Home1 = async () => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
                     <Image
-                      src={item.featuredImage.node.mediaItemUrl}
+                      src={item?.featuredImage?.node?.mediaItemUrl}
                       alt="thumbnil"
                       width={900}
                       height={50}
@@ -65,12 +65,12 @@ const Home1 = async () => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
-                    <Link href={`/blogs/${item.slug}`} className={`md:w-1/3`}>
+                    <Link href={`/blogs/${item?.slug}`} className={`md:w-1/3`}>
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
                         <Image
-                          src={item.featuredImage.node.mediaItemUrl}
+                          src={item?.featuredImage?.node?.mediaItemUrl}
                           alt=""
                           width={200}
                           height={200}
@@ -90,7 +90,7 @@ const Home1 = async () => {
                         <h2
                           className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
                         >
-                          {item.title}
+                          {item?.title}
                         </h2>
                       </div>
                       <div className="mt-3 text-text leading-8 font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(item?.excerpt) }} />
