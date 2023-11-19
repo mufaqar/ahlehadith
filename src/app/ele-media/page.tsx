@@ -25,9 +25,8 @@ const Page = () => {
               iframeClassName={`w-full h-full aspect-square`}
               onReady={onPlayerReady}
             />
-          </div>
-          <div className="my-10 grid md:grid-cols-3 grid-cols-1 gap-7">
-          <YouTube
+
+            <YouTube
               videoId="mXGuMJPrdgE"
               opts={opts}
               className={`videocontainer`}
@@ -35,8 +34,8 @@ const Page = () => {
               onReady={onPlayerReady}
             />
           </div>
-          </div>
-              
+        </div>
+
       </Layout>
     </>
   );
