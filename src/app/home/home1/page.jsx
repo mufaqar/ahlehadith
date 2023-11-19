@@ -38,11 +38,10 @@ const Home1 = async () => {
               {posts?.slice(0, 1).map((item, idx) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
-                    <Image
+                    <img
                       src={item?.featuredImage?.node?.mediaItemUrl}
                       alt="thumbnil"
-                      width={900}
-                      height={50}
+                     
                       className="w-full h-full object-cover opacity-60"
                     />
                     <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
@@ -69,11 +68,10 @@ const Home1 = async () => {
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
-                        <Image
+                        <img
                           src={item?.featuredImage?.node?.mediaItemUrl}
                           alt=""
-                          width={200}
-                          height={200}
+                        
                           className={`w-full md:h-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
                         />
                       </figure>
