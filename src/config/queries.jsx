@@ -118,52 +118,84 @@ export const Books = gql`
 `;
 
 export const Members = gql`
-query NewQuery($first: Int ) {
-  members(first: $first) {
-    nodes {
+  query NewQuery($first: Int) {
+    members(first: $first) {
+      nodes {
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
+        title
+      }
+    }
+  }
+`;
+
+export const VideoType = gql`
+  query videoTypes {
+    videoTypes(first: 100) {
+      nodes {
+        name
+        slug
+      }
+    }
+  }
+`;
+
+export const PictureData = gql`
+  query PictureData($id: ID!) {
+    picture(id: $id, idType: SLUG) {
+      title
+      pictureInfo {
+        gallery {
+          mediaItemUrl
+          altText
+        }
+      }
+    }
+  }
+`;
+
+export const VideoByTypes = gql`
+  query videoType($id: ID = "") {
+    videoType(id: $id, idType: SLUG) {
+      videos(first: 100) {
+        nodes {
+          videoInfo {
+            videoUrl
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const singlePost = gql`
+  query singlePost($id: ID = "") {
+    post(id: $id, idType: ID) {
+      excerpt
+      slug
+      id
+      title
+      date
+      content
+      categories {
+        nodes {
+          slug
+          name
+        }
+      }
+      author {
+        node {
+          name
+        }
+      }
       featuredImage {
         node {
           mediaItemUrl
         }
       }
-      title
     }
   }
-}`;
-
-export const VideoType = gql`
-query videoTypes {
-  videoTypes(first: 100) {
-    nodes {
-      name
-      slug
-    }
-  }
-}`;
-
-export const PictureData = gql`
-query PictureData($id: ID!) {
-  picture(id: $id, idType: SLUG) {
-    title
-    pictureInfo {
-      gallery {
-        mediaItemUrl
-        altText
-      }
-    }
-  }
-}`;
-
-
-export const VideoByTypes = gql`
-query videoType($id: ID = "") {
-  videoType(id: $id, idType: SLUG) {
-    videos(first: 100) {
-      nodes {
-        videoInfo {
-          videoUrl
-        }
-      }
-    }
-  }
-}`;
+`;

@@ -7,11 +7,13 @@ import Footer from "@/components/footer";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
 import apolloClient from "@/config/client";
-import { AllPosts } from "@/config/queries";
+import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
+import { useQuery } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 import {
   FaFacebookF,
@@ -25,12 +27,22 @@ import { SlCalender } from "react-icons/sl";
 
 const Slug = () => {
 
+  const path = useParams()
+  console.log("🚀 ~ file: page.tsx:31 ~ Slug ~ path:", path)
+
+  const { loading, error, data } = useQuery(singlePost, {
+    variables: { id: path?.slug},
+  });
+  
+  console.log("🚀 ~ file: page.tsx:36 ~ Slug ~ data:", data)
+
+
   return (
     <>
       <PageBanner
-        title="Lorem ipsum dolor sit amet consectetur"
-        subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
-        image="/assets/images/Cars.jpg"
+        title={data?.post?.title}
+        subTitle={data?.post?.excerpt}
+        image={data?.post?.featuredImage?.node?.mediaItemUrl}
       />
       <Layout>
         <section className="lg:flex gap-10 my-10">
@@ -38,52 +50,26 @@ const Slug = () => {
             <div className="flex items-center justify-start gap-2">
               <div className="p-[5px] bg-light-blue group-hover:bg-light-blue" />
               <h2 className="capitalize text-sm text-gray-400 group-hover:text-light-blue cursor-pointer ">
-                Technology
+                {data?.post?.categories?.nodes[0]?.name}
               </h2>
             </div>
-            <h2 className="text-xl md:text-2xl capitalize mt-2 font-ahle font-bold">{`Lorem ipsum dolor sit amet consectetur`}</h2>
+            <h2 className="text-xl md:text-2xl capitalize mt-2 font-ahle font-bold">{data?.post?.title}</h2>
             <figure className="relative">
               <Image
-                src="/assets/images/Cars.jpg"
+                src={data?.post?.featuredImage?.node?.mediaItemUrl}
                 alt="image"
                 width={100}
                 height={100}
                 className="w-full mt-6"
               />
-              <p className="absolute bottom-0 right-0 left-0 bg-black/30 p-2 text-gray-300 font-ahle text-sm font-light">
+              {/* <p className="absolute bottom-0 right-0 left-0 bg-black/30 p-2 text-gray-300 font-ahle text-sm font-light">
                 <strong className="text-yellow">Source:</strong> Lorem ipsum
                 dolor sit amet consectetur adipisicing elit.
-              </p>
+              </p> */}
             </figure>
-            <p className="mt-8 text-text leading-8 tracking-wide">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              repudiandae aliquid, atque veritatis, dolor, cumque dolores quo
-              obcaecati harum laudantium reprehenderit temporibus numquam
-              perspiciatis doloremque! Ratione reiciendis necessitatibus cumque
-              ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis non sit, minus inventore nostrum, sapiente, corporis
-              assumenda delectus ipsum repellat facilis omnis voluptatibus nam
-              provident nihil culpa laborum alias illo.
-            </p>
-            <p className="mt-6 text-text leading-8 tracking-wide">
-              Ratione reiciendis necessitatibus cumque ducimus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Blanditiis non sit,
-              minus inventore nostrum, sapiente, corporis assumenda delectus
-              ipsum repellat facilis omnis voluptatibus nam provident nihil
-              culpa laborum alias illo.
-            </p>
-            <p className="mt-6 text-text leading-8 tracking-wide">
-              Corporis assumenda delectus ipsum repellat facilis omnis
-              voluptatibus nam provident nihil culpa laborum alias illo. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-              debitis, fuga corrupti autem similique reiciendis placeat,
-              inventore dolorem nemo distinctio dignissimos. Quae, aut?
-              Distinctio numquam hic fuga ut, blanditiis doloremque? Lorem
-              ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              doloremque officia voluptates id dolore aspernatur! Temporibus ad
-              id, non perferendis labore earum expedita sunt consequatur
-              reiciendis, et corporis officia! Minus.
-            </p>
+            <div className="mt-8 text-text leading-8 tracking-wide" dangerouslySetInnerHTML={{__html:data?.post?.content}}/>
+            
+            
             {/* <div className="bg-light-gray flex flex-col md:flex-row justify-between p-4 mt-7 gap-3 md:gap-0 md:items-center">
               <p className="uppercase text-sm font-bold text-light-blue">
                 Keep Reading
@@ -166,7 +152,7 @@ const Slug = () => {
                 </ul>
               </div>
             </div> */}
-            <SideBarHeading long={true}> Related Post </SideBarHeading>
+            <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
               {PostMokeData.slice(0, 3).map((post, idx) => {
                 return (
@@ -274,7 +260,7 @@ const CommentForm = () => {
 // export const getServerSideProps: GetServerSideProps = async () => {  
 //   const response = await apolloClient.query({
 //     query: AllPosts,
-//   });
+//   });use
   
 
 //   const PostsData = response.data.posts.nodes;
