@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/Layout/Layout";
+import PageBanner from "@/components/page-banner/banner";
 
 
 export const metadata = {
@@ -9,9 +9,16 @@ export const metadata = {
 
 const Introduction = () => {
   return (
-    <>
+    <main>
+       <PageBanner
+          title="تعارف"
+          subTitle=""
+          image="/assets/images/contat.jpg"
+          buttontext=""
+          buttonLink=""
+        />
       <section className='bg-light-gray py-10 md:py-20'>
-        <Layout>
+        <div className='container px-4 md:px-10 mx-auto'>
           <div className="mb-10">
             <h2 className='text-4xl leading-[4rem] font-ahle'>مرکزی جمعیت اہل حدیث</h2>
           </div>
@@ -68,9 +75,9 @@ const Introduction = () => {
               </Link> */}
             </div>
           </div>
-        </Layout>
+        </div>
       </section>
-    </>
+    </main>
   );
 };
 

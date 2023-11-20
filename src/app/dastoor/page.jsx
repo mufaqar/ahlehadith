@@ -1,10 +1,15 @@
 "use client"
 import React, { useState } from 'react';
-import Layout from '@/components/Layout/Layout';
 import { Dastoor_Data } from '@/const/dastor';
 import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import Image from 'next/image';
+import PageBanner from '@/components/page-banner/banner';
+
+export const metadata = {
+  title: "دستور",
+  description: "",
+};
 
 const Pictures = () => {
   
@@ -18,8 +23,15 @@ const Pictures = () => {
 
   return (
     <>
-      <Layout>
-        <section className="my-20">
+    <PageBanner
+          title="دستور"
+          subTitle=""
+          image="/assets/images/contat.jpg"
+          buttontext=""
+          buttonLink=""
+        />
+    <section className='container px-4 md:px-10 mx-auto'>
+        <div className="my-20">
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
               <Masonry columnsCount={3} gutter="20px">
@@ -34,8 +46,8 @@ const Pictures = () => {
           {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
           }
-        </section>
-      </Layout>
+        </div>
+      </section>
     </>
   )
 }

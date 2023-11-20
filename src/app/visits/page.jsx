@@ -1,9 +1,14 @@
 "use client"
 import React, { useState } from 'react';
-import Layout from '@/components/Layout/Layout';
 import { Visits_Data } from '@/const/visits';
 import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import PageBanner from '@/components/page-banner/banner';
+
+export const metadata = {
+  title: 'یادرفتگاں',
+  description: '',
+};
 
 const Visits = () => {
 
@@ -15,9 +20,16 @@ const Visits = () => {
     setIsOpen(true);
   }
   return (
-    <>
-      <Layout>
-        <section className="my-20">
+    <main>
+      <PageBanner
+        title="یادرفتگاں"
+        subTitle=""
+        image="/assets/images/contat.jpg"
+        buttontext=""
+        buttonLink=""
+      />
+     <section className='container px-4 md:px-10 mx-auto'>
+        <div className="my-20">
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
               <Masonry columnsCount={3} gutter="20px">
@@ -32,9 +44,9 @@ const Visits = () => {
           {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
           }
-        </section>
-      </Layout>
-    </>
+        </div>
+      </section>
+    </main>
   )
 }
 

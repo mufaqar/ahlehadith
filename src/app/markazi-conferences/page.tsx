@@ -5,6 +5,12 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 import { useQuery } from '@apollo/client';
 import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
+import PageBanner from '@/components/page-banner/banner';
+
+export const metadata = {
+  title: 'مرکزی کانفرنسز',
+  description: '',
+};
 
 const Page = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
@@ -24,8 +30,15 @@ const { loading, error, data } = useQuery(VideoByTypes, {
 const videosList = data?.videoType?.videos?.nodes;
 
   return (
-    <>
-      <Layout>
+    <main>
+       <PageBanner
+        title="مرکزی کانفرنسز"
+        subTitle=""
+        image="/assets/images/slid1.jpeg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className='items-center font-ahle my-10 md:my-20 md:mt-20 grid gap-10'>
           <div className="my-10 grid md:grid-cols-3 grid-cols-1 gap-7">
             {videosList?.map((item:any, idx:number) => {
@@ -40,8 +53,8 @@ const videosList = data?.videoType?.videos?.nodes;
             })}
           </div>
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

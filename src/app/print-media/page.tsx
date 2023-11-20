@@ -1,19 +1,31 @@
 
 import React from 'react';
-import Layout from '@/components/Layout/Layout';
 import apolloClient from '@/config/client';
 import { PictureData } from '@/config/queries';
 import Gallery_images from '@/components/image-gallery';
+import PageBanner from '@/components/page-banner/banner';
+
+export const metadata = {
+  title: 'پرنٹ میڈیا کوریج',
+  description: '',
+};
 
 const Print_Media = async () => {
   const {picturesData}:any = await getData()
 
   return (
-    <>
-      <Layout>
+    <main>
+    <PageBanner
+        title="پرنٹ میڈیا کوریج"
+        subTitle=""
+        image="/assets/images/contat.jpg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         <Gallery_images picturesData={picturesData} />
-      </Layout>
-    </>
+      </section>
+    </main>
   )
 }
 
