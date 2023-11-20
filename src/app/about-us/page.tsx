@@ -1,12 +1,27 @@
 import Layout from "@/components/Layout/Layout";
+import PageBanner from "@/components/page-banner/banner";
 import Image from "next/image";
 import React from "react";
 import { FiDivide } from "react-icons/fi";
 
+export const metadata = {
+  title: 'About Us',
+  description: '',
+};
+
+
 const Page = () => {
   return (
     <>
+    <PageBanner
+          title="کتب لائبریری"
+          subTitle=""
+          image="/assets/images/contat.jpg"
+          buttontext=""
+          buttonLink=""
+        />
       <Layout>
+
         <section className="grid grid-cols-1 md:grid-cols-2 my-24 gap-10">
           <div className="lg:mt-24">
             <span className="text-light-blue uppercase">Category</span>
