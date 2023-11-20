@@ -10,6 +10,8 @@ import { ApolloProvider } from "@apollo/client";
 import apolloClient from "@/config/client";
 const inter = Inter({ subsets: ["latin"] });
 import NextNProgress from 'nextjs-progressbar';
+import Header1 from "@/components/header/header1";
+import Footer from "@/components/footer";
 
 
 export default function RootLayout({
@@ -20,11 +22,15 @@ export default function RootLayout({
   return (
     <html lang="ur" dir="rtl">
       <body className={`dark:bg-dark-gray ${inter.className}`} >
-      <NextNProgress />
-      <ApolloProvider client={apolloClient}>
-        <SettingsProvider>
-          <ThemeProvider enableSystem={false} attribute="class">{children}</ThemeProvider>
-        </SettingsProvider>
+        <NextNProgress />
+        <ApolloProvider client={apolloClient}>
+          <SettingsProvider>
+            <ThemeProvider enableSystem={false} attribute="class">
+              <Header1 />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </SettingsProvider>
         </ApolloProvider>
       </body>
     </html>

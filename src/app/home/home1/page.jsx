@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout/Layout";
 import React from "react";
 import Link from "next/link";
 import VideosGallery from "@/components/videos-gallery/videos";
@@ -22,11 +21,10 @@ const Home1 = async () => {
 
   return (
     <>
-      <Header1 />
       <Main1 />
       <Sub_Nav />
       <Tabs />
-      <Layout>
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="my-5">
             <h2 className="text-3xl leading-[4rem] uppercase font-ahle ahle-heading">
@@ -99,8 +97,8 @@ const Home1 = async () => {
             </div>
           </div>
         </div>
-      </Layout>
-      <Layout>
+      </section>
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-10 md:my-20 md:mt-20">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 ">
             <div className=" border border-light-gray">
@@ -158,9 +156,9 @@ const Home1 = async () => {
             </div>
           </div>
         </div>
-      </Layout>
+      </section>
       <section className="py-16 bg-[url('/assets/images/tabdeeli.jpg')] bg-center bg-cover bg-black/50 bg-blend-multiply">
-        <Layout>
+        <section className='container px-4 md:px-10 mx-auto'>
           <div className="flex md:flex-row flex-col gap-5">
             <div className="md:w-1/4 w-full">
             </div>
@@ -181,9 +179,9 @@ const Home1 = async () => {
               </div>
             </div>
           </div>
-        </Layout>
+        </section>
       </section>
-      <Layout>
+      <section className='container px-4 md:px-10 mx-auto'>
         <section className="my-10 md:my-16 md:mt-16">
           <div className="">
             <div className="my-20">
@@ -223,8 +221,8 @@ const Home1 = async () => {
             </div>
           </div >
         </section >
-      </Layout >
-      <Layout>
+      </section>
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-20">
           <div className="my-14">
             <div className="flex justify-between items-center">
@@ -241,8 +239,7 @@ const Home1 = async () => {
           </div>
           <Team membersData={membersData}/>
         </div>
-      </Layout>
-      <Footer />
+      </section>
     </>
   );
 };

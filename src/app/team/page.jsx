@@ -1,9 +1,14 @@
 "use client"
-import Layout from "@/components/Layout/Layout";
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModelBox from '../../components/ModelBox/ModelBox'
 import { Team_Gallery } from "@/const/exports";
+import PageBanner from "@/components/page-banner/banner";
+
+export const metadata = {
+  title: 'عاملہ',
+  description: '',
+};
 
 const Page = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
@@ -14,8 +19,15 @@ const Page = () => {
     setIsOpen(true);
   }
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+          title="عاملہ"
+          subTitle=""
+          image="/assets/images/slid1.jpeg"
+          buttontext=""
+          buttonLink=""
+        />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className='items-center font-ahle my-10 md:my-20 md:mt-20 grid gap-10'>
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
@@ -32,8 +44,8 @@ const Page = () => {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
           }
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

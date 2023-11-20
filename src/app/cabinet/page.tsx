@@ -1,10 +1,23 @@
 import Layout from "@/components/Layout/Layout";
+import PageBanner from "@/components/page-banner/banner";
 import React from "react";
+
+export const metadata = {
+  title: 'کابینہ',
+  description: '',
+};
 
 const Page = () => {
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+        title="کابینہ"
+        subTitle=""
+        image="/assets/images/slid1.jpeg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className='my-10 md:my-20 md:mt-20'>
           <div>
             <h2 className="text-3xl uppercase font-ahle mb-10">
@@ -126,8 +139,8 @@ const Page = () => {
             </ul>
           </div>
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

@@ -1,10 +1,22 @@
-import Layout from "@/components/Layout/Layout";
+import PageBanner from "@/components/page-banner/banner";
 import React from "react";
+
+export const metadata = {
+  title: 'قیادت',
+  description: '',
+};
 
 const Page = () => {
   return (
-    <>
-      <Layout>
+    <main>
+     <PageBanner
+          title="قیادت"
+          subTitle=""
+          image="/assets/images/banner/3.jpg"
+          buttontext=""
+          buttonLink=""
+        />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className='items-center font-ahle my-10 md:my-20 md:mt-20 grid gap-10'>
           <div>
             <div className="mb-10">
@@ -95,8 +107,8 @@ const Page = () => {
           </div>
        
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

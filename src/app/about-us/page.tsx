@@ -1,8 +1,6 @@
-import Layout from "@/components/Layout/Layout";
 import PageBanner from "@/components/page-banner/banner";
 import Image from "next/image";
 import React from "react";
-import { FiDivide } from "react-icons/fi";
 
 export const metadata = {
   title: 'About Us',
@@ -20,7 +18,7 @@ const Page = () => {
           buttontext=""
           buttonLink=""
         />
-      <Layout>
+       <section className='container px-4 md:px-10 mx-auto'>
 
         <section className="grid grid-cols-1 md:grid-cols-2 my-24 gap-10">
           <div className="lg:mt-24">
@@ -56,7 +54,7 @@ const Page = () => {
             </figure>
           </div>
         </section>
-      </Layout>
+      </section>
       <section className="bg-dark-gray dark:bg-light-gray py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 container px-4 md:px-10 mx-auto">
           <div>
@@ -129,7 +127,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <Layout>
+       <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-16 md:my-28 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <Image
             src="/assets/images/i4.png"
@@ -184,9 +182,9 @@ const Page = () => {
             className="w-full h-[300px] object-cover"
           />
         </div>
-      </Layout>
+      </section>
       <div className="pt-[1px] w-full mt-6 bg-border" />
-      <Layout>
+       <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-28">
           <div className="grid md:grid-cols-2 lg:grid-cols-3">
             <div className="flex flex-col">
@@ -220,7 +218,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </Layout>
+      </section>
      
     </>
   );

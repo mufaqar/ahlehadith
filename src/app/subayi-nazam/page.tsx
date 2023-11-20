@@ -1,10 +1,22 @@
-import Layout from "@/components/Layout/Layout";
+import PageBanner from "@/components/page-banner/banner";
 import React from "react";
+
+export const metadata = {
+  title: 'صوبائی نظم',
+  description: '',
+};
 
 const Page = () => {
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+          title="صوبائی نظم"
+          subTitle=""
+          image="/assets/images/slid1.jpeg"
+          buttontext=""
+          buttonLink=""
+        />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className='my-10 md:my-20 md:mt-20 file:grid gap-10'>
           <div>
             <h2 className="text-3xl uppercase font-ahle mb-5">
@@ -39,8 +51,8 @@ const Page = () => {
             </p>
           </div>
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 
