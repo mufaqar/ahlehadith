@@ -6,19 +6,20 @@ import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import Team from "@/components/team/team";
-import { PostMokeData } from "@/const/post";
-import { GetWordStr } from "@/utils";
+import { ConvertDateIntoUrdu, GetWordStr } from "@/utils";
 import Image from "next/image";
 import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
+import apolloClient from '@/config/client';
+import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQoute, UpdatesByCategoryQuran, Videos } from '@/config/queries';
 
-export const metadata = {
-  title: 'Markazi Jamiyat Ahle Hadith Pakistan',
-  description: 'مرکزی جمعیت اہل حدیث الحمدللہ دعوت و اصلاح ، تعلیم وتربیت ، علم وتحقیق، نشر و اشاعت ،تنظیم واحصائیات اور تعمیرات ورفاہ عامہ جیسے اہم محاذوں پر بھرپور جدوجہد کررہی ہے جس کے مبارک ثمرات ملکی سطح پر محسوس کیے جارہے ہیں اور خود موقر مجالس عاملہ وشوری مرکزی جمعیت اہل حدیث نے بھی اپنے حالیہ اجلاسوں میں جمعیت کی ہمہ جہت کارکردگی پراطمینان کااظہار فرمایاہے.	',
-};
+const Home1 = async () => {
 
-export default function Home() {
+  const { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData } = await getData()
+  
+  const posts = postData
+
   return (
     <>
       <Header1 />
@@ -34,25 +35,24 @@ export default function Home() {
           </div>
           <div className="md:flex gap-6">
             <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
-              {PostMokeData.slice(0, 1).map((item, idx) => {
+              {posts?.slice(0, 1).map((item, idx) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
-                    <Image
-                      src={item.img}
+                    <img
+                      src={item?.featuredImage?.node?.mediaItemUrl}
                       alt="thumbnil"
-                      width={900}
-                      height={50}
-                      className="w-full h-full opacity-60"
+                     
+                      className="w-full h-full object-cover opacity-60"
                     />
-                    <span className="bg-yellow text-black py-1 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
-                      {item?.categories}
+                    <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
+                      {item?.categories?.nodes[0]?.name}
                     </span>
-                    <span className="bg-black text-yellow py-1 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
-                      22 فروری
+                    <span className="bg-black text-yellow py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
+                      {ConvertDateIntoUrdu(item?.date)}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
-                      <Link href="#" className="text-2xl font-ahle text-black">
-                        {item.title}
+                      <Link href={`/blogs/${item.slug}`} className="text-2xl font-ahle text-black">
+                        {item?.title}
                       </Link>
                     </div>
                   </div>
@@ -60,20 +60,19 @@ export default function Home() {
               })}
             </div>
             <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
-              {PostMokeData.slice(0, 3).map((item, idx) => {
+              {posts?.slice(1, 4).map((item, idx) => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
-                    <Link href={`/blogs/${item.title}`} className={`md:w-1/3`}>
+                    <Link href={`/blogs/${item?.slug}`} className={`md:w-1/3`}>
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
-                        <Image
-                          src={item?.img}
+                        <img
+                          src={item?.featuredImage?.node?.mediaItemUrl}
                           alt=""
-                          width={200}
-                          height={160}
-                          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full`}
+                        
+                          className={`w-full md:h-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
                         />
                       </figure>
                     </Link>
@@ -82,15 +81,17 @@ export default function Home() {
                     >
                       <div className={``}>
                         <p className="capitalize text-light-blue text-sm">
-                          By Farhan  - <span className="uppercase">23 September</span>
+                          <span className="uppercase">{ConvertDateIntoUrdu(item.date)}</span>
+                          <span> - </span>
+                          <span>By {item?.author?.node?.name}</span>
                         </p>
                         <h2
-                          className={`text-[18px] leading-[2.3rem] font-medium font-ahle `}
+                          className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
                         >
-                          {item.title}
+                          {item?.title}
                         </h2>
                       </div>
-                      <p className="mt-3 text-text font-normal">{GetWordStr(item?.body)}</p>
+                      <div className="mt-3 text-text leading-8 font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(item?.excerpt) }} />
                     </div>
                   </div>
                 );
@@ -111,13 +112,12 @@ export default function Home() {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                  وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَأَطِيعُوا الرَّسُولَ لَعَلَّكُمْ تُرْحَمُونَ
+                  <span>{dailyQuran[0]?.title}: </span>
+                  <span>{dailyQuran[0]?.dailyUpdatesInfo?.description}</span>
                 </p>
-                <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                  اور چاہیے کہ نماز کا اہتمام کرو، زکوۃ ادا کرنے میں سرگرم رہو اور اللہ کے رسول کا کہا مانو، کچھ بعید نہیں کہ رحمت الٰہی کے سزاوار ہو
-                </p>
+
                 <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                  ۔النور:56
+                  {dailyQuran[0]?.dailyUpdatesInfo?.source}
                 </p>
               </div>
             </div>
@@ -130,10 +130,10 @@ export default function Home() {
               </div>
               <div className="p-5">
                 <p className="font-ahle text-lg text-gray-600 dark:text-text">
-                  رسول اللہ ﷺ نے فرمایا: ”تم میں سے جو شخص اس حال میں صبح کرے کہ وہ اپنی جان کی طرف سے بے خوف ہو، جسمانی اعتبار سے صحت مند ہو، ایک دن کی خوراک کا سامان اس کے پاس ہو، تو گویا اس کے لیے ساری دنیا جمع کردی گئی  </p>
-                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                  ۔صحیح الجامع:6042
+                  <span>{dailyHadees[0]?.title}: </span>
+                  <span>{dailyHadees[0]?.dailyUpdatesInfo?.description}</span>
                 </p>
+                <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">۔ {dailyHadees[0]?.dailyUpdatesInfo?.source}</p>
               </div>
             </div>
             <div className=" border border-light-gray">
@@ -147,15 +147,13 @@ export default function Home() {
                 <ul className="divide-y divide-border ">
                   <li className="py-3">
                     <p className="font-ahle text-lg text-pure">
-                      تابعی طاؤوس بن كيسان رحمہ اللہ دعا کیا کرتے تھے  </p>
-                    <p className="font-ahle text-lg text-gray-600 dark:text-text mt-5">
-                      :"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ غِنًى مُبْطِرٍ، وَفَقْرٍ مُلِبٍّ، أَوْ مُرِبٍّ."
-                      ”اے اللہ! میں تیری پناہ میں آتا ہوں آپے سے باہر کر دینے والی امیری سے، اور جان نہ چھوڑنے والی فقیری سے۔“
+                      <span>{dailyQoute[0]?.title}: </span>
+                      <span>{dailyQoute[0]?.dailyUpdatesInfo?.description}</span>
                     </p>
-                    <p className="font-ahle text-lg text-pure dark:text-text">
-                      (جامع معمر بن راشد : ١٩٦٣٣)  </p>
+                    <p className="font-ahle text-lg text-pure dark:text-text mt-5">۔ {dailyQoute[0]?.dailyUpdatesInfo?.source}</p>
                   </li>
                 </ul>
+
               </div>
             </div>
           </div>
@@ -202,8 +200,9 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <VideosGallery />
+              <VideosGallery videosData={videosData}/>
             </div>
+
             <div>
               <div className="my-5">
                 <div className="flex justify-between items-center">
@@ -219,7 +218,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="">
-                <BooksSection />
+                <BooksSection booksData={booksData} />
               </div>
             </div>
           </div >
@@ -240,10 +239,46 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Team />
+          <Team membersData={membersData}/>
         </div>
       </Layout>
       <Footer />
     </>
   );
+};
+
+export default Home1;
+
+
+
+
+async function getData() {
+  const [posts, hadees, quran, qoute, videos, books, members] = await Promise.all([
+    apolloClient.query({ query: AllPosts }),
+    apolloClient.query({ query: UpdatesByCategoryHadees }),
+    apolloClient.query({ query: UpdatesByCategoryQuran }),
+    apolloClient.query({ query: UpdatesByCategoryQoute }),
+    apolloClient.query({ query: Videos }),
+    apolloClient.query({ query: Books }),
+    apolloClient.query({
+        query: Members,
+        variables: {
+          first: 10,
+        },
+    }),
+  ]);
+  const postData = posts?.data?.posts?.nodes
+  const dailyHadees = hadees?.data?.updateType?.updates?.nodes
+  const dailyQuran = quran?.data?.updateType?.updates?.nodes
+  const dailyQoute = qoute?.data?.updateType?.updates?.nodes
+  const videosData = videos?.data?.videos?.nodes
+  const booksData = books?.data?.books?.edges
+  const membersData = members?.data?.members?.nodes
+
+  if (!postData) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }
 }

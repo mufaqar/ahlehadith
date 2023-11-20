@@ -6,16 +6,11 @@ import ModelBox from '../../components/ModelBox/ModelBox'
 import { Gallery } from "@/const/exports";
 
 
-interface IGallery {
-img: string
-
-}
-
 const Page = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
   const [modalIsOpen, setIsOpen] = useState(false);
   const [URL, setURL] = useState('');
-  const OpenModelBox = (image: any) => {
+  const OpenModelBox = (image) => {
     setURL(image)
     setIsOpen(true);
   }
@@ -31,7 +26,7 @@ const Page = () => {
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
               <Masonry columnsCount={3} gutter="20px">
-                {Gallery.map((image:IGallery) => (
+                {Gallery.map((image) => (
                   <figure key={image.img} className="p-1 hover:shadow-lg cursor-pointer">
                     <img src={image.img} alt="Gallery" className="w-full rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]" onClick={() => OpenModelBox(image)} />
                   </figure>

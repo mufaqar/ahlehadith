@@ -2,21 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const BooksSection = () => {
+const BooksSection = ({booksData}) => {
+
     return (
         <div className='grid md:grid-cols-4 grid-cols-1 gap-6'>
 
-            {BooksData.map((item, idx) => {
+            {booksData?.slice(0,4)?.map((item, idx) => {
                 return (
-                    <div key={idx} className='h-[590px] relative before:content-[" "] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border group'>
+                    <div key={idx} className='h-[450px] relative before:content-[" "] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border group'>
                         <div className='h-full w-full '>
-                            <Image src={item.img}
+                            <img src={item?.node?.featuredImage?.node?.mediaItemUrl}
                                 alt='image'
-                                height={300}
-                                width={300}
+                                // height={300}
+                                // width={300}
                                 className='h-full w-full z-[1] object-cover ' />
-                            <div className='absolute bottom-8 right-5 z-[1]'>
-                                <Link href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank"
+                            <div className='absolute bottom-9 right-5 z-[1]'>
+                                <Link href={item?.node?.booksInfo?.downloadFile?.mediaItemUrl} target="_blank"
                                     className="bg-yellow text-black group-hover:bg-light-blue group-hover:text-white text-base px-8 py-2.5 uppercase ">
                                     ڈاؤن لوڈ
                                 </Link>
@@ -33,18 +34,3 @@ const BooksSection = () => {
 }
 
 export default BooksSection
-
-export const BooksData = [
-    {
-        img: "/assets/images/book1.jpg",
-    },
-    {
-        img: "/assets/images/book2.jpg",
-    },
-    {
-        img: "/assets/images/book3.jpg",
-    },
-    {
-        img: "/assets/images/book4.jpg",
-    },
-];

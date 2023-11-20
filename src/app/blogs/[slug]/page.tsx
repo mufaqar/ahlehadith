@@ -3,10 +3,13 @@
 import Layout from "@/components/Layout/Layout";
 import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
-import Insta from "@/components/insta";
+
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
+import apolloClient from "@/config/client";
+import { AllPosts } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
+import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -21,6 +24,7 @@ import {
 import { SlCalender } from "react-icons/sl";
 
 const Slug = () => {
+
   return (
     <>
       <PageBanner
@@ -80,7 +84,7 @@ const Slug = () => {
               id, non perferendis labore earum expedita sunt consequatur
               reiciendis, et corporis officia! Minus.
             </p>
-            <div className="bg-light-gray flex flex-col md:flex-row justify-between p-4 mt-7 gap-3 md:gap-0 md:items-center">
+            {/* <div className="bg-light-gray flex flex-col md:flex-row justify-between p-4 mt-7 gap-3 md:gap-0 md:items-center">
               <p className="uppercase text-sm font-bold text-light-blue">
                 Keep Reading
               </p>
@@ -116,8 +120,8 @@ const Slug = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="my-10 sm:flex items-center gap-6 justify-start">
+            </div> */}
+            {/* <div className="my-10 sm:flex items-center gap-6 justify-start">
               <div className="w-40">
                 <Image
                   src="/assets/images/Cars.jpg"
@@ -161,7 +165,7 @@ const Slug = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
             <SideBarHeading long={true}> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
               {PostMokeData.slice(0, 3).map((post, idx) => {
@@ -170,12 +174,12 @@ const Slug = () => {
                 );
               })}
             </div>
-            <SideBarHeading long={true}> Comments </SideBarHeading>
+            {/* <SideBarHeading long={true}> Comments </SideBarHeading>
             <CommentDesign />
             <CommentDesign reply={true} />
-            <CommentDesign />
-            <SideBarHeading long={true}> Comment </SideBarHeading>
-            <CommentForm />
+            <CommentDesign /> */}
+           
+          
           </section>
 
           <Aside
@@ -188,7 +192,7 @@ const Slug = () => {
           />
         </section>
       </Layout>
-      <Insta />
+  
       <Footer />
     </>
   );
@@ -265,3 +269,20 @@ const CommentForm = () => {
     </form>
   );
 };
+
+
+// export const getServerSideProps: GetServerSideProps = async () => {  
+//   const response = await apolloClient.query({
+//     query: AllPosts,
+//   });
+  
+
+//   const PostsData = response.data.posts.nodes;
+
+//   return {
+//     props: {
+//       PostsData,
+//     },
+//   };
+// }
+

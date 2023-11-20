@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
-const SliderComponent = (_data: any) => {
+const SliderComponent = (_data) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -11,14 +11,14 @@ const SliderComponent = (_data: any) => {
     slidesToScroll: 1,
     arrows: false,
   };
-  const slider = React.useRef<Slider>(null);
+  const slider = React.useRef(null);
 
 
   return (
     <>
       <section className="h-screen relative 2xl:h-[800px] blogs">
         <Slider ref={slider} {...settings}>
-          {Slide_BG.map((item: any, idx: number) => {
+          {Slide_BG.map((item, idx) => {
             return (
               <div className={`h-screen relative 2xl:h-[800px]`} key={idx}>
                 <img

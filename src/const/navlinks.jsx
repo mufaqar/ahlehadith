@@ -85,7 +85,7 @@ export const NavLinks = [
                },
                {
                     name: 'الیکٹرانک میڈیا کوریج',
-                    link: '#',
+                    link: '/ele-media',
                },
           ]
      },

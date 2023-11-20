@@ -6,7 +6,7 @@ import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 
 const Main1 = () => {
   const { windowSize } = useContext(SettingsContext)
-  const [post, setPost] = useState<any>([])
+  const [post, setPost] = useState([])
 
   useEffect(() => {
     windowSize[0] <= 1080 ? setPost(Slide_BG) : setPost(Slide_BG)
@@ -21,7 +21,7 @@ const Main1 = () => {
     autoplay: false,
     arrows: false,
   };
-  const slider = React.useRef<Slider>(null);
+  const slider = React.useRef(null);
 
   return (
     <>
@@ -29,7 +29,7 @@ const Main1 = () => {
         <div className="relative w-full">
         <Slider ref={slider} {...settings}>
             {
-              Slide_BG.map((item: any, idx: number) => {
+              Slide_BG.map((item, idx) => {
                 return (
                   <img src={item.img} alt="img" key={idx} className="h-[580px] w-full object-cover"/>
                 )
