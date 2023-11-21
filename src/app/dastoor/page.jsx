@@ -6,10 +6,6 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import Image from 'next/image';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: "دستور",
-  description: "",
-};
 
 const Pictures = () => {
   

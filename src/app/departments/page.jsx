@@ -6,10 +6,10 @@ import ModelBox from '../../components/ModelBox/ModelBox'
 import { Gallery } from "@/const/exports";
 import PageBanner from "@/components/page-banner/banner";
 
-export const metadata = {
-  title: 'شعبہ جات',
-  description: '',
-};
+// export const metadata = {
+//   title: 'شعبہ جات',
+//   description: '',
+// };
 
 const Page = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
