@@ -1,9 +1,5 @@
 import React from "react";
 
-export const metadata = {
-  title: 'Blogs',
-  description: '',
-};
 
 export default function PageLayout({
   children,
