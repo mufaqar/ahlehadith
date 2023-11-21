@@ -5,10 +5,10 @@ import { PictureData } from '@/config/queries';
 import Gallery_images from '@/components/image-gallery';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'پرنٹ میڈیا کوریج',
-  description: '',
-};
+// export const metadata = {
+//   title: 'پرنٹ میڈیا کوریج',
+//   description: '',
+// };
 
 const Print_Media = async () => {
   const {picturesData}:any = await getData()

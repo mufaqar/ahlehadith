@@ -4,10 +4,10 @@ import apolloClient from '@/config/client';
 import { PictureData } from '@/config/queries';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: "Picture",
-  description: "",
-};
+// export const metadata = {
+//   title: "Picture",
+//   description: "",
+// };
 
 const Pictures = async () => {
 
