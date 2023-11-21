@@ -4,8 +4,12 @@ import Layout from '@/components/Layout/Layout';
 import { Hadith_Data } from '@/const/hadith';
 import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import PageBanner from '@/components/page-banner/banner';
 
-
+export const metadata = {
+  title: 'Ahlehadith Magazine',
+  description: '',
+};
 
 const Ahlehadith_Magazine = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
@@ -16,9 +20,16 @@ const Ahlehadith_Magazine = () => {
     setIsOpen(true);
   }
   return (
-    <>
-      <Layout>
-        <section className="my-20">
+    <main>
+      <PageBanner
+        title="اہلِ حدیث میگزین"
+        subTitle=""
+        image="/assets/images/contat.jpg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
+        <div className="my-20">
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
               <Masonry columnsCount={3} gutter="20px">
@@ -33,9 +44,9 @@ const Ahlehadith_Magazine = () => {
           {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
           }
-        </section>
-      </Layout>
-    </>
+        </div>
+      </section>
+    </main>
   )
 }
 

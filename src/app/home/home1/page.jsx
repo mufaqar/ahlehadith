@@ -1,13 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import VideosGallery from "@/components/videos-gallery/videos";
-import Footer from "@/components/footer";
 import Main1 from "@/components/main/main1";
 import BooksSection from "@/components/books-section/books";
 import Team from "@/components/team/team";
 import { ConvertDateIntoUrdu, GetWordStr } from "@/utils";
 import Image from "next/image";
-import Header1 from "@/components/header/header1";
 import Tabs from "@/components/tabs/tabs";
 import Sub_Nav from "@/components/header/sub-nav";
 import apolloClient from '@/config/client';

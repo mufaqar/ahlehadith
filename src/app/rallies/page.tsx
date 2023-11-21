@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import Layout from "@/components/Layout/Layout";
 import { Rallies_vides } from '@/const/exports';
 import { TVideo } from '@/utils/types';
 import YouTube, { YouTubeProps } from 'react-youtube';

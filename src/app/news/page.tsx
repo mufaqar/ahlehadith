@@ -1,14 +1,26 @@
 "use client"
 import React from 'react';
-import Layout from "@/components/Layout/Layout";
 import { News_Data } from '@/const/news';
 import Image from 'next/image';
+import PageBanner from '@/components/page-banner/banner';
+
+export const metadata = {
+  title: 'جماعتی خبریں',
+  description: '',
+};
 
 const Page = () => {
 
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+        title="جماعتی خبریں"
+        subTitle=""
+        image="/assets/images/slid1.jpeg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-24">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
             {News_Data.map((item, idx) => {
@@ -36,8 +48,8 @@ const Page = () => {
             })}
           </div>
         </div>
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

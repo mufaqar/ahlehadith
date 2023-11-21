@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import Layout from "@/components/Layout/Layout";
 import YouTube, { YouTubeProps } from 'react-youtube';
 import PageBanner from '@/components/page-banner/banner';
 

@@ -1,6 +1,4 @@
 "use client";
-
-import Layout from "@/components/Layout/Layout";
 import Pagination from "@/components/Pagination/pagination";
 import { SideBarHeading } from "@/components/aside";
 import Featured_News from "@/components/featured-news/news";
@@ -16,6 +14,10 @@ import {
   AiOutlineEye,
 } from "react-icons/ai";
 
+export const metadata = {
+  title: 'Blogs',
+  description: '',
+};
 
 const Blog = () => {
 
@@ -25,12 +27,12 @@ const Blog = () => {
   }
 
   return (
-    <>
+    <main>
       <section className="md:mt-20 sm:mt-14 mt-10 pt-3">
         <Featured_News />
       </section>
-      <Layout>
-        <section className="my-24">
+      <section className='container px-4 md:px-10 mx-auto'>
+        <div className="my-24">
           <SideBarHeading className="max-w-[18rem] mx-auto mb-12">
             جماعتی خبریں
           </SideBarHeading>
@@ -41,9 +43,9 @@ const Blog = () => {
               );
             })}
           </div>
-        </section>
+        </div>
         <div className="pt-[1px] bg-border" />
-        <section className="my-24">
+        <div className="my-24">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8">
             {pData?.map((post, idx) => {
               if (idx === 3) {
@@ -89,9 +91,9 @@ const Blog = () => {
             })}
           </div>
           <Pagination data={PostMokeData.slice(5)} PaginatedData={PaginatedData} />
-        </section>
-      </Layout>
-    </>
+        </div>
+      </section>
+    </main>
   );
 };
 

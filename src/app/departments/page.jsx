@@ -1,5 +1,4 @@
 "use client"
-import Layout from "@/components/Layout/Layout";
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ModelBox from '../../components/ModelBox/ModelBox'

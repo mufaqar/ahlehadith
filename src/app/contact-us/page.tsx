@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout/Layout";
 import GoogleMap from "@/components/map/googleMap";
+import PageBanner from "@/components/page-banner/banner";
 import Button from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
@@ -12,8 +12,15 @@ export const metadata = {
 
 const ContactUs = () => {
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+          title="رابطہ کریں"
+          subTitle=""
+          image="/assets/images/contat.jpg"
+          buttontext=""
+          buttonLink=""
+        />
+       <section className='container px-4 md:px-10 mx-auto'>
         <form className="my-12">
           <div className='my-8'>
             <h2 className="text-3xl uppercase font-ahle ahle-heading">
@@ -57,7 +64,7 @@ const ContactUs = () => {
             </Button>
           </div>
         </form>
-        <section className="grid md:grid-cols-3 my-24">
+        <div className="grid md:grid-cols-3 my-24">
           <div className="flex flex-col text-gray-500 gap-1 items-center">
             <FaPhoneSquareAlt size={80} className="text-yellow" />
             <h4 className="text-xl mt-6 text-dark-gray font-ahle">فون نمبر</h4>
@@ -83,12 +90,12 @@ const ContactUs = () => {
               mjah106@gmail.com
             </Link>
           </div>
-        </section>
-        <section className="mb-10">
+        </div>
+        <div className="mb-10">
           <GoogleMap />
-        </section>
-      </Layout>
-    </>
+        </div>
+      </section>
+    </main>
   );
 };
 

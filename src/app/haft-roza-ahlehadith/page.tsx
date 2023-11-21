@@ -1,20 +1,26 @@
-import Layout from '@/components/Layout/Layout';
-import Footer from '@/components/footer';
-import Header1 from '@/components/header/header1';
 import PageBanner from '@/components/page-banner/banner';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
-
+export const metadata = {
+    title: 'Haft Roza Ahlehadith',
+    description: '',
+  };
 
 const Haft_Roza_Ahlehadith = () => {
     return (
-        <>
-            
-            <Layout>
-                <section className="my-10 md:my-16 md:mt-16 grid md:grid-cols-2 grid-cols-1">
+        <main>
+            <PageBanner
+                title="ہفت روزہ اہلحدیث"
+                subTitle=""
+                image="/assets/images/contat.jpg"
+                buttontext=""
+                buttonLink=""
+            />
+            <section className='container px-4 md:px-10 mx-auto'>
+                <div className="my-10 md:my-16 md:mt-16 grid md:grid-cols-2 grid-cols-1">
                     <div>
                         <figure className="relative group overflow-hidden">
                             <Image
@@ -62,10 +68,9 @@ const Haft_Roza_Ahlehadith = () => {
                             </div>
                         </figure>
                     </div>
-                </section>
-            </Layout>
-
-        </>
+                </div>
+            </section>
+        </main>
     )
 }
 

@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout/Layout";
 import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 

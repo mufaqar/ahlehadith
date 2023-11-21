@@ -1,39 +1,43 @@
-import Layout from "@/components/Layout/Layout";
-import Footer from "@/components/footer";
-import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
 import VideosGallery from "@/components/videos-gallery/videos";
 import apolloClient from "@/config/client";
 import { VideoType, Videos as VideoQ } from "@/config/queries";
 import React from "react";
 
-// export const metadata = {
-//     title: "Videos",
-//     description: "",
-// };
+export const metadata = {
+  title: "Videos",
+  description: "",
+};
 
 const Videos = async () => {
   const { videosData, videoTypeData } = await getData();
 
   return (
-    <>
-      <Layout>
+    <main>
+      <PageBanner
+        title="وڈیوز"
+        subTitle=""
+        image="/assets/images/contat.jpg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         {videoTypeData?.map((item, idx) => {
           return (
-            <section className="my-10 md:my-16 md:mt-16" key={idx}>
+            <div className="my-10 md:my-16 md:mt-16" key={idx}>
               <div>
                 <div className="my-5">
                   <h2 className="text-2xl uppercase font-ahle">
                     {item?.name}
                   </h2>
                 </div>
-                <VideosGallery type={item?.name} videosData={videosData}/>
+                <VideosGallery type={item?.name} videosData={videosData} />
               </div>
-            </section>
+            </div>
           );
         })}
-      </Layout>
-    </>
+      </section>
+    </main>
   );
 };
 

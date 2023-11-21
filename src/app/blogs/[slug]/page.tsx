@@ -1,9 +1,6 @@
 "use client";
-
-import Layout from "@/components/Layout/Layout";
 import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
-
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
 import apolloClient from "@/config/client";
@@ -25,6 +22,11 @@ import {
 } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
+export const metadata = {
+  title: 'Blogs',
+  description: '',
+};
+
 const Slug = () => {
 
   const path = useParams()
@@ -44,8 +46,8 @@ const Slug = () => {
         subTitle={data?.post?.excerpt}
         image={data?.post?.featuredImage?.node?.mediaItemUrl}
       />
-      <Layout>
-        <section className="lg:flex gap-10 my-10">
+       <section className='container px-4 md:px-10 mx-auto'>
+        <div className="lg:flex gap-10 my-10">
           <section className="lg:w-[73%]">
             <div className="flex items-center justify-start gap-2">
               <div className="p-[5px] bg-light-blue group-hover:bg-light-blue" />
@@ -176,8 +178,8 @@ const Slug = () => {
             latestCategories={PostMokeData}
             advertisement={true}
           />
-        </section>
-      </Layout>
+        </div>
+      </section>
   
       <Footer />
     </>
