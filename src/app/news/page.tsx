@@ -4,11 +4,6 @@ import { News_Data } from '@/const/news';
 import Image from 'next/image';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'جماعتی خبریں',
-  description: '',
-};
-
 const Page = () => {
 
   return (

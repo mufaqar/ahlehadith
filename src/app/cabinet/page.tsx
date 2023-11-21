@@ -1,11 +1,6 @@
 import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 
-export const metadata = {
-  title: 'کابینہ',
-  description: '',
-};
-
 const Page = () => {
   return (
     <main>

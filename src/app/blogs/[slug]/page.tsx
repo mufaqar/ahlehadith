@@ -22,11 +22,6 @@ import {
 } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
-export const metadata = {
-  title: 'Blogs',
-  description: '',
-};
-
 const Slug = () => {
 
   const path = useParams()

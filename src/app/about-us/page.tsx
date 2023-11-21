@@ -2,12 +2,6 @@ import PageBanner from "@/components/page-banner/banner";
 import Image from "next/image";
 import React from "react";
 
-export const metadata = {
-  title: 'About Us',
-  description: '',
-};
-
-
 const Page = () => {
   return (
     <>

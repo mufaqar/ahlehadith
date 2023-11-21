@@ -4,11 +4,6 @@ import apolloClient from "@/config/client";
 import { VideoType, Videos as VideoQ } from "@/config/queries";
 import React from "react";
 
-export const metadata = {
-  title: "Videos",
-  description: "",
-};
-
 const Videos = async () => {
   const { videosData, videoTypeData } = await getData();
 

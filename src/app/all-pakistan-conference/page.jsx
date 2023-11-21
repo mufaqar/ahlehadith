@@ -4,8 +4,6 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 import { YtVideo } from '@/components/ui/YtVideo'
 import PageBanner from '@/components/page-banner/banner';
 
-
-
 const Page = () => {
   const onPlayerReady = (event) => {
     event.target.pauseVideo();

@@ -5,11 +5,6 @@ import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import PageBanner from '@/components/page-banner/banner';
 
-// export const metadata = {
-//   title: 'یادرفتگاں',
-//   description: '',
-// };
-
 const Visits = () => {
 
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };

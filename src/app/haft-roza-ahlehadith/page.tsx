@@ -4,11 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
-export const metadata = {
-    title: 'Haft Roza Ahlehadith',
-    description: '',
-  };
-
 const Haft_Roza_Ahlehadith = () => {
     return (
         <main>
