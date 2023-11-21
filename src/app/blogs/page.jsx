@@ -14,10 +14,6 @@ import {
   AiOutlineEye,
 } from "react-icons/ai";
 
-export const metadata = {
-  title: 'Blogs',
-  description: '',
-};
 
 const Blog = () => {
 
