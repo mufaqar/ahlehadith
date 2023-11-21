@@ -28,15 +28,11 @@ import { SlCalender } from "react-icons/sl";
 const Slug = () => {
 
   const path = useParams()
-  console.log("🚀 ~ file: page.tsx:31 ~ Slug ~ path:", path)
 
   const { loading, error, data } = useQuery(singlePost, {
     variables: { id: path?.slug},
   });
   
-  console.log("🚀 ~ file: page.tsx:36 ~ Slug ~ data:", data)
-
-
   return (
     <>
       <PageBanner
