@@ -5,10 +5,10 @@ import ModelBox from '@/components/ModelBox/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'یادرفتگاں',
-  description: '',
-};
+// export const metadata = {
+//   title: 'یادرفتگاں',
+//   description: '',
+// };
 
 const Visits = () => {
 

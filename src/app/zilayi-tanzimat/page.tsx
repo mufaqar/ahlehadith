@@ -1,10 +1,10 @@
 import PageBanner from "@/components/page-banner/banner";
 import React from "react";
 
-export const metadata = {
-  title: 'ذیلی تنظیمات',
-  description: '',
-};
+// export const metadata = {
+//   title: 'ذیلی تنظیمات',
+//   description: '',
+// };
 
 const Page = () => {
   return (

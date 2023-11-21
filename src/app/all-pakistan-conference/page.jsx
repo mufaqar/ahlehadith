@@ -4,10 +4,7 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 import { YtVideo } from '@/components/ui/YtVideo'
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'آل پاکستان کانفرنس',
-  description: '',
-};
+
 
 const Page = () => {
   const onPlayerReady = (event) => {

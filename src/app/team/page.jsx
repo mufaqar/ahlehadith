@@ -5,10 +5,10 @@ import ModelBox from '../../components/ModelBox/ModelBox'
 import { Team_Gallery } from "@/const/exports";
 import PageBanner from "@/components/page-banner/banner";
 
-export const metadata = {
-  title: 'عاملہ',
-  description: '',
-};
+// export const metadata = {
+//   title: 'عاملہ',
+//   description: '',
+// };
 
 const Page = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };

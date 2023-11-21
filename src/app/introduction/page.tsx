@@ -2,10 +2,10 @@ import React from "react";
 import PageBanner from "@/components/page-banner/banner";
 
 
-export const metadata = {
-  title: "Introduction",
-  description: "",
-};
+// export const metadata = {
+//   title: "Introduction",
+//   description: "",
+// };
 
 const Introduction = () => {
   return (

@@ -6,10 +6,10 @@ import apolloClient from "@/config/client";
 import { Members } from "@/config/queries";
 import PageBanner from "@/components/page-banner/banner";
 
-export const metadata = {
-    title: 'علمائےکرام/معروف شخصیات',
-    description: '',
-  };
+// export const metadata = {
+//     title: 'علمائےکرام/معروف شخصیات',
+//     description: '',
+//   };
 
 const Page = async () => {
     const [modalIsOpen, setIsOpen] = useState(false);

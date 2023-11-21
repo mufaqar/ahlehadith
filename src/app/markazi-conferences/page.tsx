@@ -6,10 +6,10 @@ import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'مرکزی کانفرنسز',
-  description: '',
-};
+// export const metadata = {
+//   title: 'مرکزی کانفرنسز',
+//   description: '',
+// };
 
 const Page = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {

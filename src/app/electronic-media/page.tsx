@@ -3,10 +3,10 @@ import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import PageBanner from '@/components/page-banner/banner';
 
-export const metadata = {
-  title: 'الیکٹرانک میڈیا کوریج',
-  description: '',
-};
+// export const metadata = {
+//   title: 'الیکٹرانک میڈیا کوریج',
+//   description: '',
+// };
 
 
 const Page = () => {
