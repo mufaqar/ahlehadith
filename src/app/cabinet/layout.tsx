@@ -2,7 +2,7 @@ import React from "react";
 
 export const metadata = {
   title: 'کابینہ',
-  description: '',
+  description: 'Ahlehadis Team',
 };
 
 export default function PageLayout({
