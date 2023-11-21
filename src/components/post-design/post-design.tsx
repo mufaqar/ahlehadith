@@ -13,12 +13,12 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
       ${layout === 3 && "bg-transparent"}
       `}
     >
-      <Link href={`/blogs/${post.title}`} className={`${layout === 2 && "md:w-1/3"}`}>
+      <Link href={`/blogs/${post.id}`} className={`${layout === 2 && "md:w-1/3"}`}>
         <figure
           className={`overflow-hidden relative ${layout === 2 && "md:w-full"}`}
         >
           <Image
-            src={post?.img}
+            src={post?.img || post.featuredImage.node.mediaItemUrl}
             alt=""
             width={200}
             height={200}
@@ -52,7 +52,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           </h2>
         </div>
         {layout !== 3 && (
-          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body)}</p>
+          <div className="mt-3 text-text font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(post?.excerpt)}}/>
         )}
       </div>
     </div>

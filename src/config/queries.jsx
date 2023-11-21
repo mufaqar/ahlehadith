@@ -6,6 +6,7 @@ export const AllPosts = gql`
       nodes {
         excerpt
         slug
+        id
         title
         date
         content
