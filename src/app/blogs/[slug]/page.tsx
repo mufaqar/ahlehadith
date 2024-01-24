@@ -17,20 +17,20 @@ import {
 const Slug = async () => {
 
   const path = useParams()
-  const [relatedposts, setRelatedPosts] = useState<any>()
+  // const [relatedposts, setRelatedPosts] = useState<any>()
   const { loading, error, data } = useQuery(singlePost, {
     variables: { id: path?.slug },
   });
 
-  useEffect(() => {
-    (async () => {
-      const [posts] = await Promise.all([
-        apolloClient.query({ query: AllPosts }),
-      ]);
-      const postData = posts?.data?.posts?.nodes
-      setRelatedPosts(postData)
-    })()
-  }, [])
+  // useEffect(() => {
+  //   (async () => {
+  //     const [posts] = await Promise.all([
+  //       apolloClient.query({ query: AllPosts }),
+  //     ]);
+  //     const postData = posts?.data?.posts?.nodes
+  //     setRelatedPosts(postData)
+  //   })()
+  // }, [])
 
   return (
     <>
@@ -147,14 +147,14 @@ const Slug = async () => {
                 </ul>
               </div>
             </div> */}
-            <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
+            {/* <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
               {relatedposts?.slice(0, 3)?.map((post:any, idx:number) => {
                 return (
                   <PostDesign post={post} idx={idx} layout={3} key={idx} />
                 );
               })}
-            </div>
+            </div> */}
             {/* <SideBarHeading long={true}> Comments </SideBarHeading>
             <CommentDesign />
             <CommentDesign reply={true} />
