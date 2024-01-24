@@ -34,12 +34,14 @@ const Home1 = async () => {
               {posts?.slice(0, 1).map((item, idx) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
+                    <Link href={`/blogs/${item.id}`}>
                     <img
                       src={item?.featuredImage?.node?.mediaItemUrl}
                       alt="thumbnil"
                      
                       className="w-full h-full object-cover opacity-60"
                     />
+                    </Link>
                     <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
                       {item?.categories?.nodes[0]?.name}
                     </span>
@@ -81,11 +83,13 @@ const Home1 = async () => {
                           <span> - </span>
                           <span>By {item?.author?.node?.name}</span>
                         </p>
+                        <Link href={`/blogs/${item?.id}`}>
                         <h2
                           className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
                         >
                           {item?.title}
                         </h2>
+                        </Link>
                       </div>
                       <div className="mt-3 text-text leading-8 font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(item?.excerpt) }} />
                     </div>
