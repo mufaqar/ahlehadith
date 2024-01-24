@@ -7,31 +7,31 @@ import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
 import { useQuery } from "@apollo/client";
+import { GetServerSideProps } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaRegCommentAlt,
   FaReply,
+  FaTwitter,
 } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
 
-const Slug = async () => {
+const Slug = () => {
 
   const path = useParams()
-  // const [relatedposts, setRelatedPosts] = useState<any>()
+
   const { loading, error, data } = useQuery(singlePost, {
-    variables: { id: path?.slug },
+    variables: { id: path?.slug},
   });
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const [posts] = await Promise.all([
-  //       apolloClient.query({ query: AllPosts }),
-  //     ]);
-  //     const postData = posts?.data?.posts?.nodes
-  //     setRelatedPosts(postData)
-  //   })()
-  // }, [])
-
+  
+  console.log("🚀 ~ Slug ~ data:", data)
+  
   return (
     <>
       <PageBanner
@@ -39,7 +39,7 @@ const Slug = async () => {
         subTitle={data?.post?.excerpt}
         image={data?.post?.featuredImage?.node?.mediaItemUrl}
       />
-      <section className='container px-4 md:px-10 mx-auto'>
+       <section className='container px-4 md:px-10 mx-auto'>
         <div className="lg:flex gap-10 my-10">
           <section className="lg:w-[73%]">
             <div className="flex items-center justify-start gap-2">
@@ -62,9 +62,9 @@ const Slug = async () => {
                 dolor sit amet consectetur adipisicing elit.
               </p> */}
             </figure>
-            <div className="mt-8 text-text leading-8 tracking-wide" dangerouslySetInnerHTML={{ __html: data?.post?.content }} />
-
-
+            <div className="mt-8 text-text leading-8 tracking-wide" dangerouslySetInnerHTML={{__html:data?.post?.content}}/>
+            
+            
             {/* <div className="bg-light-gray flex flex-col md:flex-row justify-between p-4 mt-7 gap-3 md:gap-0 md:items-center">
               <p className="uppercase text-sm font-bold text-light-blue">
                 Keep Reading
@@ -149,7 +149,7 @@ const Slug = async () => {
             </div> */}
             {/* <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
-              {relatedposts?.slice(0, 3)?.map((post:any, idx:number) => {
+              {PostMokeData.slice(0, 3).map((post, idx) => {
                 return (
                   <PostDesign post={post} idx={idx} layout={3} key={idx} />
                 );
@@ -159,8 +159,8 @@ const Slug = async () => {
             <CommentDesign />
             <CommentDesign reply={true} />
             <CommentDesign /> */}
-
-
+           
+          
           </section>
 
           <Aside
@@ -173,7 +173,7 @@ const Slug = async () => {
           />
         </div>
       </section>
-
+  
       <Footer />
     </>
   );
@@ -250,3 +250,20 @@ const CommentForm = () => {
     </form>
   );
 };
+
+
+// export const getServerSideProps: GetServerSideProps = async () => {  
+//   const response = await apolloClient.query({
+//     query: AllPosts,
+//   });use
+  
+
+//   const PostsData = response.data.posts.nodes;
+
+//   return {
+//     props: {
+//       PostsData,
+//     },
+//   };
+// }
+
