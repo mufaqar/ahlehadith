@@ -29,9 +29,7 @@ const Slug = () => {
   const { loading, error, data } = useQuery(singlePost, {
     variables: { id: path?.slug},
   });
-  
-  console.log("🚀 ~ Slug ~ data:", data)
-  
+    
   return (
     <>
       <PageBanner
