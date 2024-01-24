@@ -3,24 +3,15 @@ import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
-import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
 import { useQuery } from "@apollo/client";
-import { GetServerSideProps } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import React from "react";
 import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaPinterestP,
-  FaRegCommentAlt,
   FaReply,
-  FaTwitter,
 } from "react-icons/fa";
-import { SlCalender } from "react-icons/sl";
 
 const Slug = () => {
 

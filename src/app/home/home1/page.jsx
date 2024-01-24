@@ -47,7 +47,7 @@ const Home1 = async () => {
                       {ConvertDateIntoUrdu(item?.date)}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
-                      <Link href={`/blogs/${item.slug}`} className="text-2xl font-ahle text-black">
+                      <Link href={`/blogs/${item.id}`} className="text-2xl font-ahle text-black">
                         {item?.title}
                       </Link>
                     </div>
@@ -60,7 +60,7 @@ const Home1 = async () => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
-                    <Link href={`/blogs/${item?.slug}`} className={`md:w-1/3`}>
+                    <Link href={`/blogs/${item?.id}`} className={`md:w-1/3`}>
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
