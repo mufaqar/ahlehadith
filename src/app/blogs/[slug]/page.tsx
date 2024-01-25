@@ -3,24 +3,15 @@ import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
-import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
 import { useQuery } from "@apollo/client";
-import { GetServerSideProps } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import React from "react";
 import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaPinterestP,
-  FaRegCommentAlt,
   FaReply,
-  FaTwitter,
 } from "react-icons/fa";
-import { SlCalender } from "react-icons/sl";
 
 const Slug = () => {
 
@@ -29,6 +20,7 @@ const Slug = () => {
   const { loading, error, data } = useQuery(singlePost, {
     variables: { id: path?.slug},
   });
+  const postsRes = useQuery(AllPosts);
     
   return (
     <>
@@ -145,14 +137,14 @@ const Slug = () => {
                 </ul>
               </div>
             </div> */}
-            {/* <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
+            <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
-              {PostMokeData.slice(0, 3).map((post, idx) => {
+              {postsRes?.data?.posts?.nodes?.slice(0, 3).map((post:any, idx:number) => {
                 return (
                   <PostDesign post={post} idx={idx} layout={3} key={idx} />
                 );
               })}
-            </div> */}
+            </div>
             {/* <SideBarHeading long={true}> Comments </SideBarHeading>
             <CommentDesign />
             <CommentDesign reply={true} />
@@ -253,11 +245,8 @@ const CommentForm = () => {
 // export const getServerSideProps: GetServerSideProps = async () => {  
 //   const response = await apolloClient.query({
 //     query: AllPosts,
-//   });use
-  
-
+//   });
 //   const PostsData = response.data.posts.nodes;
-
 //   return {
 //     props: {
 //       PostsData,

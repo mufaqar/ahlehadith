@@ -1,5 +1,4 @@
 
-import { GetStaticProps } from "next";
 import Home1 from "./home/home1/page";
 
 export const metadata = {

@@ -22,6 +22,7 @@ const Blog = () => {
   const { loading, error, data } = useQuery(AllPosts);
 
   const [pData, setPData] = useState()
+  
   const PaginatedData = (res) => {
     setPData(res)
   }

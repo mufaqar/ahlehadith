@@ -113,7 +113,7 @@ export const SideBarHeading = ({ children, long, className }: any) => {
   return (
     <div className={`flex flex-col justify-center items-center ${className}`}>
       <div className="pt-[1px] bg-yellow w-full" />
-      <h6 className={`uppercase text-sm text-center  inline-block -mt-[10px] ${long ? 'px-8 bg-yellow dark:bg-dark-gray' : 'px-2 dark:bg-light-gray bg-yellow'}`}>
+      <h6 className={`uppercase text-sm text-center pb-2 inline-block -mt-[14px] ${long ? 'px-8 bg-yellow dark:bg-dark-gray' : 'px-2 dark:bg-light-gray bg-yellow'}`}>
         {children}
       </h6>
     </div>
