@@ -5,9 +5,7 @@ import PostDesign from "@/components/post-design/post-design";
 import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
-import { useQuery } from "@apollo/client";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import React from "react";
 
 

@@ -1,12 +1,12 @@
 "use client"
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
-import { useQuery } from '@apollo/client';
 import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
 import PageBanner from '@/components/page-banner/banner';
+import apolloClient from '@/config/client';
 
-const Page = () => {
+const Page = async () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
     event.target.pauseVideo();
   }
@@ -17,10 +17,7 @@ const Page = () => {
     },
   };
 
-  const { loading, error, data } = useQuery(VideoByTypes, {
-    variables: { id: "تنظیمی-اجلاس" },
-  });
-  const videosList = data?.videoType?.videos?.nodes;
+  const { videosList } = await getData()
 
   return (
     <main>
@@ -50,3 +47,21 @@ const Page = () => {
 };
 
 export default Page;
+
+async function getData() {
+  const [postres] = await Promise.all([
+    apolloClient.query({ 
+      query: VideoByTypes,
+      variables: {
+        id: "تنظیمی-اجلاس" 
+      }
+     }),
+  ]);
+  const videosList = postres?.data?.videoType?.videos?.nodes;
+
+  if (!videosList) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return { videosList }
+}
