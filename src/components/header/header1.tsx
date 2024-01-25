@@ -18,14 +18,12 @@ const Header1 = () => {
   const [scrollTop, setScrollTop] = useState<any>(0);
   const [headerClr, setHeaderClr] = useState(false);
   const [dropdown, setDropdown] = useState(null);
-  const [handleSubmenu, setHandleSubmenu] = useState(null)
+
   const handleMenu = (id: any) => {
     if (dropdown === id) {
       return setDropdown(null)
     }
     setDropdown(id)
-    //setDropdown(!dropdown)
-
   }
 
   useEffect(() => {

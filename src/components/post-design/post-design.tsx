@@ -23,7 +23,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
             width={200}
             height={200}
             className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover ${layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
-            ${layout === 3 && home ? 'sm:h-[240px]' : "sm:h-[340px]"}
+            ${layout === 3 && home ? 'sm:h-[240px]' : "sm:h-[270px]"}
           `}
           />
           {layout !== 3 && (
@@ -34,7 +34,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
         </figure>
       </Link>
       <div
-        className={`bg-light-gray ${layout === 2 && "md:w-2/3"} ${layout === 3 ? "p-0 bg-transparent" : 'p-6'
+        className={`px-4 pb-3 bg-light-gray ${layout === 2 && "md:w-2/3"} ${layout === 3 ? "p-0 bg-transparent" : 'p-6'
           }
         ${layout === 3 && "p-0 pt-6"}`}
       >
@@ -42,6 +42,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           <p className="capitalize text-light-blue text-sm">
             By Danial Alam - <span className="uppercase">22 December</span>
           </p>
+          <Link href={`/blogs/${post.id}`}>
           <h2
             className={`text-[18px] font-medium font-ahle ${layout === 3
                 ? " mb-3 leading-6"
@@ -50,6 +51,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           >
             {post.title}
           </h2>
+          </Link>
         </div>
         {layout !== 3 && (
           <div className="mt-3 text-text font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(post?.excerpt)}}/>

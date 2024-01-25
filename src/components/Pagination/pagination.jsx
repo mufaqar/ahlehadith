@@ -1,5 +1,6 @@
-import { SettingsContext } from "@/context/setting-context";
-import React, { useContext, useEffect, useState } from "react";
+'use client'
+
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import {GrNext, GrPrevious} from 'react-icons/gr'
 
