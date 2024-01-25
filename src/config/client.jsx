@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 const URL = `${process.env.WORDPRESS_URL}/graphql`
 
 const apolloClient = new ApolloClient({
-  uri: "https://revelallday.org/graphql",
+  uri: "http://ant.a59.mywebsitetransfer.com/ahlehadith/graphql",
   cache: new InMemoryCache(),
 });
 

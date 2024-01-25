@@ -2,7 +2,7 @@ const fs = require("fs");
 const { ApolloClient, InMemoryCache, gql } = require("@apollo/client")
 
 
-const BACKEND_SITE_URL = "https://revelallday.org/graphql";
+const BACKEND_SITE_URL = "http://ant.a59.mywebsitetransfer.com/ahlehadith/graphql";
 const FRONTEND_URI = "https://ahlehadith.vercel.app";
 
 // generate current data and time to given formate that required in sitemap
