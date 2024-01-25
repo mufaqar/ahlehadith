@@ -1,33 +1,12 @@
-"use client";
-import Pagination from "@/components/Pagination/pagination";
 import { SideBarHeading } from "@/components/aside";
-import Featured_News from "@/components/featured-news/news";
-import Footer from "@/components/footer";
-import Header1 from "@/components/header/header1";
 import PostDesign from "@/components/post-design/post-design";
-import Button from "@/components/ui/button";
+import apolloClient from "@/config/client";
 import { AllPosts } from "@/config/queries";
-import { PostMokeData } from "@/const/post";
-import { useQuery } from "@apollo/client";
-import Link from "next/link";
-import React, { useState } from "react";
-import {
-  AiOutlineClockCircle,
-  AiOutlineEye,
-} from "react-icons/ai";
+import React from "react";
 
 
-const Blog = () => {
-
-  const { loading, error, data } = useQuery(AllPosts);
-
-  const [pData, setPData] = useState()
-  
-  const PaginatedData = (res) => {
-    setPData(res)
-  }
-
-  
+const Blog = async () => {
+  const { postData } = await getData()
 
   return (
     <main>
@@ -40,25 +19,33 @@ const Blog = () => {
             جماعتی خبریں
           </SideBarHeading>
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
-            {data?.posts?.nodes?.map((post, idx) => {
+            {postData?.map((post, idx) => {
               return (
                 <PostDesign post={post} idx={idx} layout={2} key={idx} />
               );
             })}
           </div>
         </div>
-        {/* <div className="pt-[1px] bg-border" />
-        <div className="my-24">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8">
-            {pData?.map((post, idx) => {
-              <PostDesign post={post} idx={idx} layout={3} key={idx} />
-            })}
-          </div>
+        {/* 
           <Pagination data={data?.posts?.nodes.slice(5)} PaginatedData={data?.posts?.nodes.slice(3)} />
-        </div> */}
+         */}
       </section>
     </main>
   );
 };
 
 export default Blog;
+
+
+async function getData() {
+  const [posts] = await Promise.all([
+    apolloClient.query({ query: AllPosts }),
+  ]);
+  const postData = posts?.data?.posts?.nodes
+
+  if (!postData) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return { postData }
+}

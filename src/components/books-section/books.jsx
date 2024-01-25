@@ -17,7 +17,7 @@ const BooksSection = ({booksData}) => {
                                 // width={300}
                                 className='h-full w-full z-[1] object-cover ' />
                             <div className='absolute bottom-9 right-5 z-[1]'>
-                                <Link href={item?.node?.booksInfo?.downloadFile?.mediaItemUrl} target="_blank"
+                                <Link href={item?.node?.booksInfo?.downloadFile || '#'} target="_blank"
                                     className="bg-yellow text-black group-hover:bg-light-blue group-hover:text-white text-base px-8 py-2.5 uppercase ">
                                     ڈاؤن لوڈ
                                 </Link>

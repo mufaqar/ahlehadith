@@ -1,25 +1,17 @@
-"use client";
-import ModelBox from "@/components/ModelBox/ModelBox";
-import React, { useEffect, useState } from "react";
-import { Ulma_Data } from '@/const/ulma'
+import React from "react";
 import apolloClient from "@/config/client";
 import { Members } from "@/config/queries";
 import PageBanner from "@/components/page-banner/banner";
-import { useQuery } from "@apollo/client";
 import Image from "next/image";
 
-const Page = () => {
-    const [modalIsOpen, setIsOpen] = useState(false);
-    const [URL, setURL] = useState('');
-    const OpenModelBox = (image) => {
-        setURL(image)
-        setIsOpen(true);
-    }
-    const { loading, error, data } = useQuery(Members, {
-        variables: {
-            first: 100,
-        }
-      });
+const UlmaKaram = async () => {
+    // const [modalIsOpen, setIsOpen] = useState(false);
+    // const [URL, setURL] = useState('');
+    // const OpenModelBox = (image) => {
+    //     setURL(image)
+    //     setIsOpen(true);
+    // }
+    const {members} =  await getData()
 
     return (
         <main>
@@ -34,12 +26,13 @@ const Page = () => {
                 <div className='container px-4 md:px-10 mx-auto'>
                     <div className='my-10 md:my-20 md:mt-20 file:grid gap-10'>
                         <div className="grid md:grid-cols-4 grid-cols-1 gap-7">
-                            {data?.members?.nodes?.map((item) => {
+                            {members?.map((item) => {
                                 return (
                                     <div key={item.img} className=''>
                                         <div className='shadow-md'>
                                             <div className={`relative h-[300px] w-full`}
-                                                onClick={() => OpenModelBox(item)} >
+                                                // onClick={() => OpenModelBox(item)} 
+                                                >
                                                 <Image
                                                     src={item?.featuredImage?.node?.mediaItemUrl}
                                                     alt="img"
@@ -61,12 +54,29 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            {
+            {/* {
                 modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
-            }
+            } */}
         </main>
     )
 }
 
-export default Page;
+export default UlmaKaram;
 
+
+async function getData() {
+    const [memberRes] = await Promise.all([
+      apolloClient.query({ 
+        query: Members,
+        variables: {
+            first: 100,
+        }
+       }),
+    ]);
+    const members = memberRes?.data?.members.nodes
+    if (!members) {
+      throw new Error('Failed to fetch data')
+    }
+  
+    return { members }
+}

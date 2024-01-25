@@ -13,7 +13,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
       ${layout === 3 && "bg-transparent"}
       `}
     >
-      <Link href={`/blogs/${post.id}`} className={`${layout === 2 && "md:w-1/3"}`}>
+      <Link href={`/blogs/${post.databaseId}`} className={`${layout === 2 && "md:w-1/3"}`}>
         <figure
           className={`overflow-hidden relative ${layout === 2 && "md:w-full"}`}
         >
@@ -42,7 +42,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           <p className="capitalize text-light-blue text-sm">
             By Danial Alam - <span className="uppercase">22 December</span>
           </p>
-          <Link href={`/blogs/${post.id}`}>
+          <Link href={`/blogs/${post.databaseId}`}>
           <h2
             className={`text-[18px] font-medium font-ahle ${layout === 3
                 ? " mb-3 leading-6"
