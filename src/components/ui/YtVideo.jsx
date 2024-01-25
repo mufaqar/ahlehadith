@@ -1,11 +1,15 @@
 import { VideoByTypes } from "@/config/queries";
 import { getIDFromURL } from "@/utils";
+import { useQuery } from "@apollo/client";
 
 const { default: YouTube } = require("react-youtube");
 
-export const YtVideo = async ({ opts, onPlayerReady }) => {
+export const YtVideo = ({ opts, onPlayerReady }) => {
+  const { loading, error, data } = useQuery(VideoByTypes, {
+    variables: { id: "آل-پاکستان-کانفرنس" },
+  });
 
-  const {videosList} = await getData()
+  const videosList = data?.videoType?.videos?.nodes;
 
   return (
     <>
@@ -24,22 +28,3 @@ export const YtVideo = async ({ opts, onPlayerReady }) => {
     </>
   );
 };
-
-
-async function getData() {
-  const [postres] = await Promise.all([
-    apolloClient.query({ 
-      query: VideoByTypes,
-      variables: {
-        id: "آل-پاکستان-کانفرنس"
-      }
-     }),
-  ]);
-  const videosList = postres?.data?.videoType?.videos?.nodes;
-
-  if (!videosList) {
-    throw new Error('Failed to fetch data')
-  }
-
-  return { videosList }
-}
