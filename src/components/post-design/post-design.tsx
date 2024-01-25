@@ -39,22 +39,19 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
         ${layout === 3 && "p-0 pt-6"}`}
       >
         <div className={`${layout === 3 && "flex flex-col-reverse"}`}>
-          <p className="capitalize text-light-blue text-sm">
-            By Danial Alam - <span className="uppercase">22 December</span>
-          </p>
           <Link href={`/blogs/${post.databaseId}`}>
-          <h2
-            className={`text-[18px] font-medium font-ahle ${layout === 3
+            <h2
+              className={`text-[18px] font-medium font-ahle ${layout === 3
                 ? " mb-3 leading-6"
                 : " text-pure leading-7 mt-2"
-              }`}
-          >
-            {post.title}
-          </h2>
+                }`}
+            >
+              {post.title}
+            </h2>
           </Link>
         </div>
         {layout !== 3 && (
-          <div className="mt-3 text-text font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(post?.excerpt)}}/>
+          <div className="mt-3 text-text font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(post?.excerpt) }} />
         )}
       </div>
     </div>
