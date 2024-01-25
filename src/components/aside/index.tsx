@@ -149,17 +149,19 @@ const NewsLetterSection = () => {
 
 const LatestPostSection = ({ posts }: any) => {
   return (
-    <div className="mt-10 px-7">
+    <div className="mt-2 px-7">
       <SideBarHeading> latest posts </SideBarHeading>
       <div className="mt-8 flex flex-col gap-4">
         {posts.slice(0, 5).map((p: any, idx: number) => {
           return (
             <div className="flex gap-4 items-center group " key={idx}>
               <figure className="h-24 min-w-[6rem] overflow-hidden">
-                <img
-                  src={p?.img}
+                <Image
+                  src={p?.featuredImage?.node?.mediaItemUrl}
                   alt="feature"
-                  className="h-24 _img object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-200"
+                  width={150}
+                  height={150}
+                  className="h-24 w-[90px] object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-200"
                 />
               </figure>
               <div>

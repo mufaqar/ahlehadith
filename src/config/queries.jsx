@@ -10,6 +10,7 @@ export const AllPosts = gql`
         title
         date
         content
+        databaseId
         categories {
           nodes {
             slug
@@ -174,13 +175,14 @@ export const VideoByTypes = gql`
 
 export const singlePost = gql`
   query singlePost($id: ID = "") {
-    post(id: $id, idType: ID) {
+    post(id: $id, idType: DATABASE_ID) {
       excerpt
       slug
       id
       title
       date
       content
+      databaseId
       categories {
         nodes {
           slug
