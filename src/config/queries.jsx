@@ -104,9 +104,7 @@ export const Books = gql`
       edges {
         node {
           booksInfo {
-            downloadFile {
-              mediaItemUrl
-            }
+            downloadFile
           }
           featuredImage {
             node {
